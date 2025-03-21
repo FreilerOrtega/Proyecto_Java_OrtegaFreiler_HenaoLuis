@@ -15,6 +15,11 @@ public class Login {
         this.id_persona = id_persona;
     }
 
+    public Login(String usuario, String contrasena) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+    }
+
     public String getUsuario() {
         return usuario;
     }

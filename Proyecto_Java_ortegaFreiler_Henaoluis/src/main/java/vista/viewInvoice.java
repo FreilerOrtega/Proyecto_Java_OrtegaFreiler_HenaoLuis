@@ -23,13 +23,25 @@ public class viewInvoice extends javax.swing.JFrame {
         modelo= (DefaultTableModel)this.table.getModel();
         
         Object[] object = new Object[4];
+        this.nameCostumer.setText("Luis Henao");
         object[0]="Acetaminofen";
         object[1]=2;
         object[2]=1000;
         object[3]=2000;
         
         modelo.addRow(object);
-        this.nameCostumer.setText("Luis Henao");
+        object[0]="Acetaminofen";
+        object[1]=2;
+        object[2]=1000;
+        object[3]=2000;
+        
+        modelo.addRow(object);
+        object[0]="Acetaminofen";
+        object[1]=2;
+        object[2]=1000;
+        object[3]=2000;
+        
+        modelo.addRow(object);
         this.table.setModel(modelo);
     }
 
@@ -75,9 +87,10 @@ public class viewInvoice extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(72, 88, 45));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Factura");
 
         javax.swing.GroupLayout LogoLayout = new javax.swing.GroupLayout(Logo);
@@ -91,20 +104,28 @@ public class viewInvoice extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Empresa: Veterinaria feliz");
 
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Dirección: Calle 123, Tibú, Norte de Santander");
 
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Teléfono: 3001234567");
 
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Cliente: ");
 
+        nameCostumer.setForeground(new java.awt.Color(255, 255, 255));
         nameCostumer.setText("nombreCliente");
 
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Documento: ");
 
+        documentCostumer.setForeground(new java.awt.Color(255, 255, 255));
         documentCostumer.setText("documentoCliente");
 
+        table.setBackground(new java.awt.Color(155, 178, 108));
         table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -117,9 +138,11 @@ public class viewInvoice extends javax.swing.JFrame {
         jScrollPane2.setViewportView(table);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Total:");
 
         full.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        full.setForeground(new java.awt.Color(255, 255, 255));
         full.setText("totalF");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

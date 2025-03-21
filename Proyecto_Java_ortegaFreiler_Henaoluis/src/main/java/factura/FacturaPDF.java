@@ -1,27 +1,23 @@
 package factura;
 
-import com.itextpdf.io.image.ImageData;
-import com.itextpdf.io.image.ImageDataFactory;
+
+import Controlador.crtllogin;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.*;
-import com.itextpdf.layout.properties.UnitValue;
 
 import java.io.FileNotFoundException;
-import java.net.MalformedURLException;
 
 import vista.*;
 
 public class FacturaPDF {
     public static void main(String[] args) {
 
-    
+        //Se activa la vista de login y se activa el controlador
+        viewLogin VL=new viewLogin();
+        VL.setVisible(true);
+        crtllogin control=new crtllogin(VL);
 
-        viewInvoice vista1= new viewInvoice();
-        vista1.setVisible(true);
-
-        viewOwnerHome vistaDueñosPrincipal = new viewOwnerHome();
-        vistaDueñosPrincipal.setVisible(true);  
 
         String destino = "./factura.pdf";  // Nombre del archivo
         try {

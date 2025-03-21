@@ -10,11 +10,12 @@ public  class Persona {
     private int telefono;
     private String correo;
     private int contacto_emergencia;
+    private String tipo;
 
 
     public Persona(){}
 
-    public Persona(String nombre1, String nombre2, String apellido1, String apellido2, int num_identificacion, String direccion, int telefono, String correo, int contacto_emergencia) {
+    public Persona(String nombre1, String nombre2, String apellido1, String apellido2, int num_identificacion, String direccion, int telefono, String correo, int contacto_emergencia,String tipo) {
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
         this.apellido1 = apellido1;
@@ -24,7 +25,7 @@ public  class Persona {
         this.telefono = telefono;
         this.correo = correo;
         this.contacto_emergencia = contacto_emergencia;
-
+        this.tipo=tipo;
 
     }
 
@@ -98,5 +99,13 @@ public  class Persona {
 
     public void setContacto_emergencia(int contacto_emergencia) {
         this.contacto_emergencia = contacto_emergencia;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }
