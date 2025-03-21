@@ -1,6 +1,5 @@
 package factura;
 
-import Controlador.Controlador;
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.pdf.*;
@@ -31,20 +30,6 @@ public class FacturaPDF {
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            String logoPath = "gato.jpg";  // Asegúrate de que esta imagen exista en tu proyecto
-            ImageData imageData = ImageDataFactory.create(logoPath);
-            Image logo = new Image(imageData);
-            logo.setWidth(60);  // Ajusta el tamaño según necesites
-            logo.setHeight(60);
-
-            Table tablaT=new Table(2);
-            tablaT.setWidth(UnitValue.createPercentValue(100));
-            tablaT.addCell(new Cell().add( new Paragraph("Factura Electrónica")
-                    .setBold()
-                    .setFontSize(18)).setBorder(null));
-            tablaT.addCell(new Cell().add(logo).setBorder(null));
-
-            document.add(tablaT);
             // Agregar título
             document.add(new Paragraph("Factura Electrónica")
                     .setBold()
@@ -85,8 +70,6 @@ public class FacturaPDF {
             System.out.println("Factura generada correctamente: " + destino);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
         }
     }
 }
