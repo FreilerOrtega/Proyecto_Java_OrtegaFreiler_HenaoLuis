@@ -148,9 +148,9 @@
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="viewSurgeries" min="-2" pref="199" max="-2" attributes="0"/>
-                          <Component id="viewVaccine" min="-2" pref="199" max="-2" attributes="0"/>
-                          <Component id="viewHistoryS" min="-2" pref="200" max="-2" attributes="0"/>
+                          <Component id="btnViewSurgeries" min="-2" pref="199" max="-2" attributes="0"/>
+                          <Component id="btnViewVaccine" min="-2" pref="199" max="-2" attributes="0"/>
+                          <Component id="btnViewHistoryS" min="-2" pref="200" max="-2" attributes="0"/>
                           <Component id="btnViewHistoryC" min="-2" pref="200" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
@@ -163,11 +163,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnViewHistoryC" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="viewHistoryS" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnViewHistoryS" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="viewVaccine" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnViewVaccine" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="viewSurgeries" min="-2" max="-2" attributes="0"/>
+                      <Component id="btnViewSurgeries" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -188,7 +188,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="viewHistoryS">
+            <Component class="javax.swing.JButton" name="btnViewHistoryS">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a5" green="93" red="1" type="rgb"/>
@@ -199,13 +199,13 @@
                 <Property name="text" type="java.lang.String" value="Ver historial de salud"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewHistorySActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewHistorySActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="viewVaccine">
+            <Component class="javax.swing.JButton" name="btnViewVaccine">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a5" green="93" red="1" type="rgb"/>
@@ -219,7 +219,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JButton" name="viewSurgeries">
+            <Component class="javax.swing.JButton" name="btnViewSurgeries">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="a5" green="93" red="1" type="rgb"/>
@@ -230,7 +230,7 @@
                 <Property name="text" type="java.lang.String" value="Ver cirugias de mascotas"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="viewSurgeriesActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewSurgeriesActionPerformed"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

@@ -35,9 +35,9 @@ public class viewOwnerHome extends javax.swing.JFrame {
         visits = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnViewHistoryC = new javax.swing.JButton();
-        viewHistoryS = new javax.swing.JButton();
-        viewVaccine = new javax.swing.JButton();
-        viewSurgeries = new javax.swing.JButton();
+        btnViewHistoryS = new javax.swing.JButton();
+        btnViewVaccine = new javax.swing.JButton();
+        btnViewSurgeries = new javax.swing.JButton();
 
         jLabel2.setText("jLabel2");
 
@@ -62,25 +62,25 @@ public class viewOwnerHome extends javax.swing.JFrame {
         btnViewHistoryC.setForeground(new java.awt.Color(255, 255, 255));
         btnViewHistoryC.setText("Ver historial de citas");
 
-        viewHistoryS.setBackground(new java.awt.Color(1, 147, 165));
-        viewHistoryS.setForeground(new java.awt.Color(255, 255, 255));
-        viewHistoryS.setText("Ver historial de salud");
-        viewHistoryS.addActionListener(new java.awt.event.ActionListener() {
+        btnViewHistoryS.setBackground(new java.awt.Color(1, 147, 165));
+        btnViewHistoryS.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewHistoryS.setText("Ver historial de salud");
+        btnViewHistoryS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewHistorySActionPerformed(evt);
+                btnViewHistorySActionPerformed(evt);
             }
         });
 
-        viewVaccine.setBackground(new java.awt.Color(1, 147, 165));
-        viewVaccine.setForeground(new java.awt.Color(255, 255, 255));
-        viewVaccine.setText("Ver vacunas aplicadas");
+        btnViewVaccine.setBackground(new java.awt.Color(1, 147, 165));
+        btnViewVaccine.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewVaccine.setText("Ver vacunas aplicadas");
 
-        viewSurgeries.setBackground(new java.awt.Color(1, 147, 165));
-        viewSurgeries.setForeground(new java.awt.Color(255, 255, 255));
-        viewSurgeries.setText("Ver cirugias de mascotas");
-        viewSurgeries.addActionListener(new java.awt.event.ActionListener() {
+        btnViewSurgeries.setBackground(new java.awt.Color(1, 147, 165));
+        btnViewSurgeries.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewSurgeries.setText("Ver cirugias de mascotas");
+        btnViewSurgeries.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                viewSurgeriesActionPerformed(evt);
+                btnViewSurgeriesActionPerformed(evt);
             }
         });
 
@@ -91,9 +91,9 @@ public class viewOwnerHome extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(viewSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(viewHistoryS, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnViewSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnViewVaccine, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnViewHistoryS, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnViewHistoryC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(68, 68, 68))
         );
@@ -103,11 +103,11 @@ public class viewOwnerHome extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btnViewHistoryC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(viewHistoryS)
+                .addComponent(btnViewHistoryS)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(viewVaccine)
+                .addComponent(btnViewVaccine)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(viewSurgeries)
+                .addComponent(btnViewSurgeries)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -165,13 +165,13 @@ public class viewOwnerHome extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void viewHistorySActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewHistorySActionPerformed
+    private void btnViewHistorySActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewHistorySActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_viewHistorySActionPerformed
+    }//GEN-LAST:event_btnViewHistorySActionPerformed
 
-    private void viewSurgeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_viewSurgeriesActionPerformed
+    private void btnViewSurgeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewSurgeriesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_viewSurgeriesActionPerformed
+    }//GEN-LAST:event_btnViewSurgeriesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -211,14 +211,14 @@ public class viewOwnerHome extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnViewHistoryC;
+    public javax.swing.JButton btnViewHistoryS;
+    public javax.swing.JButton btnViewSurgeries;
+    public javax.swing.JButton btnViewVaccine;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     public javax.swing.JLabel ownerName;
-    public javax.swing.JButton viewHistoryS;
-    public javax.swing.JButton viewSurgeries;
-    public javax.swing.JButton viewVaccine;
     public javax.swing.JLabel visits;
     // End of variables declaration//GEN-END:variables
 }

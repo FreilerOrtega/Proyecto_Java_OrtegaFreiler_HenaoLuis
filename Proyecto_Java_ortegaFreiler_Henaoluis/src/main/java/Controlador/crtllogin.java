@@ -29,12 +29,16 @@ public class crtllogin  implements ActionListener {
 
             try {
                 int id=logDao.logInConf(login);// se obtiene el id de la persona que tiene ese usuario y contrasena
+                if (id==0){
+                    throw new Exception("Usuario o contraseña incorrecto");
+                }
                 people=DAO.SearchPeopleById(id);//se asignan los datos de la persona en base al id
-
+                System.out.println(people.getTipo());
                 if (people.getTipo().toLowerCase().equals("cliente")){
                     //si la persona es de tipo cliente se cierra la vista de login y se abre la de dueno
                     vLogin.setVisible(false);
                     viewOwnerHome VOH=new viewOwnerHome();
+                    ctrlOwnerHome ctrOwHom=new ctrlOwnerHome(VOH,people);
                     VOH.setVisible(true);
                 }
             }catch (Exception i){

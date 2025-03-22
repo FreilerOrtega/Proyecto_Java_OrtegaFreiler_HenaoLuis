@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class LoginDAO {
 
     public int logInConf(Login login) throws SQLException {
-        String sql="Select id_persona from login where user=? and password=?";
+        String sql="Select person_id from login where username=? and passwordU=?";
 
         try(Connection con=Conect.getCon();
             PreparedStatement ps= con.prepareStatement(sql);)
@@ -17,12 +17,9 @@ public class LoginDAO {
             ps.setString(1,login.getUsuario());
             ps.setString(2,login.getContrasena());
 
-            ResultSet rs=ps.executeQuery();
+                ResultSet rs=ps.executeQuery();
             if (rs.next()){//si encuentra un login que cumplan con los datos se retorna el id de la persona que tenga ese login
                 return rs.getInt(1);
-            }
-            else {
-                JOptionPane.showMessageDialog(null,"Usuario o contraseña invalida");
             }
 
         } catch (SQLException e) {

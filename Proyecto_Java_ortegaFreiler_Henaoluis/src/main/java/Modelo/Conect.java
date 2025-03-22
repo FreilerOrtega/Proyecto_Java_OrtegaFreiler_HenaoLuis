@@ -5,9 +5,9 @@ import java.sql.*;
 public class Conect {
 
     Connection con = null;
-    private static String url = "jdbc:mysql://localhost:3306/dia_19";
-    private static String user = "root";
-    private static String password="";
+    private static String url = "jdbc:mysql://b9ukenypawjyakayyu3r-mysql.services.clever-cloud.com:3306/b9ukenypawjyakayyu3r";
+    private static String user = "uxjqgjaen33op09b";
+    private static String password="gX2pupB6Gb96kwt1e0ef";
 
     public static Connection getCon() {
         Connection con = null;
