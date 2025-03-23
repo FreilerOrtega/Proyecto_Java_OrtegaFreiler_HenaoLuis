@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class personaDAO {
+public class PersonaDAO {
 
     public Persona SearchPeopleById(int id) throws SQLException {
         Persona persona=new Persona();

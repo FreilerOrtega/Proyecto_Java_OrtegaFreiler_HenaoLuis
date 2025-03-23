@@ -1,70 +1,58 @@
-package Modelo;
+package Model;
 
 public class Desparacitaciones {
-    private String tipo;
-    private String fecha_aplicacion;
-    private String proxima_aplicacion;
-    private int id_medico;
-    private int id_mascota;
-    private int  id_veterinario;
+    private int idDeworming;  // New attribute 'idDeworming'
+    private String type;
+    private String applicationDate;
+    private String nextApplication;
+    private int doctorId;
+    private int petId;
+    private int veterinarianId;
 
     public Desparacitaciones() {
     }
 
-    public Desparacitaciones(String tipo, String fecha_aplicacion, String proxima_aplicacion, int id_medico, int id_mascota, int id_veterinario) {
-        this.tipo = tipo;
-        this.fecha_aplicacion = fecha_aplicacion;
-        this.proxima_aplicacion = proxima_aplicacion;
-        this.id_medico = id_medico;
-        this.id_mascota = id_mascota;
-        this.id_veterinario = id_veterinario;
+    public Desparacitaciones(int idDeworming, String type, String applicationDate, String nextApplication, int doctorId, int petId, int veterinarianId) {
+        this.idDeworming = idDeworming;  // Initialize new attribute
+        this.type = type;
+        this.applicationDate = applicationDate;
+        this.nextApplication = nextApplication;
+        this.doctorId = doctorId;
+        this.petId = petId;
+        this.veterinarianId = veterinarianId;
     }
 
-    public String getTipo() {
-        return tipo;
+    public int getIdDeworming() {
+        return idDeworming;  // Getter for 'idDeworming'
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setIdDeworming(int idDeworming) {
+        this.idDeworming = idDeworming;  // Setter for 'idDeworming'
     }
 
-    public String getFecha_aplicacion() {
-        return fecha_aplicacion;
+    public String getType() {
+        return type;
     }
 
-    public void setFecha_aplicacion(String fecha_aplicacion) {
-        this.fecha_aplicacion = fecha_aplicacion;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    public String getProxima_aplicacion() {
-        return proxima_aplicacion;
+    public String getApplicationDate() {
+        return applicationDate;
     }
 
-    public void setProxima_aplicacion(String proxima_aplicacion) {
-        this.proxima_aplicacion = proxima_aplicacion;
+    public void setApplicationDate(String applicationDate) {
+        this.applicationDate = applicationDate;
     }
 
-    public int getId_medico() {
-        return id_medico;
+    public String getNextApplication() {
+        return nextApplication;
     }
 
-    public void setId_medico(int id_medico) {
-        this.id_medico = id_medico;
+    public void setNextApplication(String nextApplication) {
+        this.nextApplication = nextApplication;
     }
 
-    public int getId_mascota() {
-        return id_mascota;
-    }
-
-    public void setId_mascota(int id_mascota) {
-        this.id_mascota = id_mascota;
-    }
-
-    public int getId_veterinario() {
-        return id_veterinario;
-    }
-
-    public void setId_veterinario(int id_veterinario) {
-        this.id_veterinario = id_veterinario;
-    }
-}
+    public int getDoctorId() {
+        return doctor

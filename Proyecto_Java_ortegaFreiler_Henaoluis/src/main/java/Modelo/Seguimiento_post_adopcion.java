@@ -1,40 +1,43 @@
-package Modelo;
+package Model;
 
-public class Seguimiento_post_adopcion {
-    private int id_contrato;
-    private String detalles;
-    private String fecha;
+public class seguimientoPostAdopcion {
+    private int contractId;
+    private String details;
+    private String date;
 
-    public Seguimiento_post_adopcion() {
+    public seguimientoPostAdopcion() {
     }
 
-    public Seguimiento_post_adopcion(int id_contrato, String detalles, String fecha) {
-        this.id_contrato = id_contrato;
-        this.detalles = detalles;
-        this.fecha = fecha;
+    public seguimientoPostAdopcion(int contractId, String details, String date) {
+        this.contractId = contractId;
+        this.details = details;
+        this.date = date;
     }
 
-    public int getId_contrato() {
-        return id_contrato;
+    // Getter and Setter for 'contractId'
+    public int getContractId() {
+        return contractId;
     }
 
-    public void setId_contrato(int id_contrato) {
-        this.id_contrato = id_contrato;
+    public void setContractId(int contractId) {
+        this.contractId = contractId;
     }
 
-    public String getDetalles() {
-        return detalles;
+    // Getter and Setter for 'details'
+    public String getDetails() {
+        return details;
     }
 
-    public void setDetalles(String detalles) {
-        this.detalles = detalles;
+    public void setDetails(String details) {
+        this.details = details;
     }
 
-    public String getFecha() {
-        return fecha;
+    // Getter and Setter for 'date'
+    public String getDate() {
+        return date;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setDate(String date) {
+        this.date = date;
     }
 }

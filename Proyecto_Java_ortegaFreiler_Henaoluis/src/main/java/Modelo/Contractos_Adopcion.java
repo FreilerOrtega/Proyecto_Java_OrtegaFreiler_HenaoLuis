@@ -1,41 +1,50 @@
 package Modelo;
 
-public class Contractos_Adopcion {
-    private int id_mascota;
-    private int id_dueno;
-    private String fecha ;
+public class ContractoAdopcion {
+    private int idContract;  // New attribute 'idContract'
+    private int petId;
+    private int ownerId;
+    private String date;
 
-
-    public Contractos_Adopcion() {
+    public ContractoAdopcion() {
     }
 
-    public Contractos_Adopcion(int id_mascota, int id_dueno, String fecha) {
-        this.id_mascota = id_mascota;
-        this.id_dueno = id_dueno;
-        this.fecha = fecha;
+    public ContractoAdopcion(int idContract, int petId, int ownerId, String date) {
+        this.idContract = idContract;  // Initialization of the new attribute
+        this.petId = petId;
+        this.ownerId = ownerId;
+        this.date = date;
     }
 
-    public int getId_mascota() {
-        return id_mascota;
+    public int getIdContract() {
+        return idContract;  // Getter for 'idContract'
     }
 
-    public void setId_mascota(int id_mascota) {
-        this.id_mascota = id_mascota;
+    public void setIdContract(int idContract) {
+        this.idContract = idContract;  // Setter for 'idContract'
     }
 
-    public int getId_dueno() {
-        return id_dueno;
+    public int getPetId() {
+        return petId;
     }
 
-    public void setId_dueno(int id_dueno) {
-        this.id_dueno = id_dueno;
+    public void setPetId(int petId) {
+        this.petId = petId;
     }
 
-    public String getFecha() {
-        return fecha;
+    public int getOwnerId() {
+        return ownerId;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setOwnerId(int ownerId) {
+        this.ownerId = ownerId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

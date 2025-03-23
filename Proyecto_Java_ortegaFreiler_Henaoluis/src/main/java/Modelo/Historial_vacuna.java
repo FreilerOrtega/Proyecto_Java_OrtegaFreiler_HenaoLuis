@@ -1,50 +1,25 @@
-package Modelo;
+package Model;
 
-public class Historial_vacuna {
-    private int id_mascota;
-    private int  id_vacuna;
-    private String fecha_aplicacion;
-    private String proxima_dosis;
+public class Historialvacuna {
+    private int idHistory;  // New attribute 'idHistory'
+    private int petId;
+    private int vaccineId;
+    private String applicationDate;
+    private String nextDose;
 
-    public Historial_vacuna() {
+    public Historialvacuna() {
     }
 
-    public Historial_vacuna(int id_mascota, int id_vacuna, String fecha_aplicacion, String proxima_dosis) {
-        this.id_mascota = id_mascota;
-        this.id_vacuna = id_vacuna;
-        this.fecha_aplicacion = fecha_aplicacion;
-        this.proxima_dosis = proxima_dosis;
+    public Historialvacuna(int idHistory, int petId, int vaccineId, String applicationDate, String nextDose) {
+        this.idHistory = idHistory;  // Initialize the new attribute
+        this.petId = petId;
+        this.vaccineId = vaccineId;
+        this.applicationDate = applicationDate;
+        this.nextDose = nextDose;
     }
 
-    public int getId_mascota() {
-        return id_mascota;
+    public int getIdHistory() {
+        return idHistory;  // Getter for 'idHistory'
     }
 
-    public void setId_mascota(int id_mascota) {
-        this.id_mascota = id_mascota;
-    }
-
-    public int getId_vacuna() {
-        return id_vacuna;
-    }
-
-    public void setId_vacuna(int id_vacuna) {
-        this.id_vacuna = id_vacuna;
-    }
-
-    public String getFecha_aplicacion() {
-        return fecha_aplicacion;
-    }
-
-    public void setFecha_aplicacion(String fecha_aplicacion) {
-        this.fecha_aplicacion = fecha_aplicacion;
-    }
-
-    public String getProxima_dosis() {
-        return proxima_dosis;
-    }
-
-    public void setProxima_dosis(String proxima_dosis) {
-        this.proxima_dosis = proxima_dosis;
-    }
-}
+    public void setIdHistory(int idHistory

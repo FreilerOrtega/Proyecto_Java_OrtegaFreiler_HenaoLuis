@@ -1,40 +1,50 @@
-package Modelo;
+package Model;
 
 public class Facturas {
-    private int id_cliente;
-    private int id_medicamento;
-    private int cantidad;
+    private int idInvoice;  // New attribute 'idInvoice'
+    private int clientId;
+    private int medicationId;
+    private int quantity;
 
     public Facturas() {
     }
 
-    public Facturas(int id_cliente, int id_medicamento, int cantidad) {
-        this.id_cliente = id_cliente;
-        this.id_medicamento = id_medicamento;
-        this.cantidad = cantidad;
+    public Facturas(int idInvoice, int clientId, int medicationId, int quantity) {
+        this.idInvoice = idInvoice;  // Initialize the new attribute
+        this.clientId = clientId;
+        this.medicationId = medicationId;
+        this.quantity = quantity;
     }
 
-    public int getId_cliente() {
-        return id_cliente;
+    public int getIdInvoice() {
+        return idInvoice;  // Getter for 'idInvoice'
     }
 
-    public void setId_cliente(int id_cliente) {
-        this.id_cliente = id_cliente;
+    public void setIdInvoice(int idInvoice) {
+        this.idInvoice = idInvoice;  // Setter for 'idInvoice'
     }
 
-    public int getId_medicamento() {
-        return id_medicamento;
+    public int getClientId() {
+        return clientId;
     }
 
-    public void setId_medicamento(int id_medicamento) {
-        this.id_medicamento = id_medicamento;
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
     }
 
-    public int getCantidad() {
-        return cantidad;
+    public int getMedicationId() {
+        return medicationId;
     }
 
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
+    public void setMedicationId(int medicationId) {
+        this.medicationId = medicationId;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

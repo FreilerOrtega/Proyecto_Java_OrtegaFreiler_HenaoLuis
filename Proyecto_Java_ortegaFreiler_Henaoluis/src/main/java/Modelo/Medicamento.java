@@ -1,70 +1,85 @@
 package Modelo;
 
 public class Medicamento {
-    private String nombre;
-    private int id_lote;
-    private String fabricante;
-    private int tipo;
-    private String presentacion;
-    private int precio;
+    private int idMedication;  // Added idMedication attribute
+    private String name;
+    private int batchId;
+    private String manufacturer;
+    private int type;
+    private String presentation;
+    private int price;
 
-    public Medicamento() {
+    public Medicamento() {}
+
+    public Medicamento(String name, int batchId, String manufacturer, int type, String presentation, int price) {
+        this.name = name;
+        this.batchId = batchId;
+        this.manufacturer = manufacturer;
+        this.type = type;
+        this.presentation = presentation;
+        this.price = price;
     }
 
-    public Medicamento(String nombre, int id_lote, String fabricante, int tipo, String presentacion, int precio) {
-        this.nombre = nombre;
-        this.id_lote = id_lote;
-        this.fabricante = fabricante;
-        this.tipo = tipo;
-        this.presentacion = presentacion;
-        this.precio = precio;
+    // Getter and Setter for 'idMedication'
+    public int getIdMedication() {
+        return idMedication;
     }
 
-    public String getNombre() {
-        return nombre;
+    public void setIdMedication(int idMedication) {
+        this.idMedication = idMedication;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    // Getter and Setter for 'name'
+    public String getName() {
+        return name;
     }
 
-    public int getId_lote() {
-        return id_lote;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setId_lote(int id_lote) {
-        this.id_lote = id_lote;
+    // Getter and Setter for 'batchId'
+    public int getBatchId() {
+        return batchId;
     }
 
-    public String getFabricante() {
-        return fabricante;
+    public void setBatchId(int batchId) {
+        this.batchId = batchId;
     }
 
-    public void setFabricante(String fabricante) {
-        this.fabricante = fabricante;
+    // Getter and Setter for 'manufacturer'
+    public String getManufacturer() {
+        return manufacturer;
     }
 
-    public int getTipo() {
-        return tipo;
+    public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
-    public void setTipo(int tipo) {
-        this.tipo = tipo;
+    // Getter and Setter for 'type'
+    public int getType() {
+        return type;
     }
 
-    public String getPresentacion() {
-        return presentacion;
+    public void setType(int type) {
+        this.type = type;
     }
 
-    public void setPresentacion(String presentacion) {
-        this.presentacion = presentacion;
+    // Getter and Setter for 'presentation'
+    public String getPresentation() {
+        return presentation;
     }
 
-    public int getPrecio() {
-        return precio;
+    public void setPresentation(String presentation) {
+        this.presentation = presentation;
     }
 
-    public void setPrecio(int precio) {
-        this.precio = precio;
+    // Getter and Setter for 'price'
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
