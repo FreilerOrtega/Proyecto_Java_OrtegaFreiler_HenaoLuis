@@ -1,23 +1,23 @@
 package Modelo;
 
 public class Procedimientos {
-    private int id;
-    private int id_mascota;
-    private String procedimiento_aplicado;
-    private String fecha;
-    private int id_veterinario;
-    private int id_cita_asignada;
+    private int id ;
+    private int pet_id;
+    private String procedurer ;
+    private String dates ;
+    private int veterinarian_id;
+    private int appointment_id;
 
     public Procedimientos() {
     }
 
-    public Procedimientos(int id,int id_mascota, String procedimiento_aplicado, String fecha, int id_veterinario, int id_cita_asignada) {
-        this.id=id;
-        this.id_mascota = id_mascota;
-        this.procedimiento_aplicado = procedimiento_aplicado;
-        this.fecha = fecha;
-        this.id_veterinario = id_veterinario;
-        this.id_cita_asignada = id_cita_asignada;
+    public Procedimientos(int id, int pet_id, String procedurer, String dates, int veterinarian_id, int appointment_id) {
+        this.id = id;
+        this.pet_id = pet_id;
+        this.procedurer = procedurer;
+        this.dates = dates;
+        this.veterinarian_id = veterinarian_id;
+        this.appointment_id = appointment_id;
     }
 
     public int getId() {
@@ -28,43 +28,43 @@ public class Procedimientos {
         this.id = id;
     }
 
-    public int getId_mascota() {
-        return id_mascota;
+    public int getPet_id() {
+        return pet_id;
     }
 
-    public void setId_mascota(int id_mascota) {
-        this.id_mascota = id_mascota;
+    public void setPet_id(int pet_id) {
+        this.pet_id = pet_id;
     }
 
-    public String getProcedimiento_aplicado() {
-        return procedimiento_aplicado;
+    public String getProcedurer() {
+        return procedurer;
     }
 
-    public void setProcedimiento_aplicado(String procedimiento_aplicado) {
-        this.procedimiento_aplicado = procedimiento_aplicado;
+    public void setProcedurer(String procedurer) {
+        this.procedurer = procedurer;
     }
 
-    public String getFecha() {
-        return fecha;
+    public String getDates() {
+        return dates;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setDates(String dates) {
+        this.dates = dates;
     }
 
-    public int getId_veterinario() {
-        return id_veterinario;
+    public int getVeterinarian_id() {
+        return veterinarian_id;
     }
 
-    public void setId_veterinario(int id_veterinario) {
-        this.id_veterinario = id_veterinario;
+    public void setVeterinarian_id(int veterinarian_id) {
+        this.veterinarian_id = veterinarian_id;
     }
 
-    public int getId_cita_asignada() {
-        return id_cita_asignada;
+    public int getAppointment_id() {
+        return appointment_id;
     }
 
-    public void setId_cita_asignada(int id_cita_asignada) {
-        this.id_cita_asignada = id_cita_asignada;
+    public void setAppointment_id(int appointment_id) {
+        this.appointment_id = appointment_id;
     }
 }

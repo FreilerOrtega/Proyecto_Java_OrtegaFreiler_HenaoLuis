@@ -14,12 +14,17 @@ public class LoginDAO {
         try(Connection con=Conect.getCon();
             PreparedStatement ps= con.prepareStatement(sql);)
         {
-            ps.setString(1,login.getUsuario());
-            ps.setString(2,login.getContrasena());
+            ps.setString(1,login.getUsername());
+            ps.setString(2,login.getPassword());
 
                 ResultSet rs=ps.executeQuery();
             if (rs.next()){//si encuentra un login que cumplan con los datos se retorna el id de la persona que tenga ese login
                 return rs.getInt(1);
+            }
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
             }
 
         } catch (SQLException e) {

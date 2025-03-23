@@ -1,29 +1,27 @@
-package Model;
+package Modelo;
 
-public class Medicamento_facturado {
-    private int invoiceId;  // Added invoiceId attribute
+public class Medicamento_factura {
+    private int id;
     private int medicationId;
     private int quantity;
 
-    public Medicamento_facturado() {
+    public Medicamento_factura() {
     }
 
-    public Medicamento_facturado(int invoiceId, int medicationId, int quantity) {
-        this.invoiceId = invoiceId;
+    public Medicamento_factura(int id, int medicationId, int quantity) {
+        this.id = id;
         this.medicationId = medicationId;
         this.quantity = quantity;
     }
 
-    // Getter and Setter for 'invoiceId'
-    public int getInvoiceId() {
-        return invoiceId;
+    public int getId() {
+        return id;
     }
 
-    public void setInvoiceId(int invoiceId) {
-        this.invoiceId = invoiceId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    // Getter and Setter for 'medicationId'
     public int getMedicationId() {
         return medicationId;
     }
@@ -32,7 +30,6 @@ public class Medicamento_facturado {
         this.medicationId = medicationId;
     }
 
-    // Getter and Setter for 'quantity'
     public int getQuantity() {
         return quantity;
     }

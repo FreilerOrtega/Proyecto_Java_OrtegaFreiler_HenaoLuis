@@ -13,7 +13,7 @@ public class crtllogin  implements ActionListener {
     Login login=new Login();
     LoginDAO logDao = new LoginDAO();
     Persona people= new Persona();
-    personaDAO DAO=new personaDAO();
+    PersonaDAO DAO=new PersonaDAO();
 
     public crtllogin(viewLogin login) {
         vLogin = login;
@@ -29,8 +29,8 @@ public class crtllogin  implements ActionListener {
     }
 
     public void CheckUserPassword() {
-        login.setUsuario(vLogin.inputUser.getText());//se toman los datos que se hayan ingresado en el input de usuario
-        login.setContrasena(vLogin.inputPassword.getText());//se toman los datos que se hayan ingresado en el input de contrasena
+        login.setUsername(vLogin.inputUser.getText());//se toman los datos que se hayan ingresado en el input de usuario
+        login.setPassword(vLogin.inputPassword.getText());//se toman los datos que se hayan ingresado en el input de contrasena
 
         try {
             int id = logDao.logInConf(login);// se obtiene el id de la persona que tiene ese usuario y contrasena
@@ -38,8 +38,8 @@ public class crtllogin  implements ActionListener {
                 throw new Exception("Usuario o contraseña incorrecto");
             }
             people = DAO.SearchPeopleById(id);//se asignan los datos de la persona en base al id
-            System.out.println(people.getTipo());
-            if (people.getTipo().toLowerCase().equals("cliente")) {
+            System.out.println(people.getPerson_type());
+            if (people.getPerson_type().toLowerCase().equals("cliente")) {
                 //si la persona es de tipo cliente se cierra la vista de login y se abre la de dueno
                 vLogin.setVisible(false);
                 viewOwnerHome VOH = new viewOwnerHome();

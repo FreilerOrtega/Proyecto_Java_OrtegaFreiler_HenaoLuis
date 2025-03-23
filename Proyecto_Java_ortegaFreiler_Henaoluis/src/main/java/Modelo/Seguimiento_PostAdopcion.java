@@ -1,14 +1,14 @@
-package Model;
+package Modelo;
 
-public class seguimientoPostAdopcion {
+public class Seguimiento_PostAdopcion {
     private int contractId;
     private String details;
     private String date;
 
-    public seguimientoPostAdopcion() {
+    public Seguimiento_PostAdopcion() {
     }
 
-    public seguimientoPostAdopcion(int contractId, String details, String date) {
+    public Seguimiento_PostAdopcion(int contractId, String details, String date) {
         this.contractId = contractId;
         this.details = details;
         this.date = date;

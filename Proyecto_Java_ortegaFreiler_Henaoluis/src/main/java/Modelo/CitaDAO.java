@@ -39,15 +39,20 @@ public class CitaDAO {
             while (rs.next()){
                 Cita appointment=new Cita();
                 appointment.setId(rs.getInt(1));
-                appointment.setId_mascota(rs.getInt(2));
-                appointment.setId_veterinaro(rs.getInt(3));
-                appointment.setFecha(rs.getString(4));
-                appointment.setMotivo_consulta(rs.getString(5));
-                appointment.setId_veterinaro(rs.getInt(6));
-                appointment.setDiagnostico(rs.getString(7));
-                appointment.setAsistencia(rs.getBoolean(8));
-                appointment.setEstado(rs.getString(9));
+                appointment.setPet_id(rs.getInt(2));
+                appointment.setOwner_id(rs.getInt(3));
+                appointment.setDates(rs.getString(4));
+                appointment.setConsultation_reason(rs.getString(5));
+                appointment.setVeterinarian_id(rs.getInt(6));
+                appointment.setDiagnosis(rs.getString(7));
+                appointment.setAttendance(rs.getBoolean(8));
+                appointment.setStatus(rs.getString(9));
                 appointmentsList.add(appointment);
+            }
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
             }
 
         } catch (Exception e) {

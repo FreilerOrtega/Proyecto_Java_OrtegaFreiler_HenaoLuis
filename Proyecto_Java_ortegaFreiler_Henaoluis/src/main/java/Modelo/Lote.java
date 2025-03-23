@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Lote {
-    private int idBatch;  // New attribute 'idBatch'
+    private int id;
     private String entryDate;
     private int entryQuantity;
     private int currentQuantity;
@@ -17,10 +17,43 @@ public class Lote {
         this.expirationDate = expirationDate;
     }
 
-    // Getter and Setter for 'idBatch'
-    public int getIdBatch() {
-        return idBatch;
+    public int getId() {
+        return id;
     }
 
-    public void setIdBatch(int idBatch) {
-        this.idBatch =
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getEntryDate() {
+        return entryDate;
+    }
+
+    public void setEntryDate(String entryDate) {
+        this.entryDate = entryDate;
+    }
+
+    public int getEntryQuantity() {
+        return entryQuantity;
+    }
+
+    public void setEntryQuantity(int entryQuantity) {
+        this.entryQuantity = entryQuantity;
+    }
+
+    public int getCurrentQuantity() {
+        return currentQuantity;
+    }
+
+    public void setCurrentQuantity(int currentQuantity) {
+        this.currentQuantity = currentQuantity;
+    }
+
+    public String getExpirationDate() {
+        return expirationDate;
+    }
+
+    public void setExpirationDate(String expirationDate) {
+        this.expirationDate = expirationDate;
+    }
+}

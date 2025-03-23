@@ -62,14 +62,14 @@ public class CtrlHealthHistory implements ActionListener {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        VHH.labelName.setText(pet.getNombre());
-        VHH.labelSpecies.setText(pet.getEspecie());
-        VHH.labelRace.setText(pet.getRaza());
-        VHH.labelAge.setText(""+pet.getEdad()+" años");
-        VHH.labelBirthDate.setText(pet.getFecha_nacimiento());
-        VHH.labelSex.setText(pet.getSexo());
-        VHH.labelWeight.setText(""+pet.getPeso());
-        if (pet.getTatuaje()==null){
+        VHH.labelName.setText(pet.getNameP());
+        VHH.labelSpecies.setText(pet.getSpecies());
+        VHH.labelRace.setText(pet.getBreed());
+        VHH.labelAge.setText(""+pet.getAge()+" años");
+        VHH.labelBirthDate.setText(pet.getBirth_date());
+        VHH.labelSex.setText(pet.getGender());
+        VHH.labelWeight.setText(""+pet.getWeight());
+        if (pet.getTatto()==null){
             VHH.labelTatto.setText("No aplica");
         } else if (pet.getMicroChip()==null) {
             VHH.labelMC.setText("No aplica");
@@ -84,8 +84,8 @@ public class CtrlHealthHistory implements ActionListener {
             ConditionList=padecimientoDAO.getConditionByPet(id);
             Object[] object=new Object[2];
             for (Padecimiento c:ConditionList){
-                object[0]=c.getFecha_deteccion();
-                object[1]=c.getDiagnostico();
+                object[0]=c.getDetection_date();
+                object[1]=c.getDiagnosis();
                 model.addRow(object);
             }
         } catch (Exception e) {

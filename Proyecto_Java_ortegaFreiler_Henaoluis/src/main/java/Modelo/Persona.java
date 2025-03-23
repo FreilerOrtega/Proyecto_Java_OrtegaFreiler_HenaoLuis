@@ -1,34 +1,33 @@
 package Modelo;
 
 public  class Persona {
-    private int id;
-    private String nombre1;
-    private String nombre2;
-    private String apellido1;
-    private String apellido2;
-    private long num_identificacion;
-    private String direccion;
-    private long telefono;
-    private String correo;
-    private long contacto_emergencia;
-    private String tipo;
+    private int id ;
+    private String first_name ;
+    private String second_name ;
+    private String last_name1 ;
+    private String last_name2 ;
+    private long id_number;
+    private String address ;
+    private long phone ;
+    private String email ;
+    private long emergency_contact;
+    private String person_type;
 
 
     public Persona(){}
 
-    public Persona(int id,String nombre1, String nombre2, String apellido1, String apellido2, long num_identificacion, String direccion, long telefono, String correo, long contacto_emergencia,String tipo) {
-        this.id=id;
-        this.nombre1 = nombre1;
-        this.nombre2 = nombre2;
-        this.apellido1 = apellido1;
-        this.apellido2 = apellido2;
-        this.num_identificacion = num_identificacion;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.correo = correo;
-        this.contacto_emergencia = contacto_emergencia;
-        this.tipo=tipo;
-
+    public Persona(int id, String first_name, String second_name, String last_name1, String last_name2, long id_number, String address, long phone, String email, long emergency_contact, String person_type) {
+        this.id = id;
+        this.first_name = first_name;
+        this.second_name = second_name;
+        this.last_name1 = last_name1;
+        this.last_name2 = last_name2;
+        this.id_number = id_number;
+        this.address = address;
+        this.phone = phone;
+        this.email = email;
+        this.emergency_contact = emergency_contact;
+        this.person_type = person_type;
     }
 
     public int getId() {
@@ -39,86 +38,88 @@ public  class Persona {
         this.id = id;
     }
 
-    public String getNombre1() {
-        return nombre1;
+    public String getFirst_name() {
+        return first_name;
     }
 
-    public void setNombre1(String nombre1) {
-        this.nombre1 = nombre1;
+    public void setFirst_name(String first_name) {
+        this.first_name = first_name;
     }
 
-    public String getNombre2() {
-        return nombre2;
+    public String getSecond_name() {
+        return second_name;
     }
 
-    public void setNombre2(String nombre2) {
-        this.nombre2 = nombre2;
+    public void setSecond_name(String second_name) {
+        this.second_name = second_name;
     }
 
-    public String getApellido1() {
-        return apellido1;
+    public String getLast_name1() {
+        return last_name1;
     }
 
-    public void setApellido1(String apellido1) {
-        this.apellido1 = apellido1;
+    public void setLast_name1(String last_name1) {
+        this.last_name1 = last_name1;
     }
 
-    public String getApellido2() {
-        return apellido2;
+    public String getLast_name2() {
+        return last_name2;
     }
 
-    public void setApellido2(String apellido2) {
-        this.apellido2 = apellido2;
+    public void setLast_name2(String last_name2) {
+        this.last_name2 = last_name2;
     }
 
-    public long getNum_identificacion() {
-        return num_identificacion;
+    public long getId_number() {
+        return id_number;
     }
 
-    public void setNum_identificacion(long num_identificacion) {
-        this.num_identificacion = num_identificacion;
+    public void setId_number(long id_number) {
+        this.id_number = id_number;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getAddress() {
+        return address;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public long getTelefono() {
-        return telefono;
+    public long getPhone() {
+        return phone;
     }
 
-    public void setTelefono(long telefono) {
-        this.telefono = telefono;
+    public void setPhone(long phone) {
+        this.phone = phone;
     }
 
-    public String getCorreo() {
-        return correo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setCorreo(String correo) {
-        this.correo = correo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public long getContacto_emergencia() {
-        return contacto_emergencia;
+    public long getEmergency_contact() {
+        return emergency_contact;
     }
 
-    public void setContacto_emergencia(long contacto_emergencia) {
-        this.contacto_emergencia = contacto_emergencia;
+    public void setEmergency_contact(long emergency_contact) {
+        this.emergency_contact = emergency_contact;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getPerson_type() {
+        return person_type;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setPerson_type(String person_type) {
+        this.person_type = person_type;
     }
+
     public String getAllName(){
-        return nombre1+" "+nombre2+" "+apellido1+" "+apellido2;
+        return first_name+" "+second_name+" "+last_name1+" "+last_name2;
     }
 }
+

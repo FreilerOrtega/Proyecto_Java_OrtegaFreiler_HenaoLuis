@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Medicamento {
-    private int idMedication;  // Added idMedication attribute
+    private int id;
     private String name;
     private int batchId;
     private String manufacturer;
@@ -11,7 +11,8 @@ public class Medicamento {
 
     public Medicamento() {}
 
-    public Medicamento(String name, int batchId, String manufacturer, int type, String presentation, int price) {
+    public Medicamento(int id, String name, int batchId, String manufacturer, int type, String presentation, int price) {
+        this.id = id;
         this.name = name;
         this.batchId = batchId;
         this.manufacturer = manufacturer;
@@ -20,16 +21,14 @@ public class Medicamento {
         this.price = price;
     }
 
-    // Getter and Setter for 'idMedication'
-    public int getIdMedication() {
-        return idMedication;
+    public int getId() {
+        return id;
     }
 
-    public void setIdMedication(int idMedication) {
-        this.idMedication = idMedication;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    // Getter and Setter for 'name'
     public String getName() {
         return name;
     }
@@ -38,7 +37,6 @@ public class Medicamento {
         this.name = name;
     }
 
-    // Getter and Setter for 'batchId'
     public int getBatchId() {
         return batchId;
     }
@@ -47,7 +45,6 @@ public class Medicamento {
         this.batchId = batchId;
     }
 
-    // Getter and Setter for 'manufacturer'
     public String getManufacturer() {
         return manufacturer;
     }
@@ -56,7 +53,6 @@ public class Medicamento {
         this.manufacturer = manufacturer;
     }
 
-    // Getter and Setter for 'type'
     public int getType() {
         return type;
     }
@@ -65,7 +61,6 @@ public class Medicamento {
         this.type = type;
     }
 
-    // Getter and Setter for 'presentation'
     public String getPresentation() {
         return presentation;
     }
@@ -74,7 +69,6 @@ public class Medicamento {
         this.presentation = presentation;
     }
 
-    // Getter and Setter for 'price'
     public int getPrice() {
         return price;
     }

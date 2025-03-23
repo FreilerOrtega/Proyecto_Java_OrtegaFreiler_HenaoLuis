@@ -18,7 +18,7 @@ public class CtrlAppointmentsHistory implements ActionListener {
     DefaultTableModel model =  new DefaultTableModel();
     Persona people=new Persona();
     MascotaDAO mascotaDAO= new MascotaDAO();
-    personaDAO peopleDao=new personaDAO();
+    PersonaDAO peopleDao=new PersonaDAO();
 
     public CtrlAppointmentsHistory(){};
 
@@ -64,12 +64,12 @@ public class CtrlAppointmentsHistory implements ActionListener {
             Object[] object=new Object[3];
             for(Cita c:appointmentLis){
 
-                object[0]=c.getFecha();
+                object[0]=c.getDates();
 
-                people=peopleDao.SearchPeopleById(c.getId_veterinaro());// se obtiene el veterinario para poder saber el nombre con base en su id
+                people=peopleDao.SearchPeopleById(c.getVeterinarian_id());// se obtiene el veterinario para poder saber el nombre con base en su id
 
                 object[1]=people.getAllName();
-                object[2]=c.getEstado();
+                object[2]=c.getStatus();
                 model.addRow(object);
             }
             VAP.tableHistoryPet.setModel(model);
@@ -91,7 +91,7 @@ public class CtrlAppointmentsHistory implements ActionListener {
         Object[] object=new Object[2];
         for(Mascota m:petLis){
             object[0]=m.getId();
-            object[1]=m.getNombre();
+            object[1]=m.getNameP();
             model.addRow(object);
         }
         VAP.tablePets.setModel(model);

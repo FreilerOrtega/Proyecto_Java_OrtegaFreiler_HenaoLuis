@@ -20,10 +20,15 @@ public class PadecimientoDAO {
             while (rs.next()){
                 Padecimiento condition=new Padecimiento();
                 condition.setId(rs.getInt(1));
-                condition.setId_mascota(rs.getInt(2));
-                condition.setFecha_deteccion(rs.getString(3));
-                condition.setDiagnostico(rs.getString(4));
+                condition.setPet_id(rs.getInt(2));
+                condition.setDetection_date(rs.getString(3));
+                condition.setDiagnosis(rs.getString(4));
                 conditionList.add(condition);
+            }
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
             }
 
         } catch (Exception e) {

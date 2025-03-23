@@ -1,7 +1,7 @@
-package Model;
+package Modelo;
 
 public class Facturas {
-    private int idInvoice;  // New attribute 'idInvoice'
+    private int id;
     private int clientId;
     private int medicationId;
     private int quantity;
@@ -9,19 +9,19 @@ public class Facturas {
     public Facturas() {
     }
 
-    public Facturas(int idInvoice, int clientId, int medicationId, int quantity) {
-        this.idInvoice = idInvoice;  // Initialize the new attribute
+    public Facturas(int id, int clientId, int medicationId, int quantity) {
+        this.id = id;
         this.clientId = clientId;
         this.medicationId = medicationId;
         this.quantity = quantity;
     }
 
-    public int getIdInvoice() {
-        return idInvoice;  // Getter for 'idInvoice'
+    public int getId() {
+        return id;
     }
 
-    public void setIdInvoice(int idInvoice) {
-        this.idInvoice = idInvoice;  // Setter for 'idInvoice'
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getClientId() {

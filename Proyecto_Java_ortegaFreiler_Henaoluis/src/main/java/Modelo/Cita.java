@@ -2,26 +2,28 @@ package Modelo;
 
 public class Cita {
     private int id;
-    private int id_mascota;
-    private String fecha;
-    private String motivo_consulta;
-    private int id_veterinaro;
-    private String diagnostico;
-    private boolean asistencia;
-    private String  estado;
+    private int pet_id;
+    private int owner_id;
+    private String dates;
+    private String consultation_reason;
+    private int veterinarian_id;
+    private String diagnosis;
+    private boolean attendance;
+    String status;
 
     public Cita() {
     }
 
-    public Cita( int id,int id_mascota, String fecha, String motivo_consulta, int id_veterinaro, String diagnostico, boolean asistencia, String estado) {
-        this.id=id;
-        this.id_mascota = id_mascota;
-        this.fecha = fecha;
-        this.motivo_consulta = motivo_consulta;
-        this.id_veterinaro = id_veterinaro;
-        this.diagnostico = diagnostico;
-        this.asistencia = asistencia;
-        this.estado = estado;
+    public Cita(int id, int pet_id, int owner_id, String dates, String consultation_reason, int veterinarian_id, String diagnosis, boolean attendance,String status) {
+        this.id = id;
+        this.pet_id = pet_id;
+        this.owner_id = owner_id;
+        this.dates = dates;
+        this.consultation_reason = consultation_reason;
+        this.veterinarian_id = veterinarian_id;
+        this.diagnosis = diagnosis;
+        this.attendance = attendance;
+        this.status=status;
     }
 
     public int getId() {
@@ -32,59 +34,67 @@ public class Cita {
         this.id = id;
     }
 
-    public int getId_mascota() {
-        return id_mascota;
+    public int getPet_id() {
+        return pet_id;
     }
 
-    public void setId_mascota(int id_mascota) {
-        this.id_mascota = id_mascota;
+    public void setPet_id(int pet_id) {
+        this.pet_id = pet_id;
     }
 
-    public String getFecha() {
-        return fecha;
+    public int getOwner_id() {
+        return owner_id;
     }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
+    public void setOwner_id(int owner_id) {
+        this.owner_id = owner_id;
     }
 
-    public String getMotivo_consulta() {
-        return motivo_consulta;
+    public String getDates() {
+        return dates;
     }
 
-    public void setMotivo_consulta(String motivo_consulta) {
-        this.motivo_consulta = motivo_consulta;
+    public void setDates(String dates) {
+        this.dates = dates;
     }
 
-    public int getId_veterinaro() {
-        return id_veterinaro;
+    public String getConsultation_reason() {
+        return consultation_reason;
     }
 
-    public void setId_veterinaro(int id_veterinaro) {
-        this.id_veterinaro = id_veterinaro;
+    public void setConsultation_reason(String consultation_reason) {
+        this.consultation_reason = consultation_reason;
     }
 
-    public String getDiagnostico() {
-        return diagnostico;
+    public int getVeterinarian_id() {
+        return veterinarian_id;
     }
 
-    public void setDiagnostico(String diagnostico) {
-        this.diagnostico = diagnostico;
+    public void setVeterinarian_id(int veterinarian_id) {
+        this.veterinarian_id = veterinarian_id;
     }
 
-    public boolean isAsistencia() {
-        return asistencia;
+    public String getDiagnosis() {
+        return diagnosis;
     }
 
-    public void setAsistencia(boolean asistencia) {
-        this.asistencia = asistencia;
+    public void setDiagnosis(String diagnosis) {
+        this.diagnosis = diagnosis;
     }
 
-    public String getEstado() {
-        return estado;
+    public boolean isAttendance() {
+        return attendance;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setAttendance(boolean attendance) {
+        this.attendance = attendance;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

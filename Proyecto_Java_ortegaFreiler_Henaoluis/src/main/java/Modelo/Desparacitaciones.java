@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Desparacitaciones {
-    private int idDeworming;  // New attribute 'idDeworming'
+    private int id;
     private String type;
     private String applicationDate;
     private String nextApplication;
@@ -12,8 +12,8 @@ public class Desparacitaciones {
     public Desparacitaciones() {
     }
 
-    public Desparacitaciones(int idDeworming, String type, String applicationDate, String nextApplication, int doctorId, int petId, int veterinarianId) {
-        this.idDeworming = idDeworming;  // Initialize new attribute
+    public Desparacitaciones(int id, String type, String applicationDate, String nextApplication, int doctorId, int petId, int veterinarianId) {
+        this.id = id;
         this.type = type;
         this.applicationDate = applicationDate;
         this.nextApplication = nextApplication;
@@ -22,12 +22,12 @@ public class Desparacitaciones {
         this.veterinarianId = veterinarianId;
     }
 
-    public int getIdDeworming() {
-        return idDeworming;  // Getter for 'idDeworming'
+    public int getId() {
+        return id;
     }
 
-    public void setIdDeworming(int idDeworming) {
-        this.idDeworming = idDeworming;  // Setter for 'idDeworming'
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getType() {
@@ -55,4 +55,26 @@ public class Desparacitaciones {
     }
 
     public int getDoctorId() {
-        return doctor
+        return doctorId;
+    }
+
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
+    }
+
+    public int getPetId() {
+        return petId;
+    }
+
+    public void setPetId(int petId) {
+        this.petId = petId;
+    }
+
+    public int getVeterinarianId() {
+        return veterinarianId;
+    }
+
+    public void setVeterinarianId(int veterinarianId) {
+        this.veterinarianId = veterinarianId;
+    }
+}

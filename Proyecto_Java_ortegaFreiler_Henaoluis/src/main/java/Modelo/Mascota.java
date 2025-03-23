@@ -2,33 +2,33 @@ package Modelo;
 
 public class Mascota {
     private int id;
-    private String nombre;
-    private String especie ;
-    private String raza;
-    private int edad;
-    private String fecha_nacimiento;
-    private String sexo;
-    private double peso ;
-    private String foto;
-    private String tatuaje;
-    private String microChip;
-    private int id_dueno;
+    private String nameP;
+    private String species;
+    private String breed;
+    private int age;
+    private String birth_date;
+    private String gender;
+    private double weight;
+    private String photo;
+    private int owner_id;
+    private String  microChip;
+    private String tatto;
 
     public Mascota(){}
 
-    public Mascota(int id,String nombre, String especie, String raza, int edad, String fecha_nacimiento, String sexo, double peso, String foto, String tatuaje,String microChip, int id_dueno) {
-        this.id=id;
-        this.nombre = nombre;
-        this.especie = especie;
-        this.raza = raza;
-        this.edad = edad;
-        this.fecha_nacimiento = fecha_nacimiento;
-        this.sexo = sexo;
-        this.peso = peso;
-        this.foto = foto;
-        this.tatuaje = tatuaje;
-        this.microChip=microChip;
-        this.id_dueno = id_dueno;
+    public Mascota(int id, String nameP, String species, String breed, int age, String birth_date, String gender, double weight, String photo, int owner_id, String microChip, String tatto) {
+        this.id = id;
+        this.nameP = nameP;
+        this.species = species;
+        this.breed = breed;
+        this.age = age;
+        this.birth_date = birth_date;
+        this.gender = gender;
+        this.weight = weight;
+        this.photo = photo;
+        this.owner_id = owner_id;
+        this.microChip = microChip;
+        this.tatto = tatto;
     }
 
     public int getId() {
@@ -39,76 +39,76 @@ public class Mascota {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNameP() {
+        return nameP;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNameP(String nameP) {
+        this.nameP = nameP;
     }
 
-    public String getEspecie() {
-        return especie;
+    public String getSpecies() {
+        return species;
     }
 
-    public void setEspecie(String especie) {
-        this.especie = especie;
+    public void setSpecies(String species) {
+        this.species = species;
     }
 
-    public String getRaza() {
-        return raza;
+    public String getBreed() {
+        return breed;
     }
 
-    public void setRaza(String raza) {
-        this.raza = raza;
+    public void setBreed(String breed) {
+        this.breed = breed;
     }
 
-    public int getEdad() {
-        return edad;
+    public int getAge() {
+        return age;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setAge(int age) {
+        this.age = age;
     }
 
-    public String getFecha_nacimiento() {
-        return fecha_nacimiento;
+    public String getBirth_date() {
+        return birth_date;
     }
 
-    public void setFecha_nacimiento(String fecha_nacimiento) {
-        this.fecha_nacimiento = fecha_nacimiento;
+    public void setBirth_date(String birth_date) {
+        this.birth_date = birth_date;
     }
 
-    public String getSexo() {
-        return sexo;
+    public String getGender() {
+        return gender;
     }
 
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public double getPeso() {
-        return peso;
+    public double getWeight() {
+        return weight;
     }
 
-    public void setPeso(double peso) {
-        this.peso = peso;
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 
-    public String getFoto() {
-        return foto;
+    public String getPhoto() {
+        return photo;
     }
 
-    public void setFoto(String foto) {
-        this.foto = foto;
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 
-    public String getTatuaje() {
-        return tatuaje;
+    public int getOwner_id() {
+        return owner_id;
     }
 
-    public void setTatuaje(String tatuaje) {
-        this.tatuaje = tatuaje;
+    public void setOwner_id(int owner_id) {
+        this.owner_id = owner_id;
     }
 
     public String getMicroChip() {
@@ -119,11 +119,11 @@ public class Mascota {
         this.microChip = microChip;
     }
 
-    public int getId_dueno() {
-        return id_dueno;
+    public String getTatto() {
+        return tatto;
     }
 
-    public void setId_dueno(int id_dueno) {
-        this.id_dueno = id_dueno;
+    public void setTatto(String tatto) {
+        this.tatto = tatto;
     }
 }
