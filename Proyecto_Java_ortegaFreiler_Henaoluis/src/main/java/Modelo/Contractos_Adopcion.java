@@ -1,15 +1,15 @@
-package Modelo;
+package modelo;
 
-public class ContractoAdopcion {
+public class Contractos_Adopcion {
     private int idContract;  // New attribute 'idContract'
     private int petId;
     private int ownerId;
     private String date;
 
-    public ContractoAdopcion() {
+    public Contractos_Adopcion() {
     }
 
-    public ContractoAdopcion(int idContract, int petId, int ownerId, String date) {
+    public Contractos_Adopcion(int idContract, int petId, int ownerId, String date) {
         this.idContract = idContract;  // Initialization of the new attribute
         this.petId = petId;
         this.ownerId = ownerId;

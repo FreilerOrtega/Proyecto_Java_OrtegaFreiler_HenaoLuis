@@ -1,4 +1,4 @@
-package Modelo;
+package modelo;
 
 public class Desparacitaciones {
     private int idDeworming;  // New attribute 'idDeworming'
@@ -23,11 +23,11 @@ public class Desparacitaciones {
     }
 
     public int getIdDeworming() {
-        return idDeworming;  // Getter for 'idDeworming'
+        return idDeworming;
     }
 
     public void setIdDeworming(int idDeworming) {
-        this.idDeworming = idDeworming;  // Setter for 'idDeworming'
+        this.idDeworming = idDeworming;
     }
 
     public String getType() {
@@ -55,4 +55,27 @@ public class Desparacitaciones {
     }
 
     public int getDoctorId() {
-        return doctor
+        return doctorId;
+    }
+
+    public void setDoctorId(int doctorId) {
+        this.doctorId = doctorId;
+    }
+
+    public int getPetId() {
+        return petId;
+    }
+
+    public void setPetId(int petId) {
+        this.petId = petId;
+    }
+
+    public int getVeterinarianId() {
+        return veterinarianId;
+    }
+
+    public void setVeterinarianId(int veterinarianId) {
+        this.veterinarianId = veterinarianId;
+    }
+
+ 

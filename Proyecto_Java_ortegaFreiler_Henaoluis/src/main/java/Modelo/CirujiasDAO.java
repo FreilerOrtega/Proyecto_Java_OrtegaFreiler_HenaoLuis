@@ -1,6 +1,6 @@
-package Modelo;
+package modelo;
 
 public class CirujiasDAO {
-    Cirugias cirujias = new Cirugias();
+    Cirujias cirujias = new Cirujias();
 
 }

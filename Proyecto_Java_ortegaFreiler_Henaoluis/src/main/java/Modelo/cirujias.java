@@ -1,4 +1,4 @@
-package Modelo;
+package modelo;
 
 public class Cirujias {
     private int id;
@@ -10,7 +10,7 @@ public class Cirujias {
     public Cirujias() {
     }
 
-    public cirujias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays) {
+    public Cirujias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays) {
         this.id = id;
         this.petId = petId;
         this.veterinarianId = veterinarianId;
