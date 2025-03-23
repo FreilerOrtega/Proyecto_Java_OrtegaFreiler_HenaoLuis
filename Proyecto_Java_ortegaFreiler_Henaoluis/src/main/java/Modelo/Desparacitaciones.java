@@ -1,4 +1,4 @@
-package Model;
+package Modelo;
 
 public class Desparacitaciones {
     private int idDeworming;  // New attribute 'idDeworming'
