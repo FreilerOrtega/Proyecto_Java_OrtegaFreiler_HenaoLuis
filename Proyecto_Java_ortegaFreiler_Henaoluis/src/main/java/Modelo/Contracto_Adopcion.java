@@ -1,27 +1,27 @@
-package Modelo;
+package modelo;
 
-public class Contracto_Adopcion {
-    private int id;
+public class Contractos_Adopcion {
+    private int idContract;  // New attribute 'idContract'
     private int petId;
     private int ownerId;
     private String date;
 
-    public Contracto_Adopcion() {
+    public Contractos_Adopcion() {
     }
 
-    public Contracto_Adopcion(int id, int petId, int ownerId, String date) {
-        this.id = id;
+    public Contractos_Adopcion(int idContract, int petId, int ownerId, String date) {
+        this.idContract = idContract;  // Initialization of the new attribute
         this.petId = petId;
         this.ownerId = ownerId;
         this.date = date;
     }
 
-    public int getId() {
-        return id;
+    public int getIdContract() {
+        return idContract;  // Getter for 'idContract'
     }
 
-    public void setIdContract(int id) {
-        this.id = id;
+    public void setIdContract(int idContract) {
+        this.idContract = idContract;  // Setter for 'idContract'
     }
 
     public int getPetId() {

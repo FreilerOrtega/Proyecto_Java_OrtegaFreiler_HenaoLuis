@@ -1,7 +1,7 @@
-package Modelo;
+package modelo;
 
 public class Desparacitaciones {
-    private int id;
+    private int idDeworming;  // New attribute 'idDeworming'
     private String type;
     private String applicationDate;
     private String nextApplication;
@@ -12,8 +12,8 @@ public class Desparacitaciones {
     public Desparacitaciones() {
     }
 
-    public Desparacitaciones(int id, String type, String applicationDate, String nextApplication, int doctorId, int petId, int veterinarianId) {
-        this.id = id;
+    public Desparacitaciones(int idDeworming, String type, String applicationDate, String nextApplication, int doctorId, int petId, int veterinarianId) {
+        this.idDeworming = idDeworming;  // Initialize new attribute
         this.type = type;
         this.applicationDate = applicationDate;
         this.nextApplication = nextApplication;
@@ -22,12 +22,12 @@ public class Desparacitaciones {
         this.veterinarianId = veterinarianId;
     }
 
-    public int getId() {
-        return id;
+    public int getIdDeworming() {
+        return idDeworming;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setIdDeworming(int idDeworming) {
+        this.idDeworming = idDeworming;
     }
 
     public String getType() {
@@ -77,4 +77,5 @@ public class Desparacitaciones {
     public void setVeterinarianId(int veterinarianId) {
         this.veterinarianId = veterinarianId;
     }
-}
+
+ 
