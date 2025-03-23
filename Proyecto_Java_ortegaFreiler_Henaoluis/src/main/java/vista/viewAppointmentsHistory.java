@@ -25,7 +25,7 @@ public class viewAppointmentsHistory extends javax.swing.JFrame {
         tablePets = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         idPet = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnViewHistory = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableHistoryPet = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
@@ -43,6 +43,7 @@ public class viewAppointmentsHistory extends javax.swing.JFrame {
                 "ID", "Nombre"
             }
         ));
+        tablePets.setToolTipText("");
         tablePets.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(tablePets);
 
@@ -56,9 +57,9 @@ public class viewAppointmentsHistory extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(1, 147, 165));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Mostrar Historial");
+        btnViewHistory.setBackground(new java.awt.Color(1, 147, 165));
+        btnViewHistory.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewHistory.setText("Mostrar Historial");
 
         tableHistoryPet.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -99,9 +100,9 @@ public class viewAppointmentsHistory extends javax.swing.JFrame {
                                 .addGap(104, 104, 104)
                                 .addComponent(jLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(idPet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(idPet, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(40, 40, 40)
-                                .addComponent(jButton1)))))
+                                .addComponent(btnViewHistory)))))
                 .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -126,7 +127,7 @@ public class viewAppointmentsHistory extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(idPet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(btnViewHistory))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -193,8 +194,8 @@ public class viewAppointmentsHistory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnViewHistory;
     public javax.swing.JTextField idPet;
-    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

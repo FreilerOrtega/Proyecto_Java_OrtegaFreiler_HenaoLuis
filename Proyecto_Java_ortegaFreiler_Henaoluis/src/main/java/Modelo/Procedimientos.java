@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Procedimientos {
+    private int id;
     private int id_mascota;
     private String procedimiento_aplicado;
     private String fecha;
@@ -10,12 +11,21 @@ public class Procedimientos {
     public Procedimientos() {
     }
 
-    public Procedimientos(int id_mascota, String procedimiento_aplicado, String fecha, int id_veterinario, int id_cita_asignada) {
+    public Procedimientos(int id,int id_mascota, String procedimiento_aplicado, String fecha, int id_veterinario, int id_cita_asignada) {
+        this.id=id;
         this.id_mascota = id_mascota;
         this.procedimiento_aplicado = procedimiento_aplicado;
         this.fecha = fecha;
         this.id_veterinario = id_veterinario;
         this.id_cita_asignada = id_cita_asignada;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getId_mascota() {

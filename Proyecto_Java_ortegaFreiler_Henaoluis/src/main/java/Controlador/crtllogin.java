@@ -24,27 +24,31 @@ public class crtllogin  implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource()==vLogin.btnLogin){//si el evento es un click en el boton de iniciar se activa el siguiente bloque de codigo
 
-            login.setUsuario(vLogin.inputUser.getText());//se toman los datos que se hayan ingresado en el input de usuario
-            login.setContrasena(vLogin.inputPassword.getText());//se toman los datos que se hayan ingresado en el input de contrasena
-
-            try {
-                int id=logDao.logInConf(login);// se obtiene el id de la persona que tiene ese usuario y contrasena
-                if (id==0){
-                    throw new Exception("Usuario o contraseña incorrecto");
-                }
-                people=DAO.SearchPeopleById(id);//se asignan los datos de la persona en base al id
-                System.out.println(people.getTipo());
-                if (people.getTipo().toLowerCase().equals("cliente")){
-                    //si la persona es de tipo cliente se cierra la vista de login y se abre la de dueno
-                    vLogin.setVisible(false);
-                    viewOwnerHome VOH=new viewOwnerHome();
-                    ctrlOwnerHome ctrOwHom=new ctrlOwnerHome(VOH,people);
-                    VOH.setVisible(true);
-                }
-            }catch (Exception i){
-                JOptionPane.showMessageDialog(vLogin,i.getMessage());
-            }
-
+            CheckUserPassword();
         }
     }
+
+    public void CheckUserPassword() {
+        login.setUsuario(vLogin.inputUser.getText());//se toman los datos que se hayan ingresado en el input de usuario
+        login.setContrasena(vLogin.inputPassword.getText());//se toman los datos que se hayan ingresado en el input de contrasena
+
+        try {
+            int id = logDao.logInConf(login);// se obtiene el id de la persona que tiene ese usuario y contrasena
+            if (id == 0) {
+                throw new Exception("Usuario o contraseña incorrecto");
+            }
+            people = DAO.SearchPeopleById(id);//se asignan los datos de la persona en base al id
+            System.out.println(people.getTipo());
+            if (people.getTipo().toLowerCase().equals("cliente")) {
+                //si la persona es de tipo cliente se cierra la vista de login y se abre la de dueno
+                vLogin.setVisible(false);
+                viewOwnerHome VOH = new viewOwnerHome();
+                VOH.setVisible(true);
+                ctrlOwnerHome ctrOwHom = new ctrlOwnerHome(VOH, people);
+            }
+        } catch (Exception i) {
+            JOptionPane.showMessageDialog(vLogin, i.getMessage());
+        }
+    }
+
 }

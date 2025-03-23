@@ -1,6 +1,7 @@
 package Modelo;
 
 public  class Persona {
+    private int id;
     private String nombre1;
     private String nombre2;
     private String apellido1;
@@ -15,7 +16,8 @@ public  class Persona {
 
     public Persona(){}
 
-    public Persona(String nombre1, String nombre2, String apellido1, String apellido2, long num_identificacion, String direccion, long telefono, String correo, long contacto_emergencia,String tipo) {
+    public Persona(int id,String nombre1, String nombre2, String apellido1, String apellido2, long num_identificacion, String direccion, long telefono, String correo, long contacto_emergencia,String tipo) {
+        this.id=id;
         this.nombre1 = nombre1;
         this.nombre2 = nombre2;
         this.apellido1 = apellido1;
@@ -27,6 +29,14 @@ public  class Persona {
         this.contacto_emergencia = contacto_emergencia;
         this.tipo=tipo;
 
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre1() {

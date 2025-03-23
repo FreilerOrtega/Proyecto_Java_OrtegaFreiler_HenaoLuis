@@ -64,7 +64,7 @@ public class viewOwnerHome extends javax.swing.JFrame {
 
         btnViewHistoryS.setBackground(new java.awt.Color(1, 147, 165));
         btnViewHistoryS.setForeground(new java.awt.Color(255, 255, 255));
-        btnViewHistoryS.setText("Ver historial de salud");
+        btnViewHistoryS.setText("Ver historial clinico");
         btnViewHistoryS.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewHistorySActionPerformed(evt);

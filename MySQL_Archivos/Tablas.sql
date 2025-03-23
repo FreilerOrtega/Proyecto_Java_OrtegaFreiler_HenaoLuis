@@ -44,7 +44,7 @@ CREATE TABLE Medicamento (
     nameM VARCHAR(255),
     batch_id INT,
     manufacturer VARCHAR(255),
-    typeM INT,
+    typeM VARCHAR(255),
     presentation VARCHAR(255),
     price INT,
     FOREIGN KEY (batch_id) REFERENCES Lote(id)

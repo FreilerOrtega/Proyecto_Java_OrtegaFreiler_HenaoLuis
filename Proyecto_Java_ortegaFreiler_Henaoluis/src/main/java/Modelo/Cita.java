@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Cita {
+    private int id;
     private int id_mascota;
     private String fecha;
     private String motivo_consulta;
@@ -12,7 +13,8 @@ public class Cita {
     public Cita() {
     }
 
-    public Cita(int id_mascota, String fecha, String motivo_consulta, int id_veterinaro, String diagnostico, boolean asistencia, String estado) {
+    public Cita( int id,int id_mascota, String fecha, String motivo_consulta, int id_veterinaro, String diagnostico, boolean asistencia, String estado) {
+        this.id=id;
         this.id_mascota = id_mascota;
         this.fecha = fecha;
         this.motivo_consulta = motivo_consulta;
@@ -20,6 +22,14 @@ public class Cita {
         this.diagnostico = diagnostico;
         this.asistencia = asistencia;
         this.estado = estado;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getId_mascota() {

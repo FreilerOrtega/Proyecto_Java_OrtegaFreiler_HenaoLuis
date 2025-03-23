@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Mascota {
+    private int id;
     private String nombre;
     private String especie ;
     private String raza;
@@ -10,11 +11,13 @@ public class Mascota {
     private double peso ;
     private String foto;
     private String tatuaje;
+    private String microChip;
     private int id_dueno;
 
     public Mascota(){}
 
-    public Mascota(String nombre, String especie, String raza, int edad, String fecha_nacimiento, String sexo, double peso, String foto, String tatuaje, int id_dueno) {
+    public Mascota(int id,String nombre, String especie, String raza, int edad, String fecha_nacimiento, String sexo, double peso, String foto, String tatuaje,String microChip, int id_dueno) {
+        this.id=id;
         this.nombre = nombre;
         this.especie = especie;
         this.raza = raza;
@@ -24,7 +27,16 @@ public class Mascota {
         this.peso = peso;
         this.foto = foto;
         this.tatuaje = tatuaje;
+        this.microChip=microChip;
         this.id_dueno = id_dueno;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -97,6 +109,14 @@ public class Mascota {
 
     public void setTatuaje(String tatuaje) {
         this.tatuaje = tatuaje;
+    }
+
+    public String getMicroChip() {
+        return microChip;
+    }
+
+    public void setMicroChip(String microChip) {
+        this.microChip = microChip;
     }
 
     public int getId_dueno() {

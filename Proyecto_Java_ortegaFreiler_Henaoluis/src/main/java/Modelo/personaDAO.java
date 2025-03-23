@@ -18,6 +18,7 @@ public class personaDAO {
             ps.setInt(1,id);
             ResultSet rs=ps.executeQuery();
             if (rs.next()){
+                persona.setId(rs.getInt(1));
                 persona.setNombre1(rs.getString(2));
                 persona.setNombre2(rs.getString(3));
                 persona.setApellido1(rs.getString(4));

@@ -1,6 +1,7 @@
 package Modelo;
 
 public class Padecimiento {
+    private int id;
     private int id_mascota;
     private String fecha_deteccion;
     private String diagnostico;
@@ -8,10 +9,19 @@ public class Padecimiento {
     public Padecimiento() {
     }
 
-    public Padecimiento(int id_mascota, String fecha_deteccion, String diagnostico) {
+    public Padecimiento( int id,int id_mascota, String fecha_deteccion, String diagnostico) {
+        this.id=id;
         this.id_mascota = id_mascota;
         this.fecha_deteccion = fecha_deteccion;
         this.diagnostico = diagnostico;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public int getId_mascota() {

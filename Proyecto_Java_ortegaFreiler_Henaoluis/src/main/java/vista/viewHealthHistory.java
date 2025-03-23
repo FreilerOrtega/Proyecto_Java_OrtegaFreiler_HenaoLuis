@@ -35,7 +35,7 @@ public class viewHealthHistory extends javax.swing.JFrame {
         tablePets = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         id_pet = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnViewH = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -99,9 +99,9 @@ public class viewHealthHistory extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(1, 147, 165));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Mostrar Historial");
+        btnViewH.setBackground(new java.awt.Color(1, 147, 165));
+        btnViewH.setForeground(new java.awt.Color(255, 255, 255));
+        btnViewH.setText("Mostrar Historial");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -322,7 +322,7 @@ public class viewHealthHistory extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(id_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
-                                .addComponent(jButton1))
+                                .addComponent(btnViewH))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(155, 155, 155)
                                 .addComponent(jLabel3)))
@@ -351,7 +351,7 @@ public class viewHealthHistory extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel1)
                             .addComponent(id_pet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1)))
+                            .addComponent(btnViewH)))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel4)
@@ -429,8 +429,8 @@ public class viewHealthHistory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnViewH;
     public javax.swing.JTextField id_pet;
-    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
