@@ -44,7 +44,7 @@ public class MascotaDAO {
 
     }
 
-    public List<Mascota> viewPetsByOwner(int id) throws SQLException {
+    public static List<Mascota> viewPetsByOwner(int id) throws SQLException {
         List<Mascota> petsList=new ArrayList<>();
 
         String sql="select * from Mascota where owner_id=?";

@@ -1,4 +1,4 @@
-package modelo;
+package Modelo;
 
 public class Cirujias {
     private int id;
@@ -6,16 +6,18 @@ public class Cirujias {
     private int veterinarianId;
     private String surgeryDate;
     private int recoveryDays;
+    private String recovery_status;
 
     public Cirujias() {
     }
 
-    public Cirujias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays) {
+    public Cirujias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays, String recovery_status) {
         this.id = id;
         this.petId = petId;
         this.veterinarianId = veterinarianId;
         this.surgeryDate = surgeryDate;
         this.recoveryDays = recoveryDays;
+        this.recovery_status = recovery_status;
     }
 
     public int getId() {
@@ -56,5 +58,13 @@ public class Cirujias {
 
     public void setRecoveryDays(int recoveryDays) {
         this.recoveryDays = recoveryDays;
+    }
+
+    public String getRecovery_status() {
+        return recovery_status;
+    }
+
+    public void setRecovery_status(String recovery_status) {
+        this.recovery_status = recovery_status;
     }
 }

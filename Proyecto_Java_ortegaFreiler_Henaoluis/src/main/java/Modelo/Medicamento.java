@@ -5,13 +5,13 @@ public class Medicamento {
     private String name;
     private int batchId;
     private String manufacturer;
-    private int type;
+    private String type;
     private String presentation;
     private int price;
 
     public Medicamento() {}
 
-    public Medicamento(int id, String name, int batchId, String manufacturer, int type, String presentation, int price) {
+    public Medicamento(int id, String name, int batchId, String manufacturer, String type, String presentation, int price) {
         this.id = id;
         this.name = name;
         this.batchId = batchId;
@@ -53,11 +53,11 @@ public class Medicamento {
         this.manufacturer = manufacturer;
     }
 
-    public int getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(int type) {
+    public void setType(String type) {
         this.type = type;
     }
 

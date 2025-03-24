@@ -15,6 +15,7 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
      */
     public viewSurgeriesHistory() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -36,9 +37,10 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         id_pet = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        btnIdPet = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         tableSugeries = new javax.swing.JTable();
+        btnExit = new javax.swing.JButton();
 
         jMenu1.setText("File");
         jMenuBar1.add(jMenu1);
@@ -80,9 +82,9 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(1, 147, 165));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Mostrar Historial");
+        btnIdPet.setBackground(new java.awt.Color(1, 147, 165));
+        btnIdPet.setForeground(new java.awt.Color(255, 255, 255));
+        btnIdPet.setText("Mostrar Historial");
 
         tableSugeries.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -93,6 +95,10 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
             }
         ));
         jScrollPane2.setViewportView(tableSugeries);
+
+        btnExit.setBackground(new java.awt.Color(1, 147, 165));
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setText("Volver");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -110,9 +116,11 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(id_pet, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(28, 28, 28)
-                                .addComponent(jButton1))))
+                                .addComponent(btnIdPet))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(302, 302, 302)
+                        .addGap(27, 27, 27)
+                        .addComponent(btnExit)
+                        .addGap(203, 203, 203)
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(273, 273, 273)
@@ -125,8 +133,13 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jLabel2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnExit)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -135,7 +148,7 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(id_pet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(btnIdPet))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(34, Short.MAX_VALUE))
@@ -201,8 +214,9 @@ public class viewSurgeriesHistory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnExit;
+    public javax.swing.JButton btnIdPet;
     public javax.swing.JTextField id_pet;
-    public javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

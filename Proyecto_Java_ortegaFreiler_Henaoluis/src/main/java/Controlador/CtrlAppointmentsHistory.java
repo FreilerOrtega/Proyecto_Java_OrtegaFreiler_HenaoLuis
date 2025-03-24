@@ -22,11 +22,12 @@ public class CtrlAppointmentsHistory implements ActionListener {
 
     public CtrlAppointmentsHistory(){};
 
-    public CtrlAppointmentsHistory(viewAppointmentsHistory VAP,int id) {
+        public CtrlAppointmentsHistory(viewAppointmentsHistory VAP,int id) {
         this.VAP = VAP;
         idPeople=id;
         seePets(VAP.tablePets,id);
         VAP.btnViewHistory.addActionListener(this);
+        VAP.btnExit.addActionListener(this);
 
     }
 
@@ -49,6 +50,18 @@ public class CtrlAppointmentsHistory implements ActionListener {
                 }
             }catch (Exception i){
                 JOptionPane.showMessageDialog(VAP, i.getMessage());
+            }
+        }
+        if (e.getSource()==VAP.btnExit) {
+            System.out.println("Hola");
+            VAP.setVisible(false);
+            try {
+                people=peopleDao.SearchPeopleById(idPeople);
+                viewOwnerHome VOH = new viewOwnerHome();
+                VOH.setVisible(true);
+                ctrlOwnerHome ctrOwHom = new ctrlOwnerHome(VOH, people);
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(VAP, ex.getMessage());
             }
         }
 
