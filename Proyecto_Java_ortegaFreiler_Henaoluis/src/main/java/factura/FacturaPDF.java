@@ -44,6 +44,7 @@ public class FacturaPDF {
             table.addCell("Precio Unitario");
             table.addCell("Total");
 
+
             // Agregar productos a la tabla
             table.addCell("Pizza Hawaiana");
             table.addCell("2");
