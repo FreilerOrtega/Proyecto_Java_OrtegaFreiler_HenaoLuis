@@ -16,6 +16,8 @@ public class viewOwnerHome extends javax.swing.JFrame {
     public viewOwnerHome() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Opciones de clientes");//se asigna titulo a la vista
+
         this.ownerName.setText("Luis Orlando Henao Bermon");
     }
 

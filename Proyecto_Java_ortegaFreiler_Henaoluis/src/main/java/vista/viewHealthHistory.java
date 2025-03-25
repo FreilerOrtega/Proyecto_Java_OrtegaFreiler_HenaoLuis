@@ -16,6 +16,8 @@ public class viewHealthHistory extends javax.swing.JFrame {
     public viewHealthHistory() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Historia clinica");//se asigna titulo a la vista
+
     }
 
     /**
