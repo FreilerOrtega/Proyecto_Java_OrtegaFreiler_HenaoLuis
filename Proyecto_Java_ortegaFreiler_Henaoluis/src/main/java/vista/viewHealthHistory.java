@@ -4,11 +4,15 @@
  */
 package vista;
 
+import javax.swing.*;
+
 /**
  *
  * @author Uniminuto Tibu
  */
 public class viewHealthHistory extends javax.swing.JFrame {
+
+    public AbstractButton btnExit;
 
     /**
      * Creates new form vistaHistorialSalud
@@ -16,8 +20,6 @@ public class viewHealthHistory extends javax.swing.JFrame {
     public viewHealthHistory() {
         initComponents();
         this.setLocationRelativeTo(null);
-        this.setTitle("Historia clinica");//se asigna titulo a la vista
-
     }
 
     /**
@@ -68,7 +70,6 @@ public class viewHealthHistory extends javax.swing.JFrame {
         labelSpecies = new javax.swing.JLabel();
         labelBirthDate = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        btnExit = new javax.swing.JButton();
 
         jLabel5.setText("jLabel5");
 
@@ -304,10 +305,6 @@ public class viewHealthHistory extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Desparacitaciones");
 
-        btnExit.setBackground(new java.awt.Color(1, 147, 165));
-        btnExit.setForeground(new java.awt.Color(255, 255, 255));
-        btnExit.setText("Volver");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -318,10 +315,8 @@ public class viewHealthHistory extends javax.swing.JFrame {
                     .addComponent(jLabel16)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(btnExit)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel2)
                                     .addGap(177, 177, 177))
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 466, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -335,7 +330,7 @@ public class viewHealthHistory extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(155, 155, 155)
                                 .addComponent(jLabel3)))
-                        .addGap(140, 140, 140)
+                        .addGap(38, 38, 38)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jLabel6)
@@ -343,7 +338,7 @@ public class viewHealthHistory extends javax.swing.JFrame {
                         .addComponent(jScrollPane3)
                         .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel4))
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -351,15 +346,10 @@ public class viewHealthHistory extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btnExit)
-                                .addGap(139, 139, 139))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel3)
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -443,7 +433,6 @@ public class viewHealthHistory extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnExit;
     public javax.swing.JButton btnViewH;
     public javax.swing.JTextField id_pet;
     private javax.swing.JLabel jLabel1;
