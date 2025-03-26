@@ -78,6 +78,7 @@ CREATE TABLE cita (
     diagnosis VARCHAR(255),
     attendance BOOLEAN,
     status VARCHAR(255),
+    hours varchar(10),
     FOREIGN KEY (pet_id) REFERENCES Mascota(id),
     FOREIGN KEY (owner_id) REFERENCES Persona(id),
     FOREIGN KEY (veterinarian_id) REFERENCES Persona(id)

@@ -15,7 +15,7 @@ import java.awt.*;
  */
 public class ViewAddProduct extends javax.swing.JFrame {
 
-    private JDateChooser inputDate;
+    public JDateChooser inputDate;
     /**
      * Creates new form ViewAddProduct
      */

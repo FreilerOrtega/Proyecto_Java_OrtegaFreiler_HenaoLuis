@@ -11,7 +11,7 @@ import com.toedter.calendar.JDateChooser;
  * @author Uniminuto Tibu
  */
 public class ViewAddPetWithOutOwner extends javax.swing.JFrame {
-    private JDateChooser inputDate;
+    public JDateChooser inputDate;
     /**
      * Creates new form ViewAddPetWithOutOwner
      */

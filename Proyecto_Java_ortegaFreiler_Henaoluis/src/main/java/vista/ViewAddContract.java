@@ -258,8 +258,8 @@ public class ViewAddContract extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAddContract;
-    private javax.swing.JTextField inputPeopleId;
-    private javax.swing.JTextField inputPetId;
+    public javax.swing.JTextField inputPeopleId;
+    public javax.swing.JTextField inputPetId;
     public javax.swing.JTextField inputSearchProduct;
     public javax.swing.JTextField inputSearchProduct1;
     private javax.swing.JLabel jLabel1;

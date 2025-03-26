@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+<Form version="1.5" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -80,16 +80,16 @@
                                       </Group>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                          <Component id="inputWeight1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="inputIdOwner1" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="inputIdOwner2" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="inputIdOwner3" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
-                                          <Component id="inputWeight2" alignment="1" min="-2" pref="302" max="-2" attributes="0"/>
+                                          <Component id="inputAddress" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="inputPhone" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="inputEmail" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="inputnumberEmergency" alignment="0" min="-2" pref="302" max="-2" attributes="0"/>
+                                          <Component id="inputPeople" alignment="1" min="-2" pref="302" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace min="-2" pref="157" max="-2" attributes="0"/>
-                                      <Component id="btnAddPeople" min="-2" max="-2" attributes="0"/>
+                                      <Component id="btnModPeople" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane3" alignment="0" max="32767" attributes="0"/>
                               </Group>
@@ -121,38 +121,38 @@
                   <Component id="jScrollPane3" pref="131" max="32767" attributes="0"/>
                   <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputWeight2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputPeople" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputWeight1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputAddress" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputIdOwner1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputPhone" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputIdOwner2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputEmail" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputIdOwner3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputnumberEmergency" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnAddPeople" min="-2" max="-2" attributes="0"/>
+                  <Component id="btnModPeople" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="btnAddPeople">
+        <Component class="javax.swing.JButton" name="btnModPeople">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c6" green="f4" red="ee" type="rgb"/>
@@ -163,7 +163,7 @@
             <Property name="text" type="java.lang.String" value="Modificar persona"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddPeopleActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModPeopleActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -180,7 +180,7 @@
             <Property name="text" type="java.lang.String" value="Contacto de emergencia:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner2">
+        <Component class="javax.swing.JTextField" name="inputEmail">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -232,7 +232,7 @@
             <Property name="text" type="java.lang.String" value="Telefono:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner1">
+        <Component class="javax.swing.JTextField" name="inputPhone">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -240,7 +240,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputWeight1">
+        <Component class="javax.swing.JTextField" name="inputAddress">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -248,7 +248,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner3">
+        <Component class="javax.swing.JTextField" name="inputnumberEmergency">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -291,7 +291,7 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tableProduct">
+            <Component class="javax.swing.JTable" name="tablePeoples">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="3" rowCount="0">
@@ -348,7 +348,7 @@
             <Property name="text" type="java.lang.String" value="Buscar por cedula"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputWeight2">
+        <Component class="javax.swing.JTextField" name="inputPeople">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>

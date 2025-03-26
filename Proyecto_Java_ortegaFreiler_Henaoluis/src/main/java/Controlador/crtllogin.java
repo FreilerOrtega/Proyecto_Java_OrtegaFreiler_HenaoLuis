@@ -45,6 +45,12 @@ public class crtllogin  implements ActionListener {
                 viewOwnerHome VOH = new viewOwnerHome();
                 VOH.setVisible(true);
                 ctrlOwnerHome ctrOwHom = new ctrlOwnerHome(VOH, people);
+            }else if (people.getPerson_type().toLowerCase().equals("administrador")) {
+                //si la persona es de tipo cliente se cierra la vista de login y se abre la de dueno
+                vLogin.setVisible(false);
+                ViewAdministratorHome VAH = new ViewAdministratorHome();
+                VAH.setVisible(true);
+                CtrlAdministratorHome CAH=new CtrlAdministratorHome(VAH,people);
             }
         } catch (Exception i) {
             JOptionPane.showMessageDialog(vLogin, i.getMessage());

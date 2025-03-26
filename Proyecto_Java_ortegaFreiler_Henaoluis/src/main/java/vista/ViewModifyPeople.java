@@ -4,11 +4,14 @@
  */
 package vista;
 
+import java.awt.*;
+
 /**
  *
  * @author Uniminuto Tibu
  */
 public class ViewModifyPeople extends javax.swing.JFrame {
+
 
     /**
      * Creates new form ViewModifyPeople
@@ -28,35 +31,35 @@ public class ViewModifyPeople extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnAddPeople = new javax.swing.JButton();
+        btnModPeople = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
-        inputIdOwner2 = new javax.swing.JTextField();
+        inputEmail = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        inputIdOwner1 = new javax.swing.JTextField();
-        inputWeight1 = new javax.swing.JTextField();
-        inputIdOwner3 = new javax.swing.JTextField();
+        inputPhone = new javax.swing.JTextField();
+        inputAddress = new javax.swing.JTextField();
+        inputnumberEmergency = new javax.swing.JTextField();
         btnExit = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tableProduct = new javax.swing.JTable();
+        tablePeoples = new javax.swing.JTable();
         inputSearchProduct = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        inputWeight2 = new javax.swing.JTextField();
+        inputPeople = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(155, 178, 108));
 
-        btnAddPeople.setBackground(new java.awt.Color(238, 244, 198));
-        btnAddPeople.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAddPeople.setText("Modificar persona");
-        btnAddPeople.addActionListener(new java.awt.event.ActionListener() {
+        btnModPeople.setBackground(new java.awt.Color(238, 244, 198));
+        btnModPeople.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnModPeople.setText("Modificar persona");
+        btnModPeople.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddPeopleActionPerformed(evt);
+                btnModPeopleActionPerformed(evt);
             }
         });
 
@@ -64,7 +67,7 @@ public class ViewModifyPeople extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("Contacto de emergencia:");
 
-        inputIdOwner2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputEmail.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -82,11 +85,11 @@ public class ViewModifyPeople extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Telefono:");
 
-        inputIdOwner1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputPhone.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputWeight1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputAddress.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputIdOwner3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputnumberEmergency.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         btnExit.setBackground(new java.awt.Color(238, 244, 198));
         btnExit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -101,7 +104,7 @@ public class ViewModifyPeople extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Personas");
 
-        tableProduct.setModel(new javax.swing.table.DefaultTableModel(
+        tablePeoples.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -109,7 +112,7 @@ public class ViewModifyPeople extends javax.swing.JFrame {
                 "ID", "Nombre", "Cedula"
             }
         ));
-        jScrollPane3.setViewportView(tableProduct);
+        jScrollPane3.setViewportView(tablePeoples);
 
         inputSearchProduct.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +124,7 @@ public class ViewModifyPeople extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Buscar por cedula");
 
-        inputWeight2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputPeople.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
@@ -159,14 +162,14 @@ public class ViewModifyPeople extends javax.swing.JFrame {
                                             .addComponent(jLabel11)))
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(inputWeight1)
-                                        .addComponent(inputIdOwner1)
-                                        .addComponent(inputIdOwner2)
-                                        .addComponent(inputIdOwner3, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(inputWeight2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                        .addComponent(inputAddress)
+                                        .addComponent(inputPhone)
+                                        .addComponent(inputEmail)
+                                        .addComponent(inputnumberEmergency, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(inputPeople, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addGap(157, 157, 157)
-                                    .addComponent(btnAddPeople))
+                                    .addComponent(btnModPeople))
                                 .addComponent(jScrollPane3)))))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
@@ -188,26 +191,26 @@ public class ViewModifyPeople extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                 .addGap(49, 49, 49)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputWeight2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputPeople, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel11))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputWeight1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel9))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputnumberEmergency, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addGap(18, 18, 18)
-                .addComponent(btnAddPeople)
+                .addComponent(btnModPeople)
                 .addGap(31, 31, 31))
         );
 
@@ -228,9 +231,9 @@ public class ViewModifyPeople extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddPeopleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddPeopleActionPerformed
+    private void btnModPeopleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModPeopleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddPeopleActionPerformed
+    }//GEN-LAST:event_btnModPeopleActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
@@ -276,14 +279,14 @@ public class ViewModifyPeople extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAddPeople;
     public javax.swing.JButton btnExit;
-    public javax.swing.JTextField inputIdOwner1;
-    public javax.swing.JTextField inputIdOwner2;
-    public javax.swing.JTextField inputIdOwner3;
+    public javax.swing.JButton btnModPeople;
+    public javax.swing.JTextField inputAddress;
+    public javax.swing.JTextField inputEmail;
+    public javax.swing.JTextField inputPeople;
+    public javax.swing.JTextField inputPhone;
     public javax.swing.JTextField inputSearchProduct;
-    public javax.swing.JTextField inputWeight1;
-    public javax.swing.JTextField inputWeight2;
+    public javax.swing.JTextField inputnumberEmergency;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
@@ -294,6 +297,6 @@ public class ViewModifyPeople extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JTable tableProduct;
+    public javax.swing.JTable tablePeoples;
     // End of variables declaration//GEN-END:variables
 }

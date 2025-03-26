@@ -38,7 +38,7 @@ public class ViewAdministratorHome extends javax.swing.JFrame {
         btnPeoples = new javax.swing.JButton();
         btnContracts = new javax.swing.JButton();
         btnAppointments = new javax.swing.JButton();
-        btnExit2 = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -107,12 +107,12 @@ public class ViewAdministratorHome extends javax.swing.JFrame {
             }
         });
 
-        btnExit2.setBackground(new java.awt.Color(238, 244, 198));
-        btnExit2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnExit2.setText("Cerrar sesion");
-        btnExit2.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setBackground(new java.awt.Color(238, 244, 198));
+        btnExit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnExit.setText("Cerrar sesion");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExit2ActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
@@ -139,7 +139,7 @@ public class ViewAdministratorHome extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(15, 15, 15)
-                        .addComponent(btnExit2))
+                        .addComponent(btnExit))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(96, 96, 96)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,7 +153,7 @@ public class ViewAdministratorHome extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(btnExit2)
+                .addComponent(btnExit)
                 .addGap(3, 3, 3)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -213,9 +213,9 @@ public class ViewAdministratorHome extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAppointmentsActionPerformed
 
-    private void btnExit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit2ActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnExit2ActionPerformed
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -255,7 +255,7 @@ public class ViewAdministratorHome extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAppointments;
     public javax.swing.JButton btnContracts;
-    public javax.swing.JButton btnExit2;
+    public javax.swing.JButton btnExit;
     public javax.swing.JButton btnInventory;
     public javax.swing.JButton btnInvoices;
     public javax.swing.JButton btnPeoples;

@@ -21,6 +21,27 @@
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
       </AuxValues>
     </Component>
+    <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTable" name="jTable1">
+          <Properties>
+            <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
+              <Table columnCount="4" rowCount="4">
+                <Column editable="true" title="Title 1" type="java.lang.Object"/>
+                <Column editable="true" title="Title 2" type="java.lang.Object"/>
+                <Column editable="true" title="Title 3" type="java.lang.Object"/>
+                <Column editable="true" title="Title 4" type="java.lang.Object"/>
+              </Table>
+            </Property>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
@@ -106,17 +127,17 @@
                               </Group>
                               <Group type="103" alignment="1" groupAlignment="0" attributes="0">
                                   <Component id="input2LastName" max="32767" attributes="0"/>
-                                  <Component id="inputWeight" min="-2" pref="302" max="-2" attributes="0"/>
+                                  <Component id="inputIDNumber" min="-2" pref="302" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="inputWeight1" max="32767" attributes="0"/>
-                              <Component id="inputIdOwner1" max="32767" attributes="0"/>
-                              <Component id="inputIdOwner2" max="32767" attributes="0"/>
+                              <Component id="inputAddres" max="32767" attributes="0"/>
+                              <Component id="inputPhone" max="32767" attributes="0"/>
+                              <Component id="inputEmail" max="32767" attributes="0"/>
                               <Component id="CombSex" alignment="0" pref="302" max="32767" attributes="0"/>
-                              <Component id="inputIdOwner3" alignment="0" max="32767" attributes="0"/>
-                              <Component id="inputIdOwner4" alignment="0" max="32767" attributes="0"/>
-                              <Component id="inputIdOwner6" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputEmergencyContact" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputUser" alignment="0" max="32767" attributes="0"/>
+                              <Component id="inputPassword" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -151,7 +172,7 @@
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -169,18 +190,18 @@
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Component id="input2LastName" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
-                          <Component id="inputWeight" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputIDNumber" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="inputWeight1" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputAddres" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="inputIdOwner1" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputPhone" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="inputIdOwner2" min="-2" max="-2" attributes="0"/>
+                          <Component id="inputEmail" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputIdOwner3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputEmergencyContact" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -190,12 +211,12 @@
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputIdOwner4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputUser" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="inputIdOwner6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputPassword" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
@@ -224,12 +245,12 @@
             <Property name="text" type="java.lang.String" value="Numero de identificacion:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputWeight">
+        <Component class="javax.swing.JTextField" name="inputIDNumber">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputWeightActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="inputIDNumberActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -298,7 +319,7 @@
             <Property name="text" type="java.lang.String" value="Primer nombre:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner2">
+        <Component class="javax.swing.JTextField" name="inputEmail">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -418,7 +439,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner1">
+        <Component class="javax.swing.JTextField" name="inputPhone">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -426,7 +447,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputWeight1">
+        <Component class="javax.swing.JTextField" name="inputAddres">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -434,7 +455,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner3">
+        <Component class="javax.swing.JTextField" name="inputEmergencyContact">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -442,7 +463,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner4">
+        <Component class="javax.swing.JTextField" name="inputUser">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -450,7 +471,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputIdOwner6">
+        <Component class="javax.swing.JTextField" name="inputPassword">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>

@@ -15,6 +15,7 @@ public class ViewModifyLogin extends javax.swing.JFrame {
      */
     public ViewModifyLogin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -29,16 +30,16 @@ public class ViewModifyLogin extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         inputSearchProduct = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tableProduct = new javax.swing.JTable();
+        tablePeoples = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        inputIdOwner6 = new javax.swing.JTextField();
-        inputIdOwner4 = new javax.swing.JTextField();
+        inputPassword = new javax.swing.JTextField();
+        inputUser = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
-        inputIdOwner5 = new javax.swing.JTextField();
-        btnExit2 = new javax.swing.JButton();
+        inputPeople = new javax.swing.JTextField();
+        btnExit = new javax.swing.JButton();
         btnModify = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -51,7 +52,7 @@ public class ViewModifyLogin extends javax.swing.JFrame {
             }
         });
 
-        tableProduct.setModel(new javax.swing.table.DefaultTableModel(
+        tablePeoples.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -59,7 +60,7 @@ public class ViewModifyLogin extends javax.swing.JFrame {
                 "ID", "Nombre", "Cedula"
             }
         ));
-        jScrollPane3.setViewportView(tableProduct);
+        jScrollPane3.setViewportView(tablePeoples);
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -77,22 +78,22 @@ public class ViewModifyLogin extends javax.swing.JFrame {
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Usuario:");
 
-        inputIdOwner6.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputIdOwner4.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputUser.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("ID de persona:");
 
-        inputIdOwner5.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputPeople.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        btnExit2.setBackground(new java.awt.Color(238, 244, 198));
-        btnExit2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnExit2.setText("Volver");
-        btnExit2.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setBackground(new java.awt.Color(238, 244, 198));
+        btnExit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnExit.setText("Volver");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExit2ActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
@@ -130,12 +131,12 @@ public class ViewModifyLogin extends javax.swing.JFrame {
                             .addComponent(jLabel17))
                         .addGap(26, 26, 26)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(inputIdOwner5, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-                            .addComponent(inputIdOwner4)
-                            .addComponent(inputIdOwner6)))
+                            .addComponent(inputPeople, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                            .addComponent(inputUser)
+                            .addComponent(inputPassword)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnExit2))
+                        .addComponent(btnExit))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(213, 213, 213)
                         .addComponent(btnModify)))
@@ -145,7 +146,7 @@ public class ViewModifyLogin extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnExit2)
+                .addComponent(btnExit)
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel10)
@@ -156,15 +157,15 @@ public class ViewModifyLogin extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputPeople, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addGap(20, 20, 20)
                 .addComponent(btnModify)
@@ -193,9 +194,9 @@ public class ViewModifyLogin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputSearchProductActionPerformed
 
-    private void btnExit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit2ActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnExit2ActionPerformed
+    }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifyActionPerformed
         // TODO add your handling code here:
@@ -237,12 +238,12 @@ public class ViewModifyLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnExit2;
+    public javax.swing.JButton btnExit;
     public javax.swing.JButton btnModify;
-    public javax.swing.JTextField inputIdOwner4;
-    public javax.swing.JTextField inputIdOwner5;
-    public javax.swing.JTextField inputIdOwner6;
+    public javax.swing.JTextField inputPassword;
+    public javax.swing.JTextField inputPeople;
     public javax.swing.JTextField inputSearchProduct;
+    public javax.swing.JTextField inputUser;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -250,6 +251,6 @@ public class ViewModifyLogin extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JTable tableProduct;
+    public javax.swing.JTable tablePeoples;
     // End of variables declaration//GEN-END:variables
 }

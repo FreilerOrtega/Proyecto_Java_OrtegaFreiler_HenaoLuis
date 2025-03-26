@@ -29,16 +29,18 @@ public class ViewAddPeople extends javax.swing.JFrame {
 
         inputTatto = new javax.swing.JTextField();
         inputIdOwner5 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        inputWeight = new javax.swing.JTextField();
+        inputIDNumber = new javax.swing.JTextField();
         btnAddPeople = new javax.swing.JButton();
         input1LastName = new javax.swing.JTextField();
         input2Name = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         input2LastName = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        inputIdOwner2 = new javax.swing.JTextField();
+        inputEmail = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         input1Name = new javax.swing.JTextField();
@@ -49,11 +51,11 @@ public class ViewAddPeople extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         CombSex = new javax.swing.JComboBox<>();
-        inputIdOwner1 = new javax.swing.JTextField();
-        inputWeight1 = new javax.swing.JTextField();
-        inputIdOwner3 = new javax.swing.JTextField();
-        inputIdOwner4 = new javax.swing.JTextField();
-        inputIdOwner6 = new javax.swing.JTextField();
+        inputPhone = new javax.swing.JTextField();
+        inputAddres = new javax.swing.JTextField();
+        inputEmergencyContact = new javax.swing.JTextField();
+        inputUser = new javax.swing.JTextField();
+        inputPassword = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
@@ -67,6 +69,19 @@ public class ViewAddPeople extends javax.swing.JFrame {
 
         inputIdOwner5.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(155, 178, 108));
@@ -75,10 +90,10 @@ public class ViewAddPeople extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Numero de identificacion:");
 
-        inputWeight.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        inputWeight.addActionListener(new java.awt.event.ActionListener() {
+        inputIDNumber.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputIDNumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputWeightActionPerformed(evt);
+                inputIDNumberActionPerformed(evt);
             }
         });
 
@@ -105,7 +120,7 @@ public class ViewAddPeople extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Primer nombre:");
 
-        inputIdOwner2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputEmail.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,15 +158,15 @@ public class ViewAddPeople extends javax.swing.JFrame {
 
         CombSex.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "------", "cliente", "veterinario", "administrador" }));
 
-        inputIdOwner1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputPhone.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputWeight1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputAddres.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputIdOwner3.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputEmergencyContact.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputIdOwner4.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputUser.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
-        inputIdOwner6.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputPassword.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -204,15 +219,15 @@ public class ViewAddPeople extends javax.swing.JFrame {
                                 .addComponent(input2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(input2LastName)
-                                .addComponent(inputWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(inputIDNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(inputWeight1)
-                            .addComponent(inputIdOwner1)
-                            .addComponent(inputIdOwner2)
+                            .addComponent(inputAddres)
+                            .addComponent(inputPhone)
+                            .addComponent(inputEmail)
                             .addComponent(CombSex, 0, 302, Short.MAX_VALUE)
-                            .addComponent(inputIdOwner3)
-                            .addComponent(inputIdOwner4)
-                            .addComponent(inputIdOwner6))))
+                            .addComponent(inputEmergencyContact)
+                            .addComponent(inputUser)
+                            .addComponent(inputPassword))))
                 .addGap(52, 52, 52))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
@@ -239,7 +254,7 @@ public class ViewAddPeople extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
-                        .addGap(12, 12, 12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel10)
                         .addGap(15, 15, 15)
                         .addComponent(jLabel8)
@@ -256,16 +271,16 @@ public class ViewAddPeople extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(input2LastName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(12, 12, 12)
-                        .addComponent(inputWeight, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputIDNumber, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(inputWeight1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputAddres, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(inputIdOwner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(inputPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(inputIdOwner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(inputEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputEmergencyContact, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel13))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -273,11 +288,11 @@ public class ViewAddPeople extends javax.swing.JFrame {
                     .addComponent(jLabel14))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputIdOwner6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel16))
                 .addGap(30, 30, 30)
                 .addComponent(btnAddPeople)
@@ -316,9 +331,9 @@ public class ViewAddPeople extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputTattoActionPerformed
 
-    private void inputWeightActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputWeightActionPerformed
+    private void inputIDNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDNumberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputWeightActionPerformed
+    }//GEN-LAST:event_inputIDNumberActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
@@ -367,15 +382,15 @@ public class ViewAddPeople extends javax.swing.JFrame {
     public javax.swing.JTextField input1Name;
     public javax.swing.JTextField input2LastName;
     public javax.swing.JTextField input2Name;
-    public javax.swing.JTextField inputIdOwner1;
-    public javax.swing.JTextField inputIdOwner2;
-    public javax.swing.JTextField inputIdOwner3;
-    public javax.swing.JTextField inputIdOwner4;
+    public javax.swing.JTextField inputAddres;
+    public javax.swing.JTextField inputEmail;
+    public javax.swing.JTextField inputEmergencyContact;
+    public javax.swing.JTextField inputIDNumber;
     public javax.swing.JTextField inputIdOwner5;
-    public javax.swing.JTextField inputIdOwner6;
+    public javax.swing.JTextField inputPassword;
+    public javax.swing.JTextField inputPhone;
     public javax.swing.JTextField inputTatto;
-    public javax.swing.JTextField inputWeight;
-    public javax.swing.JTextField inputWeight1;
+    public javax.swing.JTextField inputUser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
@@ -390,5 +405,7 @@ public class ViewAddPeople extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }
