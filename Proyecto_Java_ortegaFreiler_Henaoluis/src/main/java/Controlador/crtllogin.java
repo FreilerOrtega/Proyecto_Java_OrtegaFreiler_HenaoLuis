@@ -51,6 +51,14 @@ public class crtllogin  implements ActionListener {
                 ViewAdministratorHome VAH = new ViewAdministratorHome();
                 VAH.setVisible(true);
                 CtrlAdministratorHome CAH=new CtrlAdministratorHome(VAH,people);
+            } else if (people.getPerson_type().toLowerCase().equals("veterinario")) {
+                // si la persona es de tipo cliente se cierra y abre el la de el veterinario
+                vLogin.setVisible(false);
+                veterinarian vet = new veterinarian();
+                vet.setVisible(true);
+                Ctrlveterinarian name = new Ctrlveterinarian(vet,people);
+
+
             }
         } catch (Exception i) {
             JOptionPane.showMessageDialog(vLogin, i.getMessage());
