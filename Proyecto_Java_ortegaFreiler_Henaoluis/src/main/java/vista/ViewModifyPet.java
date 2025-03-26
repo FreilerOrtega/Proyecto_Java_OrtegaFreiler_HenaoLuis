@@ -36,15 +36,15 @@ public class ViewModifyPet extends javax.swing.JFrame {
         inputWeight = new javax.swing.JTextField();
         btnAddPet = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
-        inputWeight1 = new javax.swing.JTextField();
+        inputMicroChip = new javax.swing.JTextField();
         btnExit = new javax.swing.JButton();
         inputSearchProduct = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tableProduct = new javax.swing.JTable();
+        tablePets = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        inputAge1 = new javax.swing.JTextField();
+        inputIdPet = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,7 +79,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Micro chip:");
 
-        inputWeight1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputMicroChip.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         btnExit.setBackground(new java.awt.Color(238, 244, 198));
         btnExit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -96,15 +96,15 @@ public class ViewModifyPet extends javax.swing.JFrame {
             }
         });
 
-        tableProduct.setModel(new javax.swing.table.DefaultTableModel(
+        tablePets.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Nombre", "Dueño"
+                "ID", "Nombre", "Especie", "Dueño"
             }
         ));
-        jScrollPane3.setViewportView(tableProduct);
+        jScrollPane3.setViewportView(tablePets);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -118,7 +118,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("ID de la mascota:");
 
-        inputAge1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+        inputIdPet.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -156,8 +156,8 @@ public class ViewModifyPet extends javax.swing.JFrame {
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(inputWeight)
                                             .addComponent(inputAge)
-                                            .addComponent(inputWeight1)
-                                            .addComponent(inputAge1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                                            .addComponent(inputMicroChip)
+                                            .addComponent(inputIdPet, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(167, 167, 167)
                         .addComponent(jLabel3)))
@@ -181,7 +181,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(inputAge1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputIdPet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
@@ -193,7 +193,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(inputWeight1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputMicroChip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(btnAddPet)
                 .addGap(25, 25, 25))
@@ -269,10 +269,10 @@ public class ViewModifyPet extends javax.swing.JFrame {
     public javax.swing.JButton btnAddPet;
     public javax.swing.JButton btnExit;
     public javax.swing.JTextField inputAge;
-    public javax.swing.JTextField inputAge1;
+    public javax.swing.JTextField inputIdPet;
+    public javax.swing.JTextField inputMicroChip;
     public javax.swing.JTextField inputSearchProduct;
     public javax.swing.JTextField inputWeight;
-    public javax.swing.JTextField inputWeight1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -282,6 +282,6 @@ public class ViewModifyPet extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane3;
-    public javax.swing.JTable tableProduct;
+    public javax.swing.JTable tablePets;
     // End of variables declaration//GEN-END:variables
 }

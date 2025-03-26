@@ -1,10 +1,7 @@
 package Controlador;
 
 import Modelo.Persona;
-import vista.ViewAddPeople;
-import vista.ViewAdministratorHome;
-import vista.ViewPeoplesManagement;
-import vista.viewLogin;
+import vista.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,6 +37,11 @@ public class CtrlAdministratorHome implements ActionListener {
             VPM.setVisible(true);
             CtrlPeoplesManagement CPM=new CtrlPeoplesManagement(VPM,people);
 
+        } else if (e.getSource()==administratorHome.btnPets){
+            administratorHome.setVisible(false);
+            ViewPetsManagement VPetM=new ViewPetsManagement();
+            VPetM.setVisible(true);
+            CtrlPetsManagement CPM=new CtrlPetsManagement(VPetM,people);
         }
 
     }

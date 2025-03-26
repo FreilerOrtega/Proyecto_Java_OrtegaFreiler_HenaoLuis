@@ -28,6 +28,8 @@ CREATE TABLE Mascota (
     weight DOUBLE,
     photo VARCHAR(255),
     owner_id INT,
+    microChip varchar(255),
+    tatto varchar(255),
     FOREIGN KEY (owner_id) REFERENCES Persona(id)
 );
 

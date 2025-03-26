@@ -33,7 +33,7 @@ public class ViewPetsManagement extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         btnAddPet = new javax.swing.JButton();
         btnAddPetWithOutOwner = new javax.swing.JButton();
-        btModifyPet = new javax.swing.JButton();
+        btnModifyPet = new javax.swing.JButton();
         btnExit1 = new javax.swing.JButton();
 
         btnExit.setBackground(new java.awt.Color(238, 244, 198));
@@ -67,12 +67,12 @@ public class ViewPetsManagement extends javax.swing.JFrame {
             }
         });
 
-        btModifyPet.setBackground(new java.awt.Color(238, 244, 198));
-        btModifyPet.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btModifyPet.setText("Modificar mascota");
-        btModifyPet.addActionListener(new java.awt.event.ActionListener() {
+        btnModifyPet.setBackground(new java.awt.Color(238, 244, 198));
+        btnModifyPet.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnModifyPet.setText("Modificar mascota");
+        btnModifyPet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btModifyPetActionPerformed(evt);
+                btnModifyPetActionPerformed(evt);
             }
         });
 
@@ -98,9 +98,8 @@ public class ViewPetsManagement extends javax.swing.JFrame {
                         .addGap(62, 62, 62)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(btnAddPet, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(btnAddPetWithOutOwner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btModifyPet, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE)))))
+                            .addComponent(btnAddPetWithOutOwner, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnModifyPet, javax.swing.GroupLayout.DEFAULT_SIZE, 268, Short.MAX_VALUE))))
                 .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -113,7 +112,7 @@ public class ViewPetsManagement extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnAddPetWithOutOwner, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btModifyPet, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnModifyPet, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
@@ -139,9 +138,9 @@ public class ViewPetsManagement extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddPetWithOutOwnerActionPerformed
 
-    private void btModifyPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btModifyPetActionPerformed
+    private void btnModifyPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifyPetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btModifyPetActionPerformed
+    }//GEN-LAST:event_btnModifyPetActionPerformed
 
     private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
@@ -187,11 +186,11 @@ public class ViewPetsManagement extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btModifyPet;
     public javax.swing.JButton btnAddPet;
     public javax.swing.JButton btnAddPetWithOutOwner;
     public javax.swing.JButton btnExit;
     public javax.swing.JButton btnExit1;
+    public javax.swing.JButton btnModifyPet;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

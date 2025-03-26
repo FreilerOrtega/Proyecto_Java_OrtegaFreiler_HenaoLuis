@@ -72,10 +72,8 @@
                           <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                               <Component id="btnAddPet" pref="268" max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnAddPetWithOutOwner" max="32767" attributes="0"/>
-                                  <Component id="btModifyPet" alignment="0" pref="268" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="btnAddPetWithOutOwner" max="32767" attributes="0"/>
+                              <Component id="btnModifyPet" alignment="0" pref="268" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -93,7 +91,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="btnAddPetWithOutOwner" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btModifyPet" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnModifyPet" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -134,7 +132,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btModifyPet">
+        <Component class="javax.swing.JButton" name="btnModifyPet">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c6" green="f4" red="ee" type="rgb"/>
@@ -145,7 +143,7 @@
             <Property name="text" type="java.lang.String" value="Modificar mascota"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btModifyPetActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnModifyPetActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

@@ -87,8 +87,8 @@
                                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                               <Component id="inputWeight" max="32767" attributes="0"/>
                                               <Component id="inputAge" max="32767" attributes="0"/>
-                                              <Component id="inputWeight1" max="32767" attributes="0"/>
-                                              <Component id="inputAge1" min="-2" pref="151" max="-2" attributes="0"/>
+                                              <Component id="inputMicroChip" max="32767" attributes="0"/>
+                                              <Component id="inputIdPet" min="-2" pref="151" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -123,7 +123,7 @@
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="inputAge1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputIdPet" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
@@ -138,7 +138,7 @@
                   <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="inputWeight1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="inputMicroChip" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAddPet" min="-2" max="-2" attributes="0"/>
@@ -225,7 +225,7 @@
             <Property name="text" type="java.lang.String" value="Micro chip:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputWeight1">
+        <Component class="javax.swing.JTextField" name="inputMicroChip">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
@@ -265,17 +265,23 @@
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
           <SubComponents>
-            <Component class="javax.swing.JTable" name="tableProduct">
+            <Component class="javax.swing.JTable" name="tablePets">
               <Properties>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                  <Table columnCount="3" rowCount="0">
+                  <Table columnCount="4" rowCount="0">
                     <Column editable="true" title="ID" type="java.lang.Object"/>
                     <Column editable="true" title="Nombre" type="java.lang.Object"/>
+                    <Column editable="true" title="Especie" type="java.lang.Object"/>
                     <Column editable="true" title="Due&#xf1;o" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                   <TableColumnModel selectionModel="0">
+                    <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                      <Title/>
+                      <Editor/>
+                      <Renderer/>
+                    </Column>
                     <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                       <Title/>
                       <Editor/>
@@ -336,7 +342,7 @@
             <Property name="text" type="java.lang.String" value="ID de la mascota:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="inputAge1">
+        <Component class="javax.swing.JTextField" name="inputIdPet">
           <Properties>
             <Property name="horizontalAlignment" type="int" value="2"/>
           </Properties>
