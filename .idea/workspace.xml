@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d26f2c8-232e-4d8b-9278-21b991c42202" name="Changes" comment="" />
+    <list default="true" id="6d26f2c8-232e-4d8b-9278-21b991c42202" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewAppointmentsHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewAppointmentsHistory.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewAppointmentsHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewAppointmentsHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewHealthHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewHealthHistory.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewHealthHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewHealthHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewInvoice.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewInvoice.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewInvoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewInvoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewLogin.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewLogin.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewOwnerHome.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewOwnerHome.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewOwnerHome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewOwnerHome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewSurgeriesHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewSurgeriesHistory.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewSurgeriesHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewSurgeriesHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewVaccineHistory.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewVaccineHistory.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/vista/viewVaccineHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/vista/viewVaccineHistory.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +52,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Uniminuto Tibu/Documents/LuisHenao/Nueva carpeta/Proyecto_Java_OrtegaFreiler_HenaoLuis/Proyecto_Java_ortegaFreiler_Henaoluis"
+    "last_opened_file_path": "C:/Users/Usuario/Desktop/freiler/Proyecto_Java_OrtegaFreiler_HenaoLuis"
   }
 }]]></component>
   <component name="RunManager" selected="Application.FacturaPDF">
