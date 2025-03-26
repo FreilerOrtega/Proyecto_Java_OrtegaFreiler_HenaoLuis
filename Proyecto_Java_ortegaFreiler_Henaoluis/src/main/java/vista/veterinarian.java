@@ -35,8 +35,7 @@ public class veterinarian extends javax.swing.JFrame {
         textwelcom = new javax.swing.JLabel();
         labelnameveterinarian = new javax.swing.JLabel();
         ButtonAddDiagnosis = new javax.swing.JButton();
-        ButtonAddSurgeries = new javax.swing.JButton();
-        ButtonADDSurgeries = new javax.swing.JButton();
+        ButtonClosedSesion = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,6 +63,7 @@ public class veterinarian extends javax.swing.JFrame {
         textwelcom.setText("      BIENVENIDO");
 
         labelnameveterinarian.setForeground(new java.awt.Color(255, 255, 255));
+        labelnameveterinarian.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelnameveterinarian.setText("Nombre Veterinario");
 
         ButtonAddDiagnosis.setBackground(new java.awt.Color(204, 255, 204));
@@ -74,19 +74,11 @@ public class veterinarian extends javax.swing.JFrame {
             }
         });
 
-        ButtonAddSurgeries.setBackground(new java.awt.Color(204, 255, 204));
-        ButtonAddSurgeries.setText("Enviar Cirujia");
-        ButtonAddSurgeries.addActionListener(new java.awt.event.ActionListener() {
+        ButtonClosedSesion.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonClosedSesion.setText("Cerrar sesion");
+        ButtonClosedSesion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonAddSurgeriesActionPerformed(evt);
-            }
-        });
-
-        ButtonADDSurgeries.setBackground(new java.awt.Color(204, 255, 204));
-        ButtonADDSurgeries.setText("Enviar Procedimiento");
-        ButtonADDSurgeries.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonADDSurgeriesActionPerformed(evt);
+                ButtonClosedSesionActionPerformed(evt);
             }
         });
 
@@ -95,66 +87,66 @@ public class veterinarian extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(235, 235, 235)
-                .addComponent(textwelcom, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(307, 307, 307)
-                        .addComponent(Buttonback))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(251, 251, 251)
+                        .addComponent(ButtonClosedSesion)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Buttonsurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Buttonprocedure)
-                            .addComponent(Buttonappoinment, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(ButtonAddDiagnosis, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ButtonAddSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(ButtonADDSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(213, Short.MAX_VALUE))
+                            .addComponent(Buttonappoinment, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Buttonsurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(93, 93, 93))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(labelnameveterinarian, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(66, 66, 66))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(textwelcom, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(74, 74, 74))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(Buttonprocedure, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(84, 84, 84))))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(labelnameveterinarian)
-                .addGap(260, 260, 260))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(Buttonback)
+                .addGap(162, 162, 162))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(18, 18, 18)
+                .addComponent(ButtonClosedSesion)
+                .addGap(2, 2, 2)
                 .addComponent(textwelcom)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(labelnameveterinarian)
-                .addGap(24, 24, 24)
+                .addGap(18, 18, 18)
                 .addComponent(Buttonprocedure)
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addComponent(Buttonsurgeries)
                 .addGap(18, 18, 18)
                 .addComponent(Buttonappoinment)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonAddDiagnosis)
-                .addGap(26, 26, 26)
-                .addComponent(ButtonAddSurgeries)
-                .addGap(26, 26, 26)
-                .addComponent(ButtonADDSurgeries)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addGap(35, 35, 35)
                 .addComponent(Buttonback)
-                .addGap(38, 38, 38))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 6, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -168,13 +160,9 @@ public class veterinarian extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonAddDiagnosisActionPerformed
 
-    private void ButtonAddSurgeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddSurgeriesActionPerformed
+    private void ButtonClosedSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonClosedSesionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonAddSurgeriesActionPerformed
-
-    private void ButtonADDSurgeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonADDSurgeriesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonADDSurgeriesActionPerformed
+    }//GEN-LAST:event_ButtonClosedSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,9 +201,8 @@ public class veterinarian extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton ButtonADDSurgeries;
-    private javax.swing.JButton ButtonAddDiagnosis;
-    private javax.swing.JButton ButtonAddSurgeries;
+    public javax.swing.JButton ButtonAddDiagnosis;
+    public javax.swing.JButton ButtonClosedSesion;
     public javax.swing.JButton Buttonappoinment;
     public javax.swing.JButton Buttonback;
     public javax.swing.JButton Buttonprocedure;
