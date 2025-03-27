@@ -9,7 +9,7 @@ import java.util.List;
 
 public class MedicamentoDAO {
 
-    public Medicamento getMedicineById(int id) throws SQLException {
+    public static Medicamento getMedicineById(int id) throws SQLException {
         Medicamento Medicine = new Medicamento();
 
         String sql="select * from Medicamento where id=?";

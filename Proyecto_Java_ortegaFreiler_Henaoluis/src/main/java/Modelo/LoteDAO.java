@@ -33,5 +33,46 @@ public class LoteDAO {
     }
 
 
+    public static Lote getBatchByID(int id) throws SQLException {
+
+        Lote batch = new Lote();
+        String sql="select * from Lote where id=?";
+        try(Connection con= Conect.getCon();
+            PreparedStatement ps= con.prepareStatement(sql)) {
+            ps.setInt(1,id);
+            ResultSet rs= ps.executeQuery();
+
+            if (rs.next()){
+
+                batch.setId(rs.getInt(1));
+                batch.setEntryDate(rs.getString(2));
+                batch.setEntryQuantity(rs.getInt(3));
+                batch.setCurrentQuantity(rs.getInt(4));
+                batch.setExpirationDate(rs.getString(5));
+
+            }
+        }catch (SQLException e){
+            throw new SQLException("Error en la busquedad de Lote por id ");
+        };
+        return batch;
+    }
+
+    public static void subtractMedicine(int idMedicine,int quantitySubstract) throws SQLException {
+
+        Medicamento medicine=MedicamentoDAO.getMedicineById(idMedicine);
+        Lote lote=LoteDAO.getBatchByID(medicine.getBatchId());
+        String sql="UPDATE Lote SET current_quantity=? WHERE id=?";
+
+        try(Connection con=Conect.getCon();
+            PreparedStatement ps=con.prepareStatement(sql)) {
+            int newQuantity=lote.getCurrentQuantity()-quantitySubstract;
+            ps.setInt(1,newQuantity);
+            ps.setInt(2,medicine.getBatchId());
+            int res= ps.executeUpdate();
+        } catch (SQLException e) {
+            throw new SQLException("Error al actualizar cantidad"+e.getMessage());
+        }
+    }
+
 }
 

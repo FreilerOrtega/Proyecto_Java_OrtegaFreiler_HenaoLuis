@@ -50,6 +50,11 @@ public class CtrlAdministratorHome implements ActionListener {
                 ViewAddInvoice VAI = new ViewAddInvoice();
                 VAI.setVisible(true);
                 CtrlAddInvoice CAI = new CtrlAddInvoice(VAI, people);
+            } else if (e.getSource()==administratorHome.btnInventory) {
+                administratorHome.setVisible(false);
+                ViewInventoryManagement VIM=new ViewInventoryManagement();
+                VIM.setVisible(true);
+                CtrlInventoryManagement CIM=new CtrlInventoryManagement(VIM,people);
             }
         }catch (Exception ex){
             JOptionPane.showMessageDialog(administratorHome,ex.getMessage());
