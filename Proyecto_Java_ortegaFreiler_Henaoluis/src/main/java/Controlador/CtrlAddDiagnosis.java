@@ -1,10 +1,7 @@
 package Controlador;
 
 import Modelo.Persona;
-import vista.AddDeworming;
-import vista.AddDiagnosis;
-import vista.AddSuffering;
-import vista.AddSurgeries;
+import vista.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -50,7 +47,15 @@ public class CtrlAddDiagnosis implements ActionListener {
             AddDeworming addDeworming = new AddDeworming();
             addDeworming.setVisible(true);
             CtrlAddDeworning ctrlAddDeworning = new CtrlAddDeworning(addDeworming,people);
+
+        } else if (e.getSource()==Diagnosis.ButtonBackDiagnosis) {
+            Diagnosis.setVisible(false);
+            veterinarian vet = new veterinarian();
+            vet.setVisible(true);
+            Ctrlveterinarian ctrlv= new Ctrlveterinarian(vet, people);
         }
+
+
 
     }
 }

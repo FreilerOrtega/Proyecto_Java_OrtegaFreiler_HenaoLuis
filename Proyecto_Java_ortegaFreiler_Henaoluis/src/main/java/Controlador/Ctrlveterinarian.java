@@ -23,7 +23,8 @@ public class Ctrlveterinarian implements ActionListener {
         this.ViewVeterinarian.Buttonappoinment.addActionListener(this);
         this.ViewVeterinarian.ButtonAddDiagnosis.addActionListener(this);
         this.ViewVeterinarian.ButtonClosedSesion.addActionListener(this);
-        this.ViewVeterinarian.Buttonback.addActionListener(this);
+
+
 
 
     }
@@ -37,6 +38,7 @@ public class Ctrlveterinarian implements ActionListener {
         ViewProcedures ViewPro = new ViewProcedures();
         ViewPro.setVisible(true);
         ctrlProcedure ctrp = new ctrlProcedure(ViewPro,people);
+
     } else if (e.getSource()==ViewVeterinarian.Buttonsurgeries) {
         ViewVeterinarian.setVisible(false);
         viewsurgeriesperformed viewS = new viewsurgeriesperformed();
@@ -55,6 +57,13 @@ public class Ctrlveterinarian implements ActionListener {
         ViewVeterinarian.setVisible(false);
         AddDiagnosis addDiagnosis = new AddDiagnosis();
         addDiagnosis.setVisible(true);
+        CtrlAddDiagnosis ctrlAppoiment = new CtrlAddDiagnosis(addDiagnosis,people);
+
+    } else if (e.getSource()==ViewVeterinarian.ButtonClosedSesion) {
+        ViewVeterinarian.setVisible(false);
+        viewLogin viewLogin = new viewLogin();
+        viewLogin.setVisible(true);
+        crtllogin crtllogin= new crtllogin(viewLogin);
 
     }
 

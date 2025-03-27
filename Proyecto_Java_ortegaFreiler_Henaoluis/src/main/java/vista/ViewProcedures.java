@@ -50,7 +50,7 @@ public class ViewProcedures extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id_Mascota", "procedimiento", "fecha", "diagnostico"
+                "id_Mascota", "procedimiento", "fecha", "ID cita"
             }
         ));
         jScrollPane1.setViewportView(tableviewprocedure);

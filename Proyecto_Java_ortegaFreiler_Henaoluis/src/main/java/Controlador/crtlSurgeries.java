@@ -26,7 +26,7 @@ public class crtlSurgeries implements ActionListener {
             vsurgeries.setVisible(false);
             veterinarian vet = new veterinarian();
             vet.setVisible(true);
-            Ctrlveterinarian name = new Ctrlveterinarian(vet,people);
+            Ctrlveterinarian name = new Ctrlveterinarian(vet, people);
         }
 
     }

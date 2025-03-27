@@ -122,7 +122,7 @@
                     <Column editable="true" title="id_Mascota" type="java.lang.Object"/>
                     <Column editable="true" title="procedimiento" type="java.lang.Object"/>
                     <Column editable="true" title="fecha" type="java.lang.Object"/>
-                    <Column editable="true" title="diagnostico" type="java.lang.Object"/>
+                    <Column editable="true" title="ID cita" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
