@@ -31,7 +31,6 @@ public class veterinarian extends javax.swing.JFrame {
         Buttonprocedure = new javax.swing.JButton();
         Buttonsurgeries = new javax.swing.JButton();
         Buttonappoinment = new javax.swing.JButton();
-        Buttonback = new javax.swing.JButton();
         textwelcom = new javax.swing.JLabel();
         labelnameveterinarian = new javax.swing.JLabel();
         ButtonAddDiagnosis = new javax.swing.JButton();
@@ -54,14 +53,6 @@ public class veterinarian extends javax.swing.JFrame {
 
         Buttonappoinment.setBackground(new java.awt.Color(204, 255, 204));
         Buttonappoinment.setText("Consultas Realizadas");
-
-        Buttonback.setBackground(new java.awt.Color(204, 255, 204));
-        Buttonback.setText("Volver");
-        Buttonback.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ButtonbackActionPerformed(evt);
-            }
-        });
 
         textwelcom.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textwelcom.setForeground(new java.awt.Color(255, 255, 255));
@@ -92,39 +83,30 @@ public class veterinarian extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(110, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ButtonClosedSesion)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ButtonAddDiagnosis, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Buttonappoinment, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Buttonsurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(93, 93, 93))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(labelnameveterinarian, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(66, 66, 66))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(textwelcom, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(74, 74, 74))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(Buttonprocedure, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(84, 84, 84))))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Buttonback)
-                .addGap(162, 162, 162))
+                        .addComponent(labelnameveterinarian, javax.swing.GroupLayout.PREFERRED_SIZE, 248, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(66, 66, 66))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(textwelcom, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(74, 74, 74))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(ButtonClosedSesion)
+                        .addGap(148, 148, 148))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(ButtonAddDiagnosis, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(Buttonappoinment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Buttonsurgeries, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Buttonprocedure, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE)))
+                        .addGap(84, 84, 84))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(ButtonClosedSesion)
-                .addGap(2, 2, 2)
+                .addGap(43, 43, 43)
                 .addComponent(textwelcom)
                 .addGap(18, 18, 18)
                 .addComponent(labelnameveterinarian)
@@ -136,9 +118,9 @@ public class veterinarian extends javax.swing.JFrame {
                 .addComponent(Buttonappoinment)
                 .addGap(18, 18, 18)
                 .addComponent(ButtonAddDiagnosis)
-                .addGap(35, 35, 35)
-                .addComponent(Buttonback)
-                .addContainerGap(58, Short.MAX_VALUE))
+                .addGap(43, 43, 43)
+                .addComponent(ButtonClosedSesion)
+                .addContainerGap(50, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -168,10 +150,6 @@ public class veterinarian extends javax.swing.JFrame {
     private void ButtonClosedSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonClosedSesionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonClosedSesionActionPerformed
-
-    private void ButtonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonbackActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ButtonbackActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,7 +191,6 @@ public class veterinarian extends javax.swing.JFrame {
     public javax.swing.JButton ButtonAddDiagnosis;
     public javax.swing.JButton ButtonClosedSesion;
     public javax.swing.JButton Buttonappoinment;
-    public javax.swing.JButton Buttonback;
     public javax.swing.JButton Buttonprocedure;
     public javax.swing.JButton Buttonsurgeries;
     public javax.swing.JPanel jPanel1;
