@@ -2,9 +2,7 @@ package Controlador;
 
 import Modelo.CitaDAO;
 import Modelo.Persona;
-import vista.ViewProcedures;
-import vista.veterinarian;
-import vista.viewsurgeriesperformed;
+import vista.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -46,6 +44,17 @@ public class Ctrlveterinarian implements ActionListener {
         crtlSurgeries ctrls = new crtlSurgeries(viewS,people);
 
 
+
+    } else if (e.getSource()==ViewVeterinarian.Buttonappoinment) {
+        ViewVeterinarian.setVisible(false);
+        ViewAppoiment viewAppoiment = new ViewAppoiment();
+        viewAppoiment.setVisible(true);
+        CtrlAppoiment crtlappoiment = new CtrlAppoiment(viewAppoiment,people);
+
+    }else if (e.getSource()==ViewVeterinarian.ButtonAddDiagnosis) {
+        ViewVeterinarian.setVisible(false);
+        AddDiagnosis addDiagnosis = new AddDiagnosis();
+        addDiagnosis.setVisible(true);
 
     }
 

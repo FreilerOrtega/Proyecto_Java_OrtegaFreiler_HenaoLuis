@@ -57,6 +57,11 @@ public class veterinarian extends javax.swing.JFrame {
 
         Buttonback.setBackground(new java.awt.Color(204, 255, 204));
         Buttonback.setText("Volver");
+        Buttonback.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonbackActionPerformed(evt);
+            }
+        });
 
         textwelcom.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         textwelcom.setForeground(new java.awt.Color(255, 255, 255));
@@ -163,6 +168,10 @@ public class veterinarian extends javax.swing.JFrame {
     private void ButtonClosedSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonClosedSesionActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ButtonClosedSesionActionPerformed
+
+    private void ButtonbackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonbackActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonbackActionPerformed
 
     /**
      * @param args the command line arguments

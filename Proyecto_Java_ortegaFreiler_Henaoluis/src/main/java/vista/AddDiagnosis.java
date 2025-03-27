@@ -35,13 +35,13 @@ public class AddDiagnosis extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         TableViewCita = new javax.swing.JTable();
         jLabel3 = new javax.swing.JLabel();
-        ButtonAddSugeries = new javax.swing.JButton();
+        ButtonAddDiagnosis = new javax.swing.JButton();
         ButtonBackDiagnosis = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        ButtonAddSurgeries = new javax.swing.JButton();
+        ButtonAddDeworning = new javax.swing.JButton();
+        ButtonAddProcedure = new javax.swing.JButton();
+        ButtonAddVaccination = new javax.swing.JButton();
+        ButtonAddSuffering = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
 
@@ -66,6 +66,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
             }
         });
 
+        ButtonSearchCita.setBackground(new java.awt.Color(204, 255, 204));
         ButtonSearchCita.setText("Buscar");
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -76,7 +77,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "ID_cita", "ID_mascota", "ID_dueño", "Fecha", "motivo ", "ID veterenirario", "diagnostico", "Asistencia", "Estado"
             }
         ));
         jScrollPane1.setViewportView(TableViewCita);
@@ -85,8 +86,10 @@ public class AddDiagnosis extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("DIAGNOSTICO");
 
-        ButtonAddSugeries.setText("Dar diagnostico");
+        ButtonAddDiagnosis.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonAddDiagnosis.setText("Dar diagnostico");
 
+        ButtonBackDiagnosis.setBackground(new java.awt.Color(204, 255, 204));
         ButtonBackDiagnosis.setText("Volver");
         ButtonBackDiagnosis.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,25 +97,40 @@ public class AddDiagnosis extends javax.swing.JFrame {
             }
         });
 
-        jButton1.setText(" Asignar Cirugia");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAddSurgeries.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonAddSurgeries.setText(" Asignar Cirugia");
+        ButtonAddSurgeries.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ButtonAddSurgeriesActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Asignar desparacitacion");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAddDeworning.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonAddDeworning.setText("Asignar desparacitacion");
+        ButtonAddDeworning.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ButtonAddDeworningActionPerformed(evt);
             }
         });
 
-        jButton4.setText("asignar procedimiento");
+        ButtonAddProcedure.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonAddProcedure.setText("asignar procedimiento");
+        ButtonAddProcedure.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAddProcedureActionPerformed(evt);
+            }
+        });
 
-        jButton5.setText("asignar vacunacion");
+        ButtonAddVaccination.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonAddVaccination.setText("asignar vacunacion");
+        ButtonAddVaccination.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonAddVaccinationActionPerformed(evt);
+            }
+        });
 
-        jButton6.setText("asignar padecimiento");
+        ButtonAddSuffering.setBackground(new java.awt.Color(204, 255, 204));
+        ButtonAddSuffering.setText("asignar padecimiento");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -122,21 +140,21 @@ public class AddDiagnosis extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(349, 349, 349)
+                        .addComponent(IdCitaAsiganar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(ButtonSearchCita))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(382, 382, 382)
+                        .addComponent(ButtonAddSuffering)))
+                .addContainerGap(391, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(618, 618, 618))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton6)
-                        .addGap(393, 393, 393))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(349, 349, 349)
-                .addComponent(IdCitaAsiganar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(ButtonSearchCita)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLabel2)
+                .addGap(618, 618, 618))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -146,16 +164,13 @@ public class AddDiagnosis extends javax.swing.JFrame {
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(41, 41, 41)
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(56, 56, 56)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ButtonAddDeworning, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(ButtonAddProcedure, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(53, 53, 53)
+                        .addComponent(ButtonAddVaccination, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(33, 33, 33)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ButtonAddSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(198, 198, 198)
                         .addComponent(jLabel3)
@@ -163,8 +178,12 @@ public class AddDiagnosis extends javax.swing.JFrame {
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(381, 381, 381)
-                        .addComponent(ButtonAddSugeries, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 67, Short.MAX_VALUE))
+                        .addComponent(ButtonAddDiagnosis, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 785, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,51 +192,48 @@ public class AddDiagnosis extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(ButtonBackDiagnosis)
-                        .addGap(38, 38, 38))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)
-                        .addGap(18, 18, 18)))
+                        .addGap(24, 24, 24)))
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ButtonSearchCita)
                     .addComponent(IdCitaAsiganar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
+                .addGap(85, 85, 85)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(85, 85, 85)
-                        .addComponent(jLabel3)))
+                    .addComponent(jLabel3)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
-                .addComponent(ButtonAddSugeries)
+                .addComponent(ButtonAddDiagnosis)
                 .addGap(51, 51, 51)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton4)
-                    .addComponent(jButton5)
-                    .addComponent(jButton1))
-                .addGap(39, 39, 39)
-                .addComponent(jButton6)
-                .addContainerGap(71, Short.MAX_VALUE))
+                    .addComponent(ButtonAddDeworning)
+                    .addComponent(ButtonAddVaccination)
+                    .addComponent(ButtonAddSurgeries)
+                    .addComponent(ButtonAddProcedure))
+                .addGap(47, 47, 47)
+                .addComponent(ButtonAddSuffering)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -235,13 +251,21 @@ public class AddDiagnosis extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ButtonAddDeworningActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddDeworningActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ButtonAddDeworningActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ButtonAddSurgeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddSurgeriesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ButtonAddSurgeriesActionPerformed
+
+    private void ButtonAddProcedureActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddProcedureActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonAddProcedureActionPerformed
+
+    private void ButtonAddVaccinationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddVaccinationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonAddVaccinationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -280,21 +304,21 @@ public class AddDiagnosis extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton ButtonAddSugeries;
+    public javax.swing.JButton ButtonAddDeworning;
+    public javax.swing.JButton ButtonAddDiagnosis;
+    public javax.swing.JButton ButtonAddProcedure;
+    public javax.swing.JButton ButtonAddSuffering;
+    public javax.swing.JButton ButtonAddSurgeries;
+    public javax.swing.JButton ButtonAddVaccination;
     public javax.swing.JButton ButtonBackDiagnosis;
     public javax.swing.JButton ButtonSearchCita;
     public javax.swing.JTextField IdCitaAsiganar;
     private javax.swing.JTable TableViewCita;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
     public javax.swing.JLabel jLabel3;
-    private javax.swing.JPanel jPanel1;
+    public javax.swing.JPanel jPanel1;
     public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
