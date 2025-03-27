@@ -3,17 +3,19 @@ package Modelo;
 public class Facturas {
     private int id;
     private int clientId;
-    private int medicationId;
-    private int quantity;
+    private String description;
+    private int total;
+    private String date;
 
     public Facturas() {
     }
 
-    public Facturas(int id, int clientId, int medicationId, int quantity) {
+    public Facturas(int id, int clientId, String description, int total, String date) {
         this.id = id;
         this.clientId = clientId;
-        this.medicationId = medicationId;
-        this.quantity = quantity;
+        this.description = description;
+        this.total = total;
+        this.date = date;
     }
 
     public int getId() {
@@ -32,19 +34,27 @@ public class Facturas {
         this.clientId = clientId;
     }
 
-    public int getMedicationId() {
-        return medicationId;
+    public String getDescription() {
+        return description;
     }
 
-    public void setMedicationId(int medicationId) {
-        this.medicationId = medicationId;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getTotal() {
+        return total;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setTotal(int total) {
+        this.total = total;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

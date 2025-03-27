@@ -3,6 +3,7 @@ package Controlador;
 import Modelo.Persona;
 import vista.*;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,22 +27,32 @@ public class CtrlAdministratorHome implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==administratorHome.btnExit) {
-            administratorHome.setVisible(false);
-            viewLogin VL=new viewLogin();
-            VL.setVisible(true);
-            crtllogin control=new crtllogin(VL);
-        }else if (e.getSource()==administratorHome.btnPeoples) {
-            administratorHome.setVisible(false);
-            ViewPeoplesManagement VPM=new ViewPeoplesManagement();
-            VPM.setVisible(true);
-            CtrlPeoplesManagement CPM=new CtrlPeoplesManagement(VPM,people);
+        try {
 
-        } else if (e.getSource()==administratorHome.btnPets){
-            administratorHome.setVisible(false);
-            ViewPetsManagement VPetM=new ViewPetsManagement();
-            VPetM.setVisible(true);
-            CtrlPetsManagement CPM=new CtrlPetsManagement(VPetM,people);
+            if (e.getSource()==administratorHome.btnExit) {
+                administratorHome.setVisible(false);
+                viewLogin VL=new viewLogin();
+                VL.setVisible(true);
+                crtllogin control=new crtllogin(VL);
+            }else if (e.getSource()==administratorHome.btnPeoples) {
+                administratorHome.setVisible(false);
+                ViewPeoplesManagement VPM=new ViewPeoplesManagement();
+                VPM.setVisible(true);
+                CtrlPeoplesManagement CPM=new CtrlPeoplesManagement(VPM,people);
+
+            } else if (e.getSource()==administratorHome.btnPets){
+                administratorHome.setVisible(false);
+                ViewPetsManagement VPetM=new ViewPetsManagement();
+                VPetM.setVisible(true);
+                CtrlPetsManagement CPM=new CtrlPetsManagement(VPetM,people);
+            } else if(e.getSource()==administratorHome.btnInvoices) {
+                administratorHome.setVisible(false);
+                ViewAddInvoice VAI = new ViewAddInvoice();
+                VAI.setVisible(true);
+                CtrlAddInvoice CAI = new CtrlAddInvoice(VAI, people);
+            }
+        }catch (Exception ex){
+            JOptionPane.showMessageDialog(administratorHome,ex.getMessage());
         }
 
     }
