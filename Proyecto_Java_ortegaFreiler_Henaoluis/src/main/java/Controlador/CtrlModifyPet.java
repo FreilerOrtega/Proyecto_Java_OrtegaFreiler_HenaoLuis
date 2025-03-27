@@ -26,6 +26,7 @@ public class CtrlModifyPet implements ActionListener {
         this.people = people;
         PetsTable(VMP.tablePets);
         this.VMP.btnExit.addActionListener(this);
+        this.VMP.btnAddPet.addActionListener(this);
     }
 
     @Override
@@ -41,7 +42,7 @@ public class CtrlModifyPet implements ActionListener {
             }
 
         }catch (Exception ex){
-            JOptionPane.showMessageDialog(VMP,ex.getMessage());
+            JOptionPane.showMessageDialog(VMP,"error: "+ex.getMessage());
         }
     }
 
@@ -55,14 +56,15 @@ public class CtrlModifyPet implements ActionListener {
         try{
             int idPet=Integer.parseInt(VMP.inputIdPet.getText());
             oldPet=MascotaDAO.getPetDates(idPet);
+            newPet.setId(idPet);
         }catch (NumberFormatException e){
             throw new NumberFormatException("Por favor ingrese un id de mascota valido");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-        newPet.setAge(VMP.inputAge.getText().trim().isEmpty()?oldPet.getAge():Integer.parseInt(VMP.inputAge.getText()));// verifica que el imput tenga informacion y en caso de que no tenga poner la direccion vieja
-        newPet.setWeight(VMP.inputWeight.getText().trim().isEmpty()?oldPet.getWeight():Integer.parseInt(VMP.inputAge.getText()));// verifica que el imput tenga informacion y en caso de que no tenga poner la direccion vieja
-        newPet.setMicroChip(VMP.inputMicroChip.getText().trim().isEmpty()?oldPet.getMicroChip():VMP.inputAge.getText());// verifica que el imput tenga informacion y en caso de que no tenga poner la direccion vieja
+        newPet.setAge(VMP.inputAge.getText().trim().isEmpty() ? oldPet.getAge() : Integer.parseInt(VMP.inputAge.getText()));// verifica que el imput tenga informacion y en caso de que no tenga poner la direccion vieja
+        newPet.setWeight(VMP.inputWeight.getText().trim().isEmpty() ? oldPet.getWeight() : Double.parseDouble(VMP.inputWeight.getText()));// verifica que el imput tenga informacion y en caso de que no tenga poner la direccion vieja
+        newPet.setMicroChip(VMP.inputMicroChip.getText().trim().isEmpty() ? oldPet.getMicroChip() : VMP.inputMicroChip.getText());// verifica que el imput tenga informacion y en caso de que no tenga poner la direccion vieja
 
         MascotaDAO.ModifyPet(newPet);
 
@@ -81,6 +83,7 @@ public class CtrlModifyPet implements ActionListener {
                 object[0] = m.getId();
                 object[1] = m.getNameP();
                 object[2] = m.getSpecies();
+                object[3] = "";
                 for (Persona p : peopleList) {
                     if (p.getId() == m.getOwner_id()) {
                         object[3] = p.getAllName();

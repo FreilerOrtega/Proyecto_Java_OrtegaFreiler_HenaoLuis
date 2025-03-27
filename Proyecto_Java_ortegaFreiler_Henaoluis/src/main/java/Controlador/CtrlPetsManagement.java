@@ -14,7 +14,7 @@ public class CtrlPetsManagement implements ActionListener {
     public CtrlPetsManagement(ViewPetsManagement VPM, Persona people) {
         this.VPM = VPM;
         this.people = people;
-        this.VPM.btnExit.addActionListener(this);
+        this.VPM.btnExit1.addActionListener(this);
         this.VPM.btnAddPet.addActionListener(this);
         this.VPM.btnAddPetWithOutOwner.addActionListener(this);
         this.VPM.btnModifyPet.addActionListener(this);
@@ -23,7 +23,7 @@ public class CtrlPetsManagement implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getSource()==VPM.btnExit){
+        if (e.getSource()==VPM.btnExit1){
             VPM.setVisible(false);
             ViewAdministratorHome VAH = new ViewAdministratorHome();
             VAH.setVisible(true);

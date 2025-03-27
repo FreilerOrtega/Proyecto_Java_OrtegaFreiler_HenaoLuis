@@ -154,16 +154,22 @@ public class MascotaDAO {
 
     public static void ModifyPet(Mascota pet) throws SQLException {
         String sql="UPDATE Mascota SET age=?,weight=?,microChip=? WHERE id=?";
-        int idGenerate=0;
 
         try(Connection con= Conect.getCon();
             PreparedStatement ps=con.prepareStatement(sql)){
             ps.setInt(1,pet.getAge());
             ps.setDouble(2,pet.getWeight());
             ps.setString(3,pet.getMicroChip());
-            ps.setLong(4,pet.getId());
-            int res=ps.executeUpdate();
-
+            ps.setInt(4,pet.getId());
+            System.out.println(pet.getAge());
+            System.out.println(pet.getWeight());
+            System.out.println(pet.getMicroChip());
+            System.out.println(pet.getId());
+            int rs=ps.executeUpdate();
+            if (rs>0){
+                System.out.println("hola");
+                JOptionPane.showMessageDialog(null,"Mascota actualizada con exito");
+            }
             try {
                 con.close();
             }catch (SQLException i){

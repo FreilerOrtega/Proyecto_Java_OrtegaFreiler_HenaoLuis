@@ -34,11 +34,10 @@ public class MedicamentoDAO {
         return Medicine;
     }
 
-    public List<Medicamento> getMedicineList() throws SQLException {
+    public static List<Medicamento> getMedicineList() throws SQLException {
 
         List<Medicamento> medicineList=new ArrayList<>();
-        String sql="select * from Medicamento";
-
+        String sql="select m.* from Medicamento m INNER JOIN Lote l ON m.batch_id=l.id where l.current_quantity>0";
         try(Connection con= Conect.getCon();
             PreparedStatement ps= con.prepareStatement(sql)) {
             ResultSet rs= ps.executeQuery();
@@ -55,7 +54,7 @@ public class MedicamentoDAO {
                 medicineList.add(Medicine);
             }
         }catch (SQLException e){
-            throw new SQLException("Error en la busquedad de medicina por id");
+            throw new SQLException("Error en la busquedad de medicina");
         };
         return medicineList;
     }
