@@ -161,14 +161,30 @@ public class MascotaDAO {
             ps.setDouble(2,pet.getWeight());
             ps.setString(3,pet.getMicroChip());
             ps.setInt(4,pet.getId());
-            System.out.println(pet.getAge());
-            System.out.println(pet.getWeight());
-            System.out.println(pet.getMicroChip());
-            System.out.println(pet.getId());
             int rs=ps.executeUpdate();
             if (rs>0){
-                System.out.println("hola");
                 JOptionPane.showMessageDialog(null,"Mascota actualizada con exito");
+            }
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
+            }
+        }catch (SQLException e){
+            throw new SQLException("Error al modificar mascota "+ e.getMessage());
+        }
+    }
+
+    public static void ModifyOwnerOfPet(int NewIdOWner, int petID) throws SQLException {
+        String sql="UPDATE Mascota SET owner_id=? WHERE id=?";
+
+        try(Connection con= Conect.getCon();
+            PreparedStatement ps=con.prepareStatement(sql)){
+            ps.setInt(1,NewIdOWner);
+            ps.setInt(2,petID);
+            int rs=ps.executeUpdate();
+            if (rs>0){
+                JOptionPane.showMessageDialog(null,"Contrato exitoso");
             }
             try {
                 con.close();

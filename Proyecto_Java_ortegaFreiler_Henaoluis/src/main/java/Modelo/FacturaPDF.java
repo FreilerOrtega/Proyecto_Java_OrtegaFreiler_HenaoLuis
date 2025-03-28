@@ -6,18 +6,36 @@ import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.*;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.List;
 
 import vista.*;
 
+import javax.swing.*;
+
 public class FacturaPDF {
     public static void GenerateFacture(int idPeople, List<Object[]> medicineListInvoice, int idFacture) throws SQLException {
 
+
+        JFileChooser chooser = new JFileChooser(); // se crea el gestor de arhivos
+
+        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);// se hace que solo seleccione carpetas y no archivos
+
+        int resultado = chooser.showOpenDialog(null);//muestra como tal el gestor de archivos y guarda en caso de que se seleccione algo
+
+        String destinoPrev = "";
+        if (resultado == JFileChooser.APPROVE_OPTION) {//verifica en caso de que el usuario haya seleccionado algo
+            // Obtener la carpeta seleccionada
+            File carpetaSeleccionada = chooser.getSelectedFile(); //obtiene la ruta del directorio seleccionado
+
+            destinoPrev=carpetaSeleccionada.getAbsolutePath(); //se obtiene la ruta absoluta en forfato string
+        }
+
         Persona owner=PersonaDAO.SearchPeopleById(idPeople);
         int total=0;
-        String destino = "./factura"+idFacture+".pdf";  // Nombre del archivo
+        String destino = destinoPrev+ "./factura"+idFacture+".pdf";  // ruta de donde quire que se guarde y le pone el nombre del archivo
         try {
             // Crear un documento PDF
             PdfWriter writer = new PdfWriter(destino);

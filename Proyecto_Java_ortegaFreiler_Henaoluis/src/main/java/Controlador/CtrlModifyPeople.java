@@ -23,13 +23,14 @@ public class CtrlModifyPeople implements ActionListener {
     ViewModifyPeople VMP=new ViewModifyPeople();
     Persona people;
     DefaultTableModel model =  new DefaultTableModel();
-
-    public CtrlModifyPeople(ViewModifyPeople VMP, Persona people) {
+    List<Persona> peoplesList= PersonaDAO.getPeopleList();
+    public CtrlModifyPeople(ViewModifyPeople VMP, Persona people) throws SQLException {
         this.VMP = VMP;
         this.people = people;
         PeoplesTable(VMP.tablePeoples);
         this.VMP.btnModPeople.addActionListener(this);
         this.VMP.btnExit.addActionListener(this);
+        SearchInRealTime(VMP.inputSearchProduct);
     }
 
     @Override
@@ -98,9 +99,9 @@ public class CtrlModifyPeople implements ActionListener {
     public void PeoplesTable(JTable table){
         model=(DefaultTableModel)table.getModel();
         model.setRowCount(0);
-        List<Persona> peoplesList = new ArrayList<>();
+
         try {
-            peoplesList= PersonaDAO.getPeopleList();
+
             Object[] object=new Object[3];
             for (Persona p:peoplesList){
                 object[0]=p.getId();
@@ -114,21 +115,44 @@ public class CtrlModifyPeople implements ActionListener {
         VMP.tablePeoples.setModel(model);
     }
 
+    public void PeoplesTableSearch(JTable table,String contain){
+        model=(DefaultTableModel)table.getModel();
+        model.setRowCount(0);
+        try {
+            Object[] object=new Object[3];
+            for (Persona p:peoplesList){
+                String IDNumber=p.getId_number()+"";
+                if (IDNumber.contains(contain)){
+                    object[0]=p.getId();
+                    object[1]=p.getAllName();
+                    object[2]=p.getId_number();
+                    model.addRow(object);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        VMP.tablePeoples.setModel(model);
+    }
+
     public void SearchInRealTime(JTextField jTextField){
         jTextField.getDocument().addDocumentListener(new DocumentListener() {
+
+
+
             @Override
             public void insertUpdate(DocumentEvent e) {
-
+                PeoplesTableSearch(VMP.tablePeoples,jTextField.getText());
             }
 
             @Override
             public void removeUpdate(DocumentEvent e) {
-
+                PeoplesTableSearch(VMP.tablePeoples,jTextField.getText());
             }
 
             @Override
             public void changedUpdate(DocumentEvent e) {
-                //textoCompleto.toLowerCase().contains(textoBuscado.toLowerCase());
+                PeoplesTableSearch(VMP.tablePeoples,jTextField.getText());
             }
         });
     }

@@ -49,6 +49,7 @@ public class CtrlAddInvoice implements ActionListener {
                 CtrlAdministratorHome CAH=new CtrlAdministratorHome(VAH,people);
             } else if (e.getSource()==VAI.btnAddProduct) {
                 addProduct();
+                getMedicines(VAI.tableProduct);
                 viewMedicineAdded(VAI.tableProductFacture);
             } else if (e.getSource()==VAI.btnFactureAdd) {
                 int idFacture=AddFacture();
@@ -113,21 +114,35 @@ public class CtrlAddInvoice implements ActionListener {
         return idFactura;
     }
 
-    public void addProduct(){
+    public void addProduct() throws SQLException {
         Object[] object=new Object[5];
         int idProduct=0;
         int price=0;
         int count=0;
+        int oldCount=0;
         try {
             idProduct=Integer.parseInt(VAI.idProductAdd.getText());
             object[0]=idProduct;
+            for(Medicamento m:medicineList){
+                if (m.getId()==idProduct){
+                    for (Lote l:batchList){
+                        if (l.getId()==m.getBatchId()){
+                            oldCount=l.getCurrentQuantity();
+                        }
+                    }
+                }
+            }
         }catch (NumberFormatException e) {
             throw new NumberFormatException("Por favor ingresa un id de producto valido");
         }
 
         try {
             count=Integer.parseInt(VAI.countProductAdd.getText());
+            if (count>oldCount){
+                throw new RuntimeException("Por favor ingresa una cantidad menor o igual a la disponible");
+            }
             object[2]=count;
+
         }catch (NumberFormatException e){
             throw new NumberFormatException("Por favor ingresa una cantidad valida");
         }
@@ -139,12 +154,14 @@ public class CtrlAddInvoice implements ActionListener {
                 price=m.getPrice();
             }
         }
-
+        LoteDAO.subtractMedicine(idProduct,count);
         int total=price*count;
 
         object[4]=total;
 
+
         medicineListInvoice.add(object);
+        medicineList= MedicamentoDAO.getMedicineList();
 
     };
 
@@ -164,7 +181,7 @@ public class CtrlAddInvoice implements ActionListener {
 
     public void getMedicines(JTable jTable){
         model=(DefaultTableModel) jTable.getModel();
-
+        model.setRowCount(0);
         Object[] object=new Object[4];
 
         for (Medicamento m:medicineList){

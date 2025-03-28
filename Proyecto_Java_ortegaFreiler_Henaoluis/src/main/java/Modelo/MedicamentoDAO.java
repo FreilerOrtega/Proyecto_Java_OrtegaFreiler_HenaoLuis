@@ -1,15 +1,13 @@
 package Modelo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import javax.swing.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MedicamentoDAO {
 
-    public Medicamento getMedicineById(int id) throws SQLException {
+    public static Medicamento getMedicineById(int id) throws SQLException {
         Medicamento Medicine = new Medicamento();
 
         String sql="select * from Medicamento where id=?";
@@ -59,4 +57,28 @@ public class MedicamentoDAO {
         return medicineList;
     }
 
+
+    public static void insertMedicine(Medicamento medicine) throws SQLException {
+        String sql="INSERT INTO Medicamento (nameM, batch_id, manufacturer, typeM, presentation, price)\n" +
+                "VALUES (?, ?, ?, ?, ?, ?);";
+
+        try(Connection con= Conect.getCon();
+            PreparedStatement ps=con.prepareStatement(sql)){
+            ps.setString(1,medicine.getName());
+            ps.setInt(2,medicine.getBatchId());
+            ps.setString(3,medicine.getManufacturer());
+            ps.setString(4,medicine.getType());
+            ps.setString(5,medicine.getPresentation());
+            ps.setInt(6,medicine.getPrice());
+            int res=ps.executeUpdate();
+
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
+            }
+        }catch (SQLException e){
+            throw new SQLException("Error al agregar medicamento "+ e.getMessage());
+        }
+    }
 }

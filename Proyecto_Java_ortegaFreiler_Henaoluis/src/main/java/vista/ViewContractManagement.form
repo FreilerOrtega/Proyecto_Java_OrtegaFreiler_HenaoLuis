@@ -46,9 +46,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="btnAddContract1" max="32767" attributes="0"/>
+                      <Component id="btnAddTraking" max="32767" attributes="0"/>
                       <Component id="btnAddContract" max="32767" attributes="0"/>
-                      <Component id="btnAddContract2" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnSeeTraking" alignment="0" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
               </Group>
@@ -67,9 +67,9 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnAddContract" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btnAddContract1" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnAddTraking" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Component id="btnAddContract2" min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="btnSeeTraking" min="-2" pref="34" max="-2" attributes="0"/>
                   <EmptySpace pref="27" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -93,7 +93,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnAddContract1">
+        <Component class="javax.swing.JButton" name="btnAddTraking">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c6" green="f4" red="ee" type="rgb"/>
@@ -104,7 +104,7 @@
             <Property name="text" type="java.lang.String" value="Dar seguimiento a un contrato"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddContract1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddTrakingActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -127,7 +127,7 @@
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
         </Component>
-        <Component class="javax.swing.JButton" name="btnAddContract2">
+        <Component class="javax.swing.JButton" name="btnSeeTraking">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c6" green="f4" red="ee" type="rgb"/>
@@ -138,7 +138,7 @@
             <Property name="text" type="java.lang.String" value="Ver seguimiento de un contrato"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAddContract2ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnSeeTrakingActionPerformed"/>
           </Events>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

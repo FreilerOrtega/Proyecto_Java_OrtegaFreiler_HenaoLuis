@@ -9,12 +9,13 @@ public class Cita {
     private int veterinarian_id;
     private String diagnosis;
     private boolean attendance;
-    String status;
+    private String status;
+    private String hours;
 
     public Cita() {
     }
 
-    public Cita(int id, int pet_id, int owner_id, String dates, String consultation_reason, int veterinarian_id, String diagnosis, boolean attendance,String status) {
+    public Cita(int id, int pet_id, int owner_id, String dates, String consultation_reason, int veterinarian_id, String diagnosis, boolean attendance, String status, String hours) {
         this.id = id;
         this.pet_id = pet_id;
         this.owner_id = owner_id;
@@ -23,7 +24,8 @@ public class Cita {
         this.veterinarian_id = veterinarian_id;
         this.diagnosis = diagnosis;
         this.attendance = attendance;
-        this.status=status;
+        this.status = status;
+        this.hours = hours;
     }
 
     public int getId() {
@@ -96,5 +98,13 @@ public class Cita {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getHours() {
+        return hours;
+    }
+
+    public void setHours(String hours) {
+        this.hours = hours;
     }
 }
