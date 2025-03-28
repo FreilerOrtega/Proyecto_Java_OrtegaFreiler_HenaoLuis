@@ -122,7 +122,7 @@ public class ViewInventoryManagement extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Productos por reavastecer");
+        jLabel2.setText("Productos por reabastecer");
 
         tableProductCant.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

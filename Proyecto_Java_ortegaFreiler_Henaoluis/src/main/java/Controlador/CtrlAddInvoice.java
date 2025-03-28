@@ -142,6 +142,7 @@ public class CtrlAddInvoice implements ActionListener {
                 throw new RuntimeException("Por favor ingresa una cantidad menor o igual a la disponible");
             }
             object[2]=count;
+
         }catch (NumberFormatException e){
             throw new NumberFormatException("Por favor ingresa una cantidad valida");
         }
@@ -160,6 +161,7 @@ public class CtrlAddInvoice implements ActionListener {
 
 
         medicineListInvoice.add(object);
+        medicineList= MedicamentoDAO.getMedicineList();
 
     };
 

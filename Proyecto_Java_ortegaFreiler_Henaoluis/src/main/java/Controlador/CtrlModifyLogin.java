@@ -8,6 +8,8 @@ import vista.ViewModifyLogin;
 import vista.ViewPeoplesManagement;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,13 +22,15 @@ public class CtrlModifyLogin implements ActionListener {
     ViewModifyLogin VML;
     Persona people;
     DefaultTableModel model =  new DefaultTableModel();
+    List<Persona> peoplesList= PersonaDAO.getPeopleList();
 
-    public CtrlModifyLogin(ViewModifyLogin VML, Persona people) {
+    public CtrlModifyLogin(ViewModifyLogin VML, Persona people) throws SQLException {
         this.VML = VML;
         this.people = people;
         PeoplesTable(VML.tablePeoples);
         this.VML.btnModify.addActionListener(this);
         this.VML.btnExit.addActionListener(this);
+        SearchInRealTime(VML.inputSearchProduct);
     }
 
     @Override
@@ -71,9 +75,9 @@ public class CtrlModifyLogin implements ActionListener {
     public void PeoplesTable(JTable table){
         model=(DefaultTableModel)table.getModel();
         model.setRowCount(0);
-        List<Persona> peoplesList = new ArrayList<>();
+
         try {
-            peoplesList= PersonaDAO.getPeopleList();
+
             Object[] object=new Object[3];
             for (Persona p:peoplesList){
                 object[0]=p.getId();
@@ -85,5 +89,46 @@ public class CtrlModifyLogin implements ActionListener {
             throw new RuntimeException(e);
         }
         VML.tablePeoples.setModel(model);
+    }
+    public void PeoplesTableSearch(JTable table,String contain){
+        model=(DefaultTableModel)table.getModel();
+        model.setRowCount(0);
+        try {
+            Object[] object=new Object[3];
+            for (Persona p:peoplesList){
+                String IDNumber=p.getId_number()+"";
+                if (IDNumber.contains(contain)){
+                    object[0]=p.getId();
+                    object[1]=p.getAllName();
+                    object[2]=p.getId_number();
+                    model.addRow(object);
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        VML.tablePeoples.setModel(model);
+    }
+
+    public void SearchInRealTime(JTextField jTextField){
+        jTextField.getDocument().addDocumentListener(new DocumentListener() {
+
+
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                PeoplesTableSearch(VML.tablePeoples,jTextField.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                PeoplesTableSearch(VML.tablePeoples,jTextField.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                PeoplesTableSearch(VML.tablePeoples,jTextField.getText());
+            }
+        });
     }
 }
