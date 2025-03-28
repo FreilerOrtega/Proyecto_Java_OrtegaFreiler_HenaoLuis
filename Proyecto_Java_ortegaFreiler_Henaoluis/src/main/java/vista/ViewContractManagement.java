@@ -29,9 +29,9 @@ public class ViewContractManagement extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         btnAddContract = new javax.swing.JButton();
-        btnAddContract1 = new javax.swing.JButton();
+        btnAddTraking = new javax.swing.JButton();
         btnExit2 = new javax.swing.JButton();
-        btnAddContract2 = new javax.swing.JButton();
+        btnSeeTraking = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -46,12 +46,12 @@ public class ViewContractManagement extends javax.swing.JFrame {
             }
         });
 
-        btnAddContract1.setBackground(new java.awt.Color(238, 244, 198));
-        btnAddContract1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAddContract1.setText("Dar seguimiento a un contrato");
-        btnAddContract1.addActionListener(new java.awt.event.ActionListener() {
+        btnAddTraking.setBackground(new java.awt.Color(238, 244, 198));
+        btnAddTraking.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAddTraking.setText("Dar seguimiento a un contrato");
+        btnAddTraking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddContract1ActionPerformed(evt);
+                btnAddTrakingActionPerformed(evt);
             }
         });
 
@@ -64,12 +64,12 @@ public class ViewContractManagement extends javax.swing.JFrame {
             }
         });
 
-        btnAddContract2.setBackground(new java.awt.Color(238, 244, 198));
-        btnAddContract2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAddContract2.setText("Ver seguimiento de un contrato");
-        btnAddContract2.addActionListener(new java.awt.event.ActionListener() {
+        btnSeeTraking.setBackground(new java.awt.Color(238, 244, 198));
+        btnSeeTraking.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnSeeTraking.setText("Ver seguimiento de un contrato");
+        btnSeeTraking.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAddContract2ActionPerformed(evt);
+                btnSeeTrakingActionPerformed(evt);
             }
         });
 
@@ -80,9 +80,9 @@ public class ViewContractManagement extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(85, 85, 85)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnAddContract1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnAddTraking, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnAddContract, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnAddContract2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnSeeTraking, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(91, 91, 91))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -97,9 +97,9 @@ public class ViewContractManagement extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAddContract, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnAddContract1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAddTraking, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnAddContract2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnSeeTraking, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -121,17 +121,17 @@ public class ViewContractManagement extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAddContractActionPerformed
 
-    private void btnAddContract1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddContract1ActionPerformed
+    private void btnAddTrakingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddTrakingActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddContract1ActionPerformed
+    }//GEN-LAST:event_btnAddTrakingActionPerformed
 
     private void btnExit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnExit2ActionPerformed
 
-    private void btnAddContract2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddContract2ActionPerformed
+    private void btnSeeTrakingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeeTrakingActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddContract2ActionPerformed
+    }//GEN-LAST:event_btnSeeTrakingActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,9 +170,9 @@ public class ViewContractManagement extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAddContract;
-    public javax.swing.JButton btnAddContract1;
-    public javax.swing.JButton btnAddContract2;
+    public javax.swing.JButton btnAddTraking;
     public javax.swing.JButton btnExit2;
+    public javax.swing.JButton btnSeeTraking;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -31,12 +31,12 @@ public class ViewContractTracking extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableContracts = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         inputContractId = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        inputDetails = new javax.swing.JTextArea();
         jLabel8 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
         btnAddTracking = new javax.swing.JButton();
@@ -58,7 +58,7 @@ public class ViewContractTracking extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Contratos");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableContracts.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -66,7 +66,7 @@ public class ViewContractTracking extends javax.swing.JFrame {
                 "ID", "Mascota", "Dueño", "Fecha"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableContracts);
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Ingresa el id del contrato:");
@@ -80,9 +80,9 @@ public class ViewContractTracking extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Ingresa los detalles de la visita:");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        inputDetails.setColumns(20);
+        inputDetails.setRows(5);
+        jScrollPane2.setViewportView(inputDetails);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,7 +124,7 @@ public class ViewContractTracking extends javax.swing.JFrame {
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabel1)
                                         .addGap(44, 44, 44)
-                                        .addComponent(inputContractId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(inputContractId, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
@@ -236,7 +236,8 @@ public class ViewContractTracking extends javax.swing.JFrame {
     public javax.swing.JButton btnAddTracking;
     public javax.swing.JButton btnExit;
     public javax.swing.JButton btnExit1;
-    private javax.swing.JTextField inputContractId;
+    public javax.swing.JTextField inputContractId;
+    public javax.swing.JTextArea inputDetails;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel7;
@@ -244,7 +245,6 @@ public class ViewContractTracking extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JTable tableContracts;
     // End of variables declaration//GEN-END:variables
 }

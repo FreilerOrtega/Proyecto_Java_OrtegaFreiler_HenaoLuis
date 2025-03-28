@@ -15,6 +15,7 @@ public class ViewAppointmentsManagement extends javax.swing.JFrame {
      */
     public ViewAppointmentsManagement() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -27,38 +28,38 @@ public class ViewAppointmentsManagement extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnExit2 = new javax.swing.JButton();
-        btnAppointments = new javax.swing.JButton();
-        btnAppointments1 = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        btnAddAppointment = new javax.swing.JButton();
+        btnAppointmentsStatus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(155, 178, 108));
 
-        btnExit2.setBackground(new java.awt.Color(238, 244, 198));
-        btnExit2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnExit2.setText("Volver");
-        btnExit2.addActionListener(new java.awt.event.ActionListener() {
+        btnExit.setBackground(new java.awt.Color(238, 244, 198));
+        btnExit.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnExit.setText("Volver");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExit2ActionPerformed(evt);
+                btnExitActionPerformed(evt);
             }
         });
 
-        btnAppointments.setBackground(new java.awt.Color(238, 244, 198));
-        btnAppointments.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAppointments.setText("Crear cita");
-        btnAppointments.addActionListener(new java.awt.event.ActionListener() {
+        btnAddAppointment.setBackground(new java.awt.Color(238, 244, 198));
+        btnAddAppointment.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAddAppointment.setText("Crear cita");
+        btnAddAppointment.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAppointmentsActionPerformed(evt);
+                btnAddAppointmentActionPerformed(evt);
             }
         });
 
-        btnAppointments1.setBackground(new java.awt.Color(238, 244, 198));
-        btnAppointments1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnAppointments1.setText("Cambiar estado de una cita");
-        btnAppointments1.addActionListener(new java.awt.event.ActionListener() {
+        btnAppointmentsStatus.setBackground(new java.awt.Color(238, 244, 198));
+        btnAppointmentsStatus.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnAppointmentsStatus.setText("Cambiar estado de una cita");
+        btnAppointmentsStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAppointments1ActionPerformed(evt);
+                btnAppointmentsStatusActionPerformed(evt);
             }
         });
 
@@ -70,23 +71,23 @@ public class ViewAppointmentsManagement extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(btnExit2))
+                        .addComponent(btnExit))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(btnAppointments1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnAppointments, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(btnAppointmentsStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnAddAppointment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnExit2, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAppointments, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAddAppointment, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btnAppointments1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnAppointmentsStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(25, Short.MAX_VALUE))
         );
 
@@ -108,17 +109,17 @@ public class ViewAppointmentsManagement extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnExit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit2ActionPerformed
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnExit2ActionPerformed
+    }//GEN-LAST:event_btnExitActionPerformed
 
-    private void btnAppointmentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentsActionPerformed
+    private void btnAddAppointmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddAppointmentActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAppointmentsActionPerformed
+    }//GEN-LAST:event_btnAddAppointmentActionPerformed
 
-    private void btnAppointments1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointments1ActionPerformed
+    private void btnAppointmentsStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAppointmentsStatusActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAppointments1ActionPerformed
+    }//GEN-LAST:event_btnAppointmentsStatusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -156,9 +157,9 @@ public class ViewAppointmentsManagement extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnAppointments;
-    public javax.swing.JButton btnAppointments1;
-    public javax.swing.JButton btnExit2;
+    public javax.swing.JButton btnAddAppointment;
+    public javax.swing.JButton btnAppointmentsStatus;
+    public javax.swing.JButton btnExit;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -31,12 +31,13 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
         inputContractId = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableContracts = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        tableTraking = new javax.swing.JTable();
         btnExit2 = new javax.swing.JButton();
+        btnSee = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -48,10 +49,11 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Ingresa el id del contrato:");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableContracts.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -59,7 +61,7 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
                 "ID", "Mascota", "Dueño", "Fecha"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tableContracts);
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -69,15 +71,15 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Seguimientos");
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        tableTraking.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID", "Mascota", "Dueño", "Fecha"
+                "Numero de cita", "Detalles", "Fecha"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        jScrollPane2.setViewportView(tableTraking);
 
         btnExit2.setBackground(new java.awt.Color(238, 244, 198));
         btnExit2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -85,6 +87,15 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
         btnExit2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnExit2ActionPerformed(evt);
+            }
+        });
+
+        btnSee.setBackground(new java.awt.Color(238, 244, 198));
+        btnSee.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btnSee.setText("Ver seguimientos");
+        btnSee.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSeeActionPerformed(evt);
             }
         });
 
@@ -103,7 +114,9 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
                         .addGap(272, 272, 272)
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(inputContractId, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(inputContractId, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnSee))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addComponent(jLabel8))
@@ -127,7 +140,8 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(inputContractId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputContractId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSee))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel8)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -158,6 +172,10 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
     private void btnExit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExit2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnExit2ActionPerformed
+
+    private void btnSeeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSeeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSeeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,14 +214,15 @@ public class ViewSeeTrackingOfContract extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnExit2;
-    private javax.swing.JTextField inputContractId;
+    public javax.swing.JButton btnSee;
+    public javax.swing.JTextField inputContractId;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    public javax.swing.JTable tableContracts;
+    public javax.swing.JTable tableTraking;
     // End of variables declaration//GEN-END:variables
 }

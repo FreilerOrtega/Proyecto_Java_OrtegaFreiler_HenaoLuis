@@ -65,7 +65,7 @@ public class ctrlProcedure implements ActionListener {
 
     public void addprocedure() throws SQLException{
         Procedimientos procedimientos = new Procedimientos();
-        procedimientos.setPet_id(AddProcedure.);//AQUI VOY FREILER 
+        //procedimientos.setPet_id(AddProcedure.);//AQUI VOY FREILER
 
     }
 }

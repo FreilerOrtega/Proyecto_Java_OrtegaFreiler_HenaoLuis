@@ -23,6 +23,7 @@ public class CtrlSeeProducts implements ActionListener {
         this.VSP = VSP;
         this.people = people;
         VSP.btnExit2.addActionListener(this);
+        seePrducts(VSP.tableMedicines);
     }
 
     @Override
@@ -57,12 +58,14 @@ public class CtrlSeeProducts implements ActionListener {
             for (Lote l:batchList){
                 if (m.getBatchId()==l.getId()){
                     object[6]=l.getId();
-                    object[7]=m.getPrice();
-                    object[8]=m.getPrice();
-                    object[9]=m.getPrice();
-                    object[10]=m.getPrice();
+                    object[7]=l.getEntryDate();
+                    object[8]=l.getEntryQuantity();
+                    object[9]=l.getCurrentQuantity();
+                    object[10]=l.getExpirationDate();
+                    model.addRow(object);
                 }
             }
         }
+        VSP.tableMedicines.setModel(model);
     }
 }

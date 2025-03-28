@@ -33,13 +33,13 @@ CREATE TABLE Mascota (
     FOREIGN KEY (owner_id) REFERENCES Persona(id)
 );
 
-CREATE TABLE Lote (
-    id INT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    entry_date VARCHAR(255),
-    entry_quantity INT,
-    current_quantity INT,
-    expiration_date VARCHAR(255)
-);
+	CREATE TABLE Lote (
+		id INT  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+		entry_date VARCHAR(255),
+		entry_quantity INT,
+		current_quantity INT,
+		expiration_date VARCHAR(255)
+	);
 
 CREATE TABLE Medicamento (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -152,13 +152,13 @@ CREATE TABLE Contratos_Adopcion (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     pet_id INT,
     owner_id INT,
-    date INT,
+    dates Varchar(255)	,
     FOREIGN KEY (pet_id) REFERENCES Mascota(id),
     FOREIGN KEY (owner_id) REFERENCES Persona(id)
 );
 
 CREATE TABLE seguimiento_post_adopcion (
-    appointment_number INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    appointment_number INT,
     contract_id INT,
     details VARCHAR(255),
     dates VARCHAR(255),

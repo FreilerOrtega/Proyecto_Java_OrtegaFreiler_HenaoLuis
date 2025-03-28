@@ -55,7 +55,18 @@ public class CtrlAdministratorHome implements ActionListener {
                 ViewInventoryManagement VIM=new ViewInventoryManagement();
                 VIM.setVisible(true);
                 CtrlInventoryManagement CIM=new CtrlInventoryManagement(VIM,people);
+            } else if (e.getSource()==administratorHome.btnAppointments) {
+                administratorHome.setVisible(false);
+                ViewAppointmentsManagement VAM=new ViewAppointmentsManagement();
+                VAM.setVisible(true);
+                CtrlAppointmentsManagement CAP=new CtrlAppointmentsManagement(VAM,people);
+            } else if (e.getSource()==administratorHome.btnContracts) {
+                administratorHome.setVisible(false);
+                ViewContractManagement VCM=new ViewContractManagement();
+                VCM.setVisible(true);
+                CtrlContractManagement CCM=new CtrlContractManagement(VCM,people);
             }
+
         }catch (Exception ex){
             JOptionPane.showMessageDialog(administratorHome,ex.getMessage());
         }

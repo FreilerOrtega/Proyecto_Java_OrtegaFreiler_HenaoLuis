@@ -1,9 +1,7 @@
 package Modelo;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import javax.swing.*;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -72,6 +70,36 @@ public class LoteDAO {
         } catch (SQLException e) {
             throw new SQLException("Error al actualizar cantidad"+e.getMessage());
         }
+    }
+
+    public static int insertBatch(Lote batch) throws SQLException {
+        String sql="INSERT INTO Lote (entry_date, entry_quantity, current_quantity, expiration_date)\n" +
+                "VALUES (?, ?, ?, ?);";
+        int idGenerate=0;
+
+        try(Connection con= Conect.getCon();
+            PreparedStatement ps=con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)){
+            ps.setString(1,batch.getEntryDate());
+            ps.setInt(2,batch.getEntryQuantity());
+            ps.setInt(3,batch.getCurrentQuantity());
+            ps.setString(4,batch.getExpirationDate());
+            int res=ps.executeUpdate();
+            if (res>0){
+                ResultSet rs=ps.getGeneratedKeys();
+                if (rs.next()){
+                    idGenerate=rs.getInt(1);
+                }
+                JOptionPane.showMessageDialog(null,"Lote agregado con exito");
+            }
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
+            }
+        }catch (SQLException e){
+            throw new SQLException("Error al agregar Lote "+ e.getMessage());
+        }
+        return idGenerate;
     }
 
 }

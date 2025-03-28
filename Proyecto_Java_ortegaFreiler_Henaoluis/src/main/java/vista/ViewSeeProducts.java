@@ -15,6 +15,7 @@ public class ViewSeeProducts extends javax.swing.JFrame {
      */
     public ViewSeeProducts() {
         initComponents();
+        this.setLocationRelativeTo(null); 
     }
 
     /**
@@ -28,7 +29,7 @@ public class ViewSeeProducts extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tableMedicines = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         btnExit2 = new javax.swing.JButton();
 
@@ -36,7 +37,7 @@ public class ViewSeeProducts extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(155, 178, 108));
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tableMedicines.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -44,10 +45,10 @@ public class ViewSeeProducts extends javax.swing.JFrame {
                 "ID", "Nombre", "Fabricante", "Tipo", "Presentacion", "Precio", "Lote ID", "Fecha de entrada", "Cantidad de entrada", "Cantidad actual", "Fecha de vencimiento"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(5);
-            jTable1.getColumnModel().getColumn(6).setPreferredWidth(10);
+        jScrollPane1.setViewportView(tableMedicines);
+        if (tableMedicines.getColumnModel().getColumnCount() > 0) {
+            tableMedicines.getColumnModel().getColumn(0).setPreferredWidth(5);
+            tableMedicines.getColumnModel().getColumn(6).setPreferredWidth(10);
         }
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -151,6 +152,6 @@ public class ViewSeeProducts extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    public javax.swing.JTable tableMedicines;
     // End of variables declaration//GEN-END:variables
 }

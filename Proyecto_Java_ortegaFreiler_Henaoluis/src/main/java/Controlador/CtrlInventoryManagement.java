@@ -2,6 +2,7 @@ package Controlador;
 
 import Modelo.*;
 import com.mysql.cj.log.Log;
+import vista.ViewAddProduct;
 import vista.ViewAdministratorHome;
 import vista.ViewInventoryManagement;
 import vista.ViewSeeProducts;
@@ -50,7 +51,13 @@ public class CtrlInventoryManagement implements ActionListener {
                 ViewSeeProducts VSP=new ViewSeeProducts();
                 VSP.setVisible(true);
                 CtrlSeeProducts CSP=new CtrlSeeProducts(VSP,people);
+            } else if (e.getSource()==VIM.btnAddProduct) {
+                VIM.setVisible(false);
+                ViewAddProduct VAP=new ViewAddProduct();
+                VAP.setVisible(true);
+                CtrlAddProduct CAP=new CtrlAddProduct(VAP,people);
             }
+
         }catch (Exception ex){
             JOptionPane.showMessageDialog(VIM,ex.getMessage());
         }
@@ -72,7 +79,6 @@ public class CtrlInventoryManagement implements ActionListener {
                 Date Expired = simpleDateFormat.parse(l.getExpirationDate());
                 long dif = Expired.getTime() - today.getTime();
                 long diasDif = TimeUnit.DAYS.convert(dif, TimeUnit.MILLISECONDS);
-                System.out.println(diasDif);
                 if (diasDif>=0 && diasDif<=7){
                     for (Medicamento m : medicineList) {
                         if (m.getBatchId()==l.getId()){
