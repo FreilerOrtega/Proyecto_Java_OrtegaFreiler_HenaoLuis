@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class ctrlProcedure implements ActionListener {
     ViewProcedures ViewPro ;
     Persona people ;
@@ -22,9 +24,10 @@ public class ctrlProcedure implements ActionListener {
         ViewPro = viewPro;
         this.people = people;
         this.ViewPro.Buttonbackprocedures.addActionListener(this);
-
+        ProcedureTable(ViewPro.tableviewprocedure);
     }
 
+//
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -37,13 +40,14 @@ public class ctrlProcedure implements ActionListener {
         }
 
     }
+    // LISTAR LOS PROCEDIMIENTOS DE ACUERDO A LA PERSONA QUE INGRESO
     public void ProcedureTable(JTable table) {
         model = (DefaultTableModel) table.getModel();
         model.setRowCount(0);
         List<Procedimientos> procedureList = new ArrayList<>();
         try {
-            procedureList = ProcedimientoDAOveterinarian.getProceduresByveterinarianId(people.getId());
-            List<Persona> peopleList = PersonaDAO.getPeopleList();
+            procedureList = ProdecimientosDAO.getProceduresByveterinarianId(people.getId());
+
             Object[] object = new Object[4];
             for (Procedimientos P : procedureList) {
 
@@ -63,9 +67,5 @@ public class ctrlProcedure implements ActionListener {
         ViewPro.tableviewprocedure.setModel(model);
     }
 
-    public void addprocedure() throws SQLException{
-        Procedimientos procedimientos = new Procedimientos();
-        procedimientos.setPet_id(AddProcedure.);//AQUI VOY FREILER 
 
-    }
 }
