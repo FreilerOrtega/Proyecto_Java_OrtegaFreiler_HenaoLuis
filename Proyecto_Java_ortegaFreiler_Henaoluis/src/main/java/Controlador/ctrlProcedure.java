@@ -67,11 +67,9 @@ public class ctrlProcedure implements ActionListener {
         ViewPro.tableviewprocedure.setModel(model);
     }
 
-<<<<<<< HEAD
-=======
-    public void addprocedure() throws SQLException{
+    public void addprocedure() throws SQLException {
         Procedimientos procedimientos = new Procedimientos();
         //procedimientos.setPet_id(AddProcedure.);//AQUI VOY FREILER
->>>>>>> fd79e1ae1a8306fd8fb33695b746a2ee34882ad2
 
+    }
 }

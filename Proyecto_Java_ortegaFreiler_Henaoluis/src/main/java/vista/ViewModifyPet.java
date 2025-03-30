@@ -38,7 +38,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         inputMicroChip = new javax.swing.JTextField();
         btnExit = new javax.swing.JButton();
-        inputSearchProduct = new javax.swing.JTextField();
+        inputSearchPet = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablePets = new javax.swing.JTable();
         jLabel7 = new javax.swing.JLabel();
@@ -90,9 +90,9 @@ public class ViewModifyPet extends javax.swing.JFrame {
             }
         });
 
-        inputSearchProduct.addActionListener(new java.awt.event.ActionListener() {
+        inputSearchPet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputSearchProductActionPerformed(evt);
+                inputSearchPetActionPerformed(evt);
             }
         });
 
@@ -139,7 +139,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
                                 .addComponent(jLabel12))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(194, 194, 194)
-                                .addComponent(inputSearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(inputSearchPet, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(175, 175, 175)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,7 +173,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
                     .addComponent(jLabel12)
                     .addComponent(jLabel7))
                 .addGap(2, 2, 2)
-                .addComponent(inputSearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(inputSearchPet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -226,9 +226,9 @@ public class ViewModifyPet extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnExitActionPerformed
 
-    private void inputSearchProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputSearchProductActionPerformed
+    private void inputSearchPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputSearchPetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputSearchProductActionPerformed
+    }//GEN-LAST:event_inputSearchPetActionPerformed
 
     /**
      * @param args the command line arguments
@@ -271,7 +271,7 @@ public class ViewModifyPet extends javax.swing.JFrame {
     public javax.swing.JTextField inputAge;
     public javax.swing.JTextField inputIdPet;
     public javax.swing.JTextField inputMicroChip;
-    public javax.swing.JTextField inputSearchProduct;
+    public javax.swing.JTextField inputSearchPet;
     public javax.swing.JTextField inputWeight;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

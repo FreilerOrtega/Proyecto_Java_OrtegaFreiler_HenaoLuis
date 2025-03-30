@@ -8,6 +8,8 @@ import vista.ViewAddPetWithOwner;
 import vista.ViewPetsManagement;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -21,13 +23,15 @@ public class CtrlAddPetWithOwner implements ActionListener {
     ViewAddPetWithOwner VAPO;
     Persona people;
     DefaultTableModel model=new DefaultTableModel();
+    List<Persona> peoplesList= PersonaDAO.getPeopleList();
 
-    public CtrlAddPetWithOwner(ViewAddPetWithOwner VAPO, Persona people) {
+    public CtrlAddPetWithOwner(ViewAddPetWithOwner VAPO, Persona people) throws SQLException {
         this.VAPO = VAPO;
         this.people = people;
         PeoplesTable(this.VAPO.tablePeople);
         this.VAPO.btnExit.addActionListener(this);
         this.VAPO.btnAddPet.addActionListener(this);
+        SearchInRealTimePeople(VAPO.inputSearchName);
     }
 
     @Override
@@ -86,14 +90,15 @@ public class CtrlAddPetWithOwner implements ActionListener {
     public void PeoplesTable(JTable table){
         model=(DefaultTableModel)table.getModel();
         model.setRowCount(0);
-        List<Persona> peoplesList = new ArrayList<>();
+
         try {
-            peoplesList= PersonaDAO.getPeopleList();
-            Object[] object=new Object[2];
+
+            Object[] object=new Object[3];
             for (Persona p:peoplesList){
                 if (p.getPerson_type().toLowerCase().equals("cliente")){
                     object[0]=p.getId();
                     object[1]=p.getAllName();
+                    object[2]=p.getId_number();
                     model.addRow(object);
                 }
 
@@ -102,6 +107,50 @@ public class CtrlAddPetWithOwner implements ActionListener {
             throw new RuntimeException(e);
         }
         VAPO.tablePeople.setModel(model);
+    }
+
+    public void PeoplesTableSearch(JTable table,String contain){
+        model=(DefaultTableModel)table.getModel();
+        model.setRowCount(0);
+        try {
+            Object[] object=new Object[3];
+            for (Persona p:peoplesList){
+                String IDNumber=p.getId_number()+"";
+                if (IDNumber.contains(contain)){
+                    if (p.getPerson_type().toLowerCase().equals("cliente")){
+                        object[0]=p.getId();
+                        object[1]=p.getAllName();
+                        object[2]=p.getId_number();
+                        model.addRow(object);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        VAPO.tablePeople.setModel(model);
+    }
+
+    public void SearchInRealTimePeople(JTextField jTextField){
+        jTextField.getDocument().addDocumentListener(new DocumentListener() {
+
+
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                PeoplesTableSearch(VAPO.tablePeople,jTextField.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                PeoplesTableSearch(VAPO.tablePeople,jTextField.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                PeoplesTableSearch(VAPO.tablePeople,jTextField.getText());
+            }
+        });
     }
 
 }

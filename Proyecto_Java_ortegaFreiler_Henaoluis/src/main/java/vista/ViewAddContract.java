@@ -32,12 +32,12 @@ public class ViewAddContract extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
         tablePets = new javax.swing.JTable();
-        inputSearchProduct = new javax.swing.JTextField();
+        inputSearchPet = new javax.swing.JTextField();
         jScrollPane4 = new javax.swing.JScrollPane();
         tablePeoples = new javax.swing.JTable();
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        inputSearchProduct1 = new javax.swing.JTextField();
+        inputSearchPeople = new javax.swing.JTextField();
         jLabel13 = new javax.swing.JLabel();
         inputPetId = new javax.swing.JTextField();
         inputPeopleId = new javax.swing.JTextField();
@@ -68,9 +68,9 @@ public class ViewAddContract extends javax.swing.JFrame {
         ));
         jScrollPane3.setViewportView(tablePets);
 
-        inputSearchProduct.addActionListener(new java.awt.event.ActionListener() {
+        inputSearchPet.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputSearchProductActionPerformed(evt);
+                inputSearchPetActionPerformed(evt);
             }
         });
 
@@ -92,9 +92,9 @@ public class ViewAddContract extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Buscar por cedula");
 
-        inputSearchProduct1.addActionListener(new java.awt.event.ActionListener() {
+        inputSearchPeople.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputSearchProduct1ActionPerformed(evt);
+                inputSearchPeopleActionPerformed(evt);
             }
         });
 
@@ -140,7 +140,7 @@ public class ViewAddContract extends javax.swing.JFrame {
                         .addGap(140, 140, 140)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel12)
-                            .addComponent(inputSearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(inputSearchPet, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel13)
                         .addGap(33, 33, 33)
@@ -153,7 +153,7 @@ public class ViewAddContract extends javax.swing.JFrame {
                         .addGap(187, 187, 187)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel10)
-                            .addComponent(inputSearchProduct1, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(inputSearchPeople, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -193,8 +193,8 @@ public class ViewAddContract extends javax.swing.JFrame {
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(inputSearchProduct1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(inputSearchProduct, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(inputSearchPeople, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(inputSearchPet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
@@ -226,13 +226,13 @@ public class ViewAddContract extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void inputSearchProductActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputSearchProductActionPerformed
+    private void inputSearchPetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputSearchPetActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputSearchProductActionPerformed
+    }//GEN-LAST:event_inputSearchPetActionPerformed
 
-    private void inputSearchProduct1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputSearchProduct1ActionPerformed
+    private void inputSearchPeopleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputSearchPeopleActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputSearchProduct1ActionPerformed
+    }//GEN-LAST:event_inputSearchPeopleActionPerformed
 
     private void btnAddContractActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddContractActionPerformed
         // TODO add your handling code here:
@@ -282,8 +282,8 @@ public class ViewAddContract extends javax.swing.JFrame {
     public javax.swing.JButton btnExit;
     public javax.swing.JTextField inputPeopleId;
     public javax.swing.JTextField inputPetId;
-    public javax.swing.JTextField inputSearchProduct;
-    public javax.swing.JTextField inputSearchProduct1;
+    public javax.swing.JTextField inputSearchPeople;
+    public javax.swing.JTextField inputSearchPet;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;

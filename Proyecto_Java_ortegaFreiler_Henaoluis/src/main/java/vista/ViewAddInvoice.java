@@ -16,6 +16,7 @@ public class ViewAddInvoice extends javax.swing.JFrame {
     public ViewAddInvoice() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Gestion de factura");
     }
 
     /**

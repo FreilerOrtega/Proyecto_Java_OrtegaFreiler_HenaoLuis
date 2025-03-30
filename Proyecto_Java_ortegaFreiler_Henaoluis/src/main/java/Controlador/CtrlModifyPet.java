@@ -8,6 +8,8 @@ import vista.ViewModifyPet;
 import vista.ViewPetsManagement;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -20,13 +22,16 @@ public class CtrlModifyPet implements ActionListener {
     ViewModifyPet VMP;
     Persona people;
     DefaultTableModel model=new DefaultTableModel();
+    List<Mascota> petsList= MascotaDAO.viewPetsList();
+    List<Persona> peopleList = PersonaDAO.getPeopleList();
 
-    public CtrlModifyPet(ViewModifyPet VMP, Persona people) {
+    public CtrlModifyPet(ViewModifyPet VMP, Persona people) throws SQLException {
         this.VMP = VMP;
         this.people = people;
         PetsTable(VMP.tablePets);
         this.VMP.btnExit.addActionListener(this);
         this.VMP.btnAddPet.addActionListener(this);
+        SearchInRealTimePet(VMP.inputSearchPet);
     }
 
     @Override
@@ -73,10 +78,9 @@ public class CtrlModifyPet implements ActionListener {
     public void PetsTable(JTable table) {
         model = (DefaultTableModel) table.getModel();
         model.setRowCount(0);
-        List<Mascota> petsList = new ArrayList<>();
+
         try {
-            petsList = MascotaDAO.viewPetsList();
-            List<Persona> peopleList = PersonaDAO.getPeopleList();
+
             Object[] object = new Object[4];
             for (Mascota m : petsList) {
 
@@ -96,5 +100,58 @@ public class CtrlModifyPet implements ActionListener {
             throw new RuntimeException(e);
         }
         VMP.tablePets.setModel(model);
+    }
+
+    public void PetsTableSearch(JTable table,String contain) {
+        model = (DefaultTableModel) table.getModel();
+        model.setRowCount(0);
+
+        try {
+
+            Object[] object = new Object[4];
+            for (Mascota m : petsList) {
+                if (m.getNameP().toLowerCase().contains(contain)){
+
+                    object[0] = m.getId();
+                    object[1] = m.getNameP();
+                    object[2] = m.getSpecies();
+                    object[3] = "";
+                    for (Persona p : peopleList) {
+                        if (p.getId() == m.getOwner_id()) {
+                            object[3] = p.getAllName();
+                        }
+                    }
+                    model.addRow(object);
+                }
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        VMP.tablePets.setModel(model);
+    }
+
+
+
+    public void SearchInRealTimePet(JTextField jTextField){
+        jTextField.getDocument().addDocumentListener(new DocumentListener() {
+
+
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                PetsTableSearch(VMP.tablePets,jTextField.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                PetsTableSearch(VMP.tablePets,jTextField.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                PetsTableSearch(VMP.tablePets,jTextField.getText());
+            }
+        });
     }
 }
