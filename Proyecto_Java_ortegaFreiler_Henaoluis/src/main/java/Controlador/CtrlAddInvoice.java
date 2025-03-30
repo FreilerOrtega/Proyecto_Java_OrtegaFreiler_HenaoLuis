@@ -165,7 +165,7 @@ public class CtrlAddInvoice implements ActionListener {
 
 
         medicineListInvoice.add(object);
-        medicineList= MedicamentoDAO.getMedicineList();
+        batchList=LoteDAO.getBatchList();
 
     };
 
