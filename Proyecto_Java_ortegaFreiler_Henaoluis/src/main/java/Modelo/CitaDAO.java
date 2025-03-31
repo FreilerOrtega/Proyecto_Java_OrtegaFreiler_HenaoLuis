@@ -105,6 +105,7 @@ public class    CitaDAO {
                 appointment.setDiagnosis(rs.getString(7));
                 appointment.setAttendance(rs.getBoolean(8));
                 appointment.setStatus(rs.getString(9));
+                appointment.setHours(rs.getString(10));
                 appointmentsList.add(appointment);
             }
 

@@ -151,7 +151,7 @@ public class ViewAddPetWithOwner extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID", "Nombre"
+                "ID", "Nombre", "Cedula"
             }
         ));
         jScrollPane1.setViewportView(tablePeople);

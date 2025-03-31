@@ -2,15 +2,20 @@ package Modelo;
 
 
 import Controlador.crtllogin;
+import com.itextpdf.io.image.ImageData;
+import com.itextpdf.io.image.ImageDataFactory;
 import com.itextpdf.kernel.pdf.*;
 import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.net.MalformedURLException;
 import java.sql.SQLException;
 import java.util.List;
 
+import com.itextpdf.layout.properties.UnitValue;
+import com.itextpdf.layout.properties.VerticalAlignment;
 import vista.*;
 
 import javax.swing.*;
@@ -42,13 +47,45 @@ public class FacturaPDF {
             PdfDocument pdf = new PdfDocument(writer);
             Document document = new Document(pdf);
 
-            // Agregar título
-            document.add(new Paragraph("Factura Electrónica")
+            //Se crea el título
+            Paragraph fact=new Paragraph("Factura Electrónica")
                     .setBold()
-                    .setFontSize(18));
+                    .setFontSize(18);
+
+
+            //Se crea la imagen de la espresa
+            ImageData imageData= ImageDataFactory.create("src/main/resources/IMG/happy_feet.png");
+            Image img=new Image(imageData);
+            //se le da medidas a la imagen
+            img.setWidth(70);
+            img.setHeight(70);
+
+            // Se crea la tabla para poder poner el titulo y la imagen al lado
+            Table tableHead=new Table(2);
+            //Se le da una medida de 100% para que ocupe todo el pdf
+            tableHead.setWidth(UnitValue.createPercentValue(100));
+            //se quitan bordes a la celda y se centra verticalmente el texto
+            tableHead.addCell(new Cell().add(fact)
+                    .setBorder(null)
+                    .setVerticalAlignment(VerticalAlignment.MIDDLE));
+
+            tableHead.addCell(new Cell().add(img).setBorder(null));
+
+
+            //se añade la tabla con el titulo y la imagen
+            document.add(tableHead);
+
+            //Se iserta un separador de secciones
+            document.add(new Paragraph("--------------------------------------------------"));
 
             // Agregar información de la empresa
             document.add(new Paragraph("Empresa: Veterinaria Happy Feets\nDirección: Calle 123, Tibú, Norte de Santander\nTeléfono: 3001234567\n"));
+
+            //agregar numero de fatura
+            document.add(new Paragraph("Numero de factura: "+idFacture));
+
+            //Se iserta un separador de secciones
+            document.add(new Paragraph("--------------------------------------------------"));
 
             // Agregar datos del cliente
             document.add(new Paragraph("Cliente: "+owner.getAllName()+"\nDocumento: "+owner.getId_number()+"\nDireccion: "+owner.getAddress()));
@@ -77,7 +114,13 @@ public class FacturaPDF {
             document.close();
             System.out.println("Factura generada correctamente: " + destino);
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            e.getMessage();
+        } catch (MalformedURLException e) {
+            throw new RuntimeException(e);
         }
+    }
+
+    public static void main(String[] args) {
+
     }
 }

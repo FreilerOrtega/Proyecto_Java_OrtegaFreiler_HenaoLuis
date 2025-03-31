@@ -44,28 +44,27 @@ public class ctrlProcedure implements ActionListener {
     // LISTAR LOS PROCEDIMIENTOS DE ACUERDO A LA PERSONA QUE INGRESO
     public void ProcedureTable(JTable table) {
         model = (DefaultTableModel) table.getModel();
-        model.setRowCount(0);  // Limpia la tabla
+        model.setRowCount(0);
         List<Procedimientos> procedureList = new ArrayList<>();
         try {
             procedureList = ProdecimientosDAO.getProceduresByveterinarianId(people.getId());
 
-            System.out.println("Cantidad de procedimientos: " + procedureList.size());  // Depuración
-
             Object[] object = new Object[4];
             for (Procedimientos P : procedureList) {
+
                 object[0] = P.getPet_id();
                 object[1] = P.getProcedurer();
                 object[2] = P.getDates();
                 object[3] = P.getAppointment_id();
-                model.addRow(object);
-            }
 
-        } catch (SQLException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Error al obtener los procedimientos: " + e.getMessage());
+
+                model.addRow(object);
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         ViewPro.tableviewprocedure.setModel(model);
     }
-
-
 }
+

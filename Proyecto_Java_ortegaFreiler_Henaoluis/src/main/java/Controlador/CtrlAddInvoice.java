@@ -6,6 +6,8 @@ import vista.ViewAdministratorHome;
 import vista.viewInvoice;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,6 +39,8 @@ public class CtrlAddInvoice implements ActionListener {
         this.VAI.btnAddProduct.addActionListener(this);
         this.VAI.btnExit.addActionListener(this);
         this.VAI.btnFactureAdd.addActionListener(this);
+        SearchInRealTimePeople(VAI.inputSearchName);
+        SearchInRealTimeProducts(VAI.inputSearchProduct);
     }
 
     @Override
@@ -161,13 +165,13 @@ public class CtrlAddInvoice implements ActionListener {
 
 
         medicineListInvoice.add(object);
-        medicineList= MedicamentoDAO.getMedicineList();
+        batchList=LoteDAO.getBatchList();
 
     };
 
     public void getPeoples(JTable jTable){
         model=(DefaultTableModel) jTable.getModel();
-
+        model.setRowCount(0);
         Object[] object=new Object[3];
 
         for (Persona p:peopleList){
@@ -179,12 +183,30 @@ public class CtrlAddInvoice implements ActionListener {
         VAI.tablePeople.setModel(model);
     }
 
+    public void getPeoplesSearch(JTable jTable,String contain){
+        model=(DefaultTableModel) jTable.getModel();
+        model.setRowCount(0);
+        Object[] object=new Object[3];
+
+        for (Persona p:peopleList){
+            String IDNumber=p.getId_number()+"";
+            if (IDNumber.contains(contain)){
+                object[0]=p.getId();
+                object[1]=p.getAllName();
+                object[2]=p.getId_number();
+                model.addRow(object);
+            }
+        }
+        VAI.tablePeople.setModel(model);
+    }
+
     public void getMedicines(JTable jTable){
         model=(DefaultTableModel) jTable.getModel();
         model.setRowCount(0);
         Object[] object=new Object[4];
 
         for (Medicamento m:medicineList){
+
             object[0]=m.getId();
             object[1]=m.getName();
             object[2]=m.getPresentation();
@@ -196,5 +218,69 @@ public class CtrlAddInvoice implements ActionListener {
             model.addRow(object);
         }
         VAI.tableProduct.setModel(model);
+    }
+
+    public void getMedicinesSearch(JTable jTable,String contain){
+        model=(DefaultTableModel) jTable.getModel();
+        model.setRowCount(0);
+        Object[] object=new Object[4];
+
+        for (Medicamento m:medicineList){
+            if (m.getName().toLowerCase().contains(contain)){
+                object[0]=m.getId();
+                object[1]=m.getName();
+                object[2]=m.getPresentation();
+                for(Lote l: batchList){
+                    if (l.getId()==m.getBatchId()){
+                        object[3]=l.getCurrentQuantity();
+                    }
+                }
+                model.addRow(object);
+            }
+        }
+        VAI.tableProduct.setModel(model);
+    }
+    public void SearchInRealTimePeople(JTextField jTextField){
+        jTextField.getDocument().addDocumentListener(new DocumentListener() {
+
+
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                getPeoplesSearch(VAI.tablePeople,jTextField.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                getPeoplesSearch(VAI.tablePeople,jTextField.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                getPeoplesSearch(VAI.tablePeople,jTextField.getText());
+            }
+        });
+    }
+
+    public void SearchInRealTimeProducts(JTextField jTextField){
+        jTextField.getDocument().addDocumentListener(new DocumentListener() {
+
+
+
+            @Override
+            public void insertUpdate(DocumentEvent e) {
+                getMedicinesSearch(VAI.tableProduct,jTextField.getText());
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent e) {
+                getMedicinesSearch(VAI.tableProduct,jTextField.getText());
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent e) {
+                getMedicinesSearch(VAI.tableProduct,jTextField.getText());
+            }
+        });
     }
 }
