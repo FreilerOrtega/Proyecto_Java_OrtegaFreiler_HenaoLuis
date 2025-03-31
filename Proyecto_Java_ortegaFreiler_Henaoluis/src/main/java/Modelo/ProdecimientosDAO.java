@@ -64,39 +64,32 @@ public class ProdecimientosDAO {
         return proceduresList;
     }
 
-    public static void insertprocedure(Procedimientos procedimientos)throws SQLException {
+    public static void insertProcedure(Procedimientos procedimientos) throws SQLException {
 
-        String sql="INSERT INTO Procedimientos (pet_id,procedurer,dates,veterinarian_id,appoiment_id)\n \n"+
-                "VALUES(?,?,?,?,?)";
-
+        String sql = "INSERT INTO Procedimiento (pet_id, procedurer, dates, veterinarian_id, appointment_id) VALUES (?, ?, ?, ?, ?)";
 
         try (Connection con = Conect.getCon();
-             PreparedStatement PS = con.prepareStatement(sql)) {
-            PS.setInt(1,procedimientos.getPet_id());
-            PS.setString(2,procedimientos.getProcedurer());
-            PS.setString(3,procedimientos.getDates());
-            PS.setInt(4,procedimientos.getVeterinarian_id());
-            PS.setInt(5,procedimientos.getAppointment_id());
+             PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, procedimientos.getPet_id());
+            ps.setString(2, procedimientos.getProcedurer());
+            ps.setString(3, procedimientos.getDates());
+            ps.setInt(4, procedimientos.getVeterinarian_id());
+            ps.setInt(5, procedimientos.getAppointment_id());
 
-
-            int agg = PS.executeUpdate();
-            if (agg>0){
-                JOptionPane.showMessageDialog(null,"Procedimiento agregado con exito");
-
+            int agg = ps.executeUpdate();
+            if (agg > 0) {
+                JOptionPane.showMessageDialog(null, "Procedimiento agregado con éxito");
             }
-            try{
-                con.close();
-            }catch (SQLException i){
-                System.out.println(i.getMessage());
-            }
-        }catch (SQLException e){
-            throw new SQLException("Error al agregar Procedimiento"+e.getMessage());
+        } catch (SQLException e) {
+            throw new SQLException("Error al agregar procedimiento: " + e.getMessage());
         }
-
-
-
-
     }
 
 
+
+
+
 }
+
+
+

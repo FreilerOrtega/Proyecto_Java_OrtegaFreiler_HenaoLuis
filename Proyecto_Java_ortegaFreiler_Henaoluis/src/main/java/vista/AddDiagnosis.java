@@ -4,17 +4,26 @@
  */
 package vista;
 
+import com.toedter.calendar.JDateChooser;
+
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Usuario
  */
 public class AddDiagnosis extends javax.swing.JFrame {
-
+      public JDateChooser inputDate;
     /**
      * Creates new form AddSurgeries
      */
     public AddDiagnosis() {
         initComponents();
+        inputDate = new JDateChooser();
+        inputDate.setDateFormatString("yyyy-MM-dd");
+        inputDate.setBounds(200, 270, 220, 24);
+        inputDate.setAlignmentX(50);
+        add(inputDate);
     }
 
     /**
@@ -73,7 +82,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID_cita", "ID_mascota", "ID_dueño", "Fecha", "motivo ", "ID veterenirario", "diagnostico", "Asistencia", "Estado"
+                "ID_cita", "ID_mascota", "ID_dueño", "Fecha", "motivo ", "diagnostico", "Asistencia", "Estado"
             }
         ));
         jScrollPane1.setViewportView(TableViewCita);
@@ -303,7 +312,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
     public javax.swing.JButton ButtonAddVaccination;
     public javax.swing.JButton ButtonBackDiagnosis;
     public javax.swing.JTextField IdCitaAsiganar;
-    private javax.swing.JTable TableViewCita;
+    public javax.swing.JTable TableViewCita;
     private javax.swing.JButton jButton3;
     public javax.swing.JLabel jLabel1;
     public javax.swing.JLabel jLabel2;
@@ -312,5 +321,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
     public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
+
+
     // End of variables declaration//GEN-END:variables
 }

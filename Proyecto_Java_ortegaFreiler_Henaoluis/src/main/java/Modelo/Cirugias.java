@@ -1,6 +1,6 @@
 package Modelo;
 
-public class Cirujias {
+public class Cirugias {
     private int id;
     private int petId;
     private int veterinarianId;
@@ -8,10 +8,10 @@ public class Cirujias {
     private int recoveryDays;
     private String recovery_status;
 
-    public Cirujias() {
+    public Cirugias() {
     }
 
-    public Cirujias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays, String recovery_status) {
+    public Cirugias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays, String recovery_status) {
         this.id = id;
         this.petId = petId;
         this.veterinarianId = veterinarianId;

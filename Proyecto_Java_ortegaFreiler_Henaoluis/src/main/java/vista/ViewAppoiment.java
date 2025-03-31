@@ -45,7 +45,7 @@ public class ViewAppoiment extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id_Consulta", "id_Mascota", "Id_Dueño", "Fecha", "Motivo_consulta", "id_Veterinario", "Diagnostico", "Asistencia"
+                "id_Consulta", "id_Mascota", "Id_Dueño", "Fecha", "Motivo_consulta", "Diagnostico", "Asistencia", "Estado"
             }
         ));
         jScrollPane1.setViewportView(ViewtableAppoiment);

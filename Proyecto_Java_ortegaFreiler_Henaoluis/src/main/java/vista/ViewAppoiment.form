@@ -105,9 +105,9 @@
                     <Column editable="true" title="Id_Due&#xf1;o" type="java.lang.Object"/>
                     <Column editable="true" title="Fecha" type="java.lang.Object"/>
                     <Column editable="true" title="Motivo_consulta" type="java.lang.Object"/>
-                    <Column editable="true" title="id_Veterinario" type="java.lang.Object"/>
                     <Column editable="true" title="Diagnostico" type="java.lang.Object"/>
                     <Column editable="true" title="Asistencia" type="java.lang.Object"/>
+                    <Column editable="true" title="Estado" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

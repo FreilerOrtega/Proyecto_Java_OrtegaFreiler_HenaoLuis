@@ -143,13 +143,13 @@ public class CtrlHealthHistory implements ActionListener {
 
         List<Desparacitaciones> dewormingList=new ArrayList<>();
         try {
-            dewormingList=DewDAO.getDewormingsBypetId(id);
+            dewormingList=DewDAO.getDewormingsByPetId(id);
 
 
             Object[] object=new Object[4];
             for (Desparacitaciones d:dewormingList){
                 object[0]=GetPeopleName(d.getVeterinarianId());
-                object[1]=GetMedicineName(d.getDoctorId());
+                object[1]=GetMedicineName(d.getMedicine_id());
                 object[2]=d.getApplicationDate();
                 object[3]=d.getNextApplication();
                 model.addRow(object);

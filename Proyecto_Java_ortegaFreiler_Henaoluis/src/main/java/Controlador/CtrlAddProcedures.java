@@ -51,25 +51,31 @@ public class CtrlAddProcedures implements ActionListener {
         }
     }
 
-    public void addprocedurer () throws SQLException {
+    public void addprocedurer() throws SQLException {
         Procedimientos procedimientos = new Procedimientos();
         try {
-            if (!addProcedure.IDMASCOTA.getText().trim().isEmpty()){
+            if (!addProcedure.IDMASCOTA.getText().trim().isEmpty()) {
                 procedimientos.setPet_id(Integer.parseInt(addProcedure.IDMASCOTA.getText()));
             } else {
                 throw new RuntimeException("por favor ingrese un id de mascota");
-
             }
-
-        }catch (NumberFormatException es){
+        } catch (NumberFormatException es) {
             throw new NumberFormatException("Por Favor Ingrese Un Id De mascota Valido");
         }
-        //OBTENER DATOS DESDE LOS INPUTS PARA PODER AGREGARLOS AL BASE DE DATOS
+
+
         procedimientos.setProcedurer(addProcedure.TEXTPROCEDIMIENTO.getText());
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         procedimientos.setDates(simpleDateFormat.format(addProcedure.inputDate.getDate()));
         procedimientos.setVeterinarian_id(people.getId());
         procedimientos.setAppointment_id(IdAppointment);
-        ProdecimientosDAO.insertprocedure(procedimientos);
+
+
+        System.out.println("Veterinarian ID: " + procedimientos.getVeterinarian_id());
+        System.out.println("Appointment ID: " + procedimientos.getAppointment_id());
+
+
+        ProdecimientosDAO.insertProcedure(procedimientos);
     }
+
 }

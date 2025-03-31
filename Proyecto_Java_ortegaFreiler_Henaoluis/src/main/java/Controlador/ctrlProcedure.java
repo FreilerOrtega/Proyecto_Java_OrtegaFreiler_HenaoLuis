@@ -16,8 +16,8 @@ import java.util.List;
 
 
 public class ctrlProcedure implements ActionListener {
-    ViewProcedures ViewPro ;
-    Persona people ;
+    ViewProcedures ViewPro;
+    Persona people;
     DefaultTableModel model = new DefaultTableModel();
 
     public ctrlProcedure(ViewProcedures viewPro, Persona people) {
@@ -27,51 +27,45 @@ public class ctrlProcedure implements ActionListener {
         ProcedureTable(ViewPro.tableviewprocedure);
     }
 
-//
+    //
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getSource()==ViewPro.Buttonbackprocedures){
+        if (e.getSource() == ViewPro.Buttonbackprocedures) {
             ViewPro.setVisible(false);
             veterinarian vet = new veterinarian();
             vet.setVisible(true);
-            Ctrlveterinarian name = new Ctrlveterinarian(vet,people);
+            Ctrlveterinarian name = new Ctrlveterinarian(vet, people);
 
         }
 
     }
+
     // LISTAR LOS PROCEDIMIENTOS DE ACUERDO A LA PERSONA QUE INGRESO
     public void ProcedureTable(JTable table) {
         model = (DefaultTableModel) table.getModel();
-        model.setRowCount(0);
+        model.setRowCount(0);  // Limpia la tabla
         List<Procedimientos> procedureList = new ArrayList<>();
         try {
             procedureList = ProdecimientosDAO.getProceduresByveterinarianId(people.getId());
 
+            System.out.println("Cantidad de procedimientos: " + procedureList.size());  // Depuración
+
             Object[] object = new Object[4];
             for (Procedimientos P : procedureList) {
-
                 object[0] = P.getPet_id();
                 object[1] = P.getProcedurer();
                 object[2] = P.getDates();
                 object[3] = P.getAppointment_id();
-
-
-
                 model.addRow(object);
-
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Error al obtener los procedimientos: " + e.getMessage());
         }
         ViewPro.tableviewprocedure.setModel(model);
     }
 
-<<<<<<< HEAD
-=======
-    public void addprocedure() throws SQLException{
-        Procedimientos procedimientos = new Procedimientos();
-        //procedimientos.setPet_id(AddProcedure.);//AQUI VOY FREILER
->>>>>>> fd79e1ae1a8306fd8fb33695b746a2ee34882ad2
 
 }

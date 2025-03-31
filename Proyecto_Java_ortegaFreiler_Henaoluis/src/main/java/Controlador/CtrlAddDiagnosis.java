@@ -1,11 +1,16 @@
 package Controlador;
 
+import Modelo.Cita;
 import Modelo.Persona;
 import vista.*;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CtrlAddDiagnosis implements ActionListener {
     AddDiagnosis Diagnosis;
@@ -17,11 +22,11 @@ public class CtrlAddDiagnosis implements ActionListener {
         this.people = people;
         this.Diagnosis.ButtonAddSurgeries.addActionListener(this);
         this.Diagnosis.ButtonBackDiagnosis.addActionListener(this);
-        this.Diagnosis.ButtonAddDiagnosis.addActionListener(this);
         this.Diagnosis.ButtonAddVaccination.addActionListener(this);
         this.Diagnosis.ButtonAddSuffering.addActionListener(this);
         this.Diagnosis.ButtonAddDeworning.addActionListener(this);
         this.Diagnosis.ButtonAddProcedure.addActionListener(this);
+        this.Diagnosis.ButtonAddDiagnosis.addActionListener(this);
 
 
 
@@ -33,22 +38,55 @@ public class CtrlAddDiagnosis implements ActionListener {
 
 
              if (e.getSource()==Diagnosis.ButtonAddSurgeries) {
-                Diagnosis.setVisible(false);
+                 try {
+                     if (!Diagnosis.IdCitaAsiganar.getText().trim().isEmpty()){
+                         idAppointment = Integer.parseInt(Diagnosis.IdCitaAsiganar.getText());
+                     } else {
+                         throw new RuntimeException("por favor ingrese un id de cita");
 
-                AddSurgeries addS = new AddSurgeries();
-                addS.setVisible(true);
-                CtrlAddSurgeries crtLS= new CtrlAddSurgeries(addS,people);
-            } else if (e.getSource()==Diagnosis.ButtonAddSuffering) {
-                Diagnosis.setVisible(false);
-                AddSuffering addviewS = new AddSuffering();
-                addviewS.setVisible(true);
-                CtrlAddSuffering CrtlSuff = new CtrlAddSuffering(addviewS,people);
+                     }
 
-            } else if (e.getSource()==Diagnosis.ButtonAddDeworning) {
-                Diagnosis.setVisible(false);
-                AddDeworming addDeworming = new AddDeworming();
-                addDeworming.setVisible(true);
-                CtrlAddDeworning ctrlAddDeworning = new CtrlAddDeworning(addDeworming,people);
+                 }catch (NumberFormatException es){
+                     throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
+                 }
+                 Diagnosis.setVisible(false);
+                 AddSurgeries addSurgeries= new AddSurgeries();
+                 addSurgeries.setVisible(true);
+                 CtrlAddSurgeries ctrlAddSurgeries = new CtrlAddSurgeries(addSurgeries,people);
+
+             } else if (e.getSource()==Diagnosis.ButtonAddSuffering) {
+                 try {
+                     if (!Diagnosis.IdCitaAsiganar.getText().trim().isEmpty()){
+                         idAppointment = Integer.parseInt(Diagnosis.IdCitaAsiganar.getText());
+                     } else {
+                         throw new RuntimeException("por favor ingrese un id de cita");
+
+                     }
+
+                 }catch (NumberFormatException es){
+                     throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
+                 }
+                 Diagnosis.setVisible(false);
+                 AddSurgeries addSurgeries= new AddSurgeries();
+                 addSurgeries.setVisible(true);
+                 CtrlAddSurgeries ctrlAddSurgeries = new CtrlAddSurgeries(addSurgeries,people);
+
+             } else if (e.getSource()==Diagnosis.ButtonAddDeworning) {
+                 try {
+                     if (!Diagnosis.IdCitaAsiganar.getText().trim().isEmpty()){
+                         idAppointment = Integer.parseInt(Diagnosis.IdCitaAsiganar.getText());
+                     } else {
+                         throw new RuntimeException("por favor ingrese un id de cita");
+
+                     }
+
+                 }catch (NumberFormatException es){
+                     throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
+                 }
+                 Diagnosis.setVisible(false);
+                 AddDeworning addDeworning= new AddDeworning();
+                 addDeworning.setVisible(true);
+                 CtrlAddDeworning ctrlAddDeworning = new CtrlAddDeworning(addDeworning,people);
 
             } else if (e.getSource()==Diagnosis.ButtonBackDiagnosis) {
                 Diagnosis.setVisible(false);
@@ -73,13 +111,59 @@ public class CtrlAddDiagnosis implements ActionListener {
                 CtrlAddProcedures ctrlAddProcedures = new CtrlAddProcedures(addProcedure,people,idAppointment);
 
 
+            } else if (e.getSource()==Diagnosis.ButtonAddVaccination) {
+                 try {
+                     if (!Diagnosis.IdCitaAsiganar.getText().trim().isEmpty()){
+                         idAppointment = Integer.parseInt(Diagnosis.IdCitaAsiganar.getText());
+                     } else {
+                         throw new RuntimeException("por favor ingrese un id de cita");
+
+                     }
+
+                 }catch (NumberFormatException es){
+                     throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
+                 }
+                 Diagnosis.setVisible(false);
+                 AddVaccination addVaccination= new AddVaccination();
+                 addVaccination.setVisible(true);
+                  crtlVaccine crtlVaccine_history = new crtlVaccine (addVaccination,people);
+
+
+            }else if (e.getSource()==Diagnosis.ButtonAddDiagnosis) {
+                 try {
+                     if (!Diagnosis.IdCitaAsiganar.getText().trim().isEmpty()) {
+                         idAppointment = Integer.parseInt(Diagnosis.IdCitaAsiganar.getText());
+                     } else {
+                         throw new RuntimeException("por favor ingrese un id de cita");
+
+                     }
+
+                 } catch (NumberFormatException es) {
+                     throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
+                 }
+
+
+
             }
 
 
         }catch  (Exception ex){
-            JOptionPane.showMessageDialog(Diagnosis,ex.getMessage());
+                JOptionPane.showMessageDialog(Diagnosis, ex.getMessage());
+
         }
 
 
+
+
+
     }
+
+
+
+
+
+
+
+
+
 }

@@ -4,17 +4,24 @@
  */
 package vista;
 
+import com.toedter.calendar.JDateChooser;
+
 /**
  *
  * @author Usuario
  */
 public class AddSurgeries extends javax.swing.JFrame {
-
+      public JDateChooser inputDate;
     /**
      * Creates new form AddSurgeries
      */
     public AddSurgeries() {
         initComponents();
+        inputDate = new JDateChooser();
+        inputDate.setDateFormatString("yyyy-MM-dd");
+        inputDate.setBounds(200, 270, 220, 24);
+        inputDate.setAlignmentX(50);
+        add(inputDate);
     }
 
     /**
@@ -28,14 +35,14 @@ public class AddSurgeries extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
+        ButtonAddsurgeries = new javax.swing.JButton();
+        ButtonBackSugeries = new javax.swing.JButton();
+        typeSurgeries = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        DaysRecovery = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,18 +52,23 @@ public class AddSurgeries extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("CIRUGIAS");
 
-        jButton2.setText("Asignar cirugia");
-
-        jButton3.setText("Volver");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        ButtonAddsurgeries.setText("Asignar cirugia");
+        ButtonAddsurgeries.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                ButtonAddsurgeriesActionPerformed(evt);
+            }
+        });
+
+        ButtonBackSugeries.setText("Volver");
+        ButtonBackSugeries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtonBackSugeriesActionPerformed(evt);
             }
         });
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        typeSurgeries.setViewportView(jTextArea1);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -70,9 +82,9 @@ public class AddSurgeries extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Dias recuperacion");
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        DaysRecovery.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                DaysRecoveryActionPerformed(evt);
             }
         });
 
@@ -84,7 +96,7 @@ public class AddSurgeries extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(16, 16, 16)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(ButtonBackSugeries, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,29 +104,29 @@ public class AddSurgeries extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(typeSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 224, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(DaysRecovery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(181, 181, 181)
                         .addComponent(jLabel1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(165, 165, 165)
-                        .addComponent(jButton2)))
+                        .addComponent(ButtonAddsurgeries)))
                 .addContainerGap(123, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
-                .addComponent(jButton3)
+                .addComponent(ButtonBackSugeries)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(typeSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel2)
@@ -123,9 +135,9 @@ public class AddSurgeries extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(DaysRecovery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(88, 88, 88)
-                .addComponent(jButton2)
+                .addComponent(ButtonAddsurgeries)
                 .addGap(46, 46, 46))
         );
 
@@ -149,13 +161,17 @@ public class AddSurgeries extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void ButtonBackSugeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonBackSugeriesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_ButtonBackSugeriesActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void DaysRecoveryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DaysRecoveryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_DaysRecoveryActionPerformed
+
+    private void ButtonAddsurgeriesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonAddsurgeriesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtonAddsurgeriesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,15 +209,15 @@ public class AddSurgeries extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    public javax.swing.JButton ButtonAddsurgeries;
+    public javax.swing.JButton ButtonBackSugeries;
+    public javax.swing.JTextField DaysRecovery;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JScrollPane typeSurgeries;
     // End of variables declaration//GEN-END:variables
 }

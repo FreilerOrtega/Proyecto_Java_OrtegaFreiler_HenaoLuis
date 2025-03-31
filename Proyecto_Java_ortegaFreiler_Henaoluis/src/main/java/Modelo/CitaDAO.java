@@ -127,4 +127,37 @@ public class    CitaDAO {
             throw new SQLException("Error al actualizar estado de una cita");
         }
     }
+
+    public static List<Cita> getsurgeriesByveterinarianId(int id) throws SQLException {
+        List<Cita> Appoimentlis =new ArrayList<>();
+
+        String sql="select * from cita where id_veterinarian=?;";
+        try(Connection con = Conect.getCon();
+            PreparedStatement ps=con.prepareStatement(sql)) {
+            ps.setInt(1,id);
+            ResultSet rs= ps.executeQuery();
+            while (rs.next()){
+                Cita appointment=new Cita();
+                appointment.setId(rs.getInt(1));
+                appointment.setPet_id(rs.getInt(2));
+                appointment.setOwner_id(rs.getInt(3));
+                appointment.setDates(rs.getString(4));
+                appointment.setConsultation_reason(rs.getString(5));
+                appointment.setDiagnosis(rs.getString(6));
+                appointment.setAttendance(rs.getBoolean(7));
+                appointment.setStatus(rs.getString(8));
+                Appoimentlis.add(appointment);
+            }
+            try {
+                con.close();
+            }catch (SQLException i){
+                System.out.println(i.getMessage());
+            }
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return Appoimentlis;
+    }
 }
+

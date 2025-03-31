@@ -3,7 +3,6 @@ package Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import Modelo.*;
@@ -62,13 +61,13 @@ public class CtrlSurgeriesHistory implements ActionListener {
     }
 
     public void getSugeriesOfPet(JTable jTable,int idPet) throws SQLException {
-        List<Cirujias> sugeriesList=CirujiasDAO.getSurgeriesListByPetID(idPet);
+        List<Cirugias> sugeriesList= CirugiasDAO.getSurgeriesListByPetID(idPet);
 
         model=(DefaultTableModel) jTable.getModel();
         model.setRowCount(0);
 
         Object[] object=new Object[4];
-        for(Cirujias c:sugeriesList){
+        for(Cirugias c:sugeriesList){
             object[0]=getNameVeterinarian(c.getVeterinarianId());
             object[1]=c.getSurgeryDate();
             object[2]=c.getRecoveryDays();
@@ -87,5 +86,7 @@ public class CtrlSurgeriesHistory implements ActionListener {
         }
         return name;
     }
+
+
 
 }

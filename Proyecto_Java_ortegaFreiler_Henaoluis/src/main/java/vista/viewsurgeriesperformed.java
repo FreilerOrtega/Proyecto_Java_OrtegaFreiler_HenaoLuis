@@ -53,7 +53,7 @@ public class viewsurgeriesperformed extends javax.swing.JFrame {
 
             },
             new String [] {
-                "id_cirujia", "id_mascota", "id_veterinario", "fecha", "dias_recuperacion", "estado_recuperacion"
+                "id_cirujia", "id_mascota", "fecha", "dias_recuperacion", "estado_recuperacion"
             }
         ));
         jScrollPane1.setViewportView(Tablesurgeries);

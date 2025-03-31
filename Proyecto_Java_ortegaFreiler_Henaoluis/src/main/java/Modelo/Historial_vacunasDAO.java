@@ -1,9 +1,13 @@
 package Modelo;
 
+import vista.AddVaccination;
+
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -40,5 +44,34 @@ public class Historial_vacunasDAO {
 
         return listHV;
     }
+    public static void insertvaccination(Historial_vacuna historialVacuna) throws SQLException {
+
+        String sql = "INSERT INTO Historial_vacunas (vaccine_id,next_dose_date)\n \n" +
+                "VALUES(?,?)";
+
+
+        try (Connection con = Conect.getCon();
+             PreparedStatement PS = con.prepareStatement(sql)) {
+            PS.setInt(1,historialVacuna.getVaccineId());
+            PS.setString(2,historialVacuna.getNextDose());
+
+
+            int agg = PS.executeUpdate();
+            if (agg > 0) {
+                JOptionPane.showMessageDialog(null, "vacunacion   agregada con exito");
+
+            }
+            try {
+                con.close();
+            } catch (SQLException i) {
+                System.out.println(i.getMessage());
+            }
+        } catch (SQLException e) {
+            throw new SQLException("Error al agregar vacunacion" + e.getMessage());
+        }
+
+    }
+
+
 
 }

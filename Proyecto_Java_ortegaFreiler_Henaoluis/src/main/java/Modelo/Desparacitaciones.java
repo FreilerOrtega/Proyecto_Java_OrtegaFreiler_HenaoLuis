@@ -5,7 +5,7 @@ public class Desparacitaciones {
     private String type;
     private String applicationDate;
     private String nextApplication;
-    private int doctorId;
+    private int medicine_id;
     private int petId;
     private int veterinarianId;
 
@@ -17,7 +17,7 @@ public class Desparacitaciones {
         this.type = type;
         this.applicationDate = applicationDate;
         this.nextApplication = nextApplication;
-        this.doctorId = doctorId;
+        this.medicine_id = doctorId;
         this.petId = petId;
         this.veterinarianId = veterinarianId;
     }
@@ -54,12 +54,12 @@ public class Desparacitaciones {
         this.nextApplication = nextApplication;
     }
 
-    public int getDoctorId() {
-        return doctorId;
+    public int getMedicine_id() {
+        return medicine_id;
     }
 
-    public void setDoctorId(int doctorId) {
-        this.doctorId = doctorId;
+    public void setMedicine_id(int medicine_id) {
+        this.medicine_id = medicine_id;
     }
 
     public int getPetId() {

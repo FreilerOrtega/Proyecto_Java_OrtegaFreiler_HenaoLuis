@@ -57,4 +57,9 @@ public class Historial_vacuna {
     public void setNextDose(String nextDose) {
         this.nextDose = nextDose;
     }
+
+    public void setNextApplication(String format) {
+    }
+
+
 }
