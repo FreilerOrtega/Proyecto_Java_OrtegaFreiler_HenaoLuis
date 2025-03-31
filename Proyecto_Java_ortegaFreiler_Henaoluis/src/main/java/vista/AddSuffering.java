@@ -4,17 +4,24 @@
  */
 package vista;
 
+import com.toedter.calendar.JDateChooser;
+
 /**
  *
  * @author Usuario
  */
 public class AddSuffering extends javax.swing.JFrame {
-
+         public JDateChooser inputDate;
     /**
      * Creates new form AddSuffering
      */
     public AddSuffering() {
         initComponents();
+        inputDate = new JDateChooser();
+        inputDate.setDateFormatString("yyyy-MM-dd");
+        inputDate.setBounds(130, 185, 220, 24);
+        inputDate.setAlignmentX(50);
+        add(inputDate);
     }
 
     /**

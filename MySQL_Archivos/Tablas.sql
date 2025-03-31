@@ -119,6 +119,7 @@ CREATE TABLE Cirugias (
     surgery_date VARCHAR(255),
     recovery_days INT,
     recovery_status VARCHAR(255),
+    typeSugery VARCHAR(255),
     FOREIGN KEY (pet_id) REFERENCES Mascota(id),
     FOREIGN KEY (veterinarian_id) REFERENCES Persona(id)
 );

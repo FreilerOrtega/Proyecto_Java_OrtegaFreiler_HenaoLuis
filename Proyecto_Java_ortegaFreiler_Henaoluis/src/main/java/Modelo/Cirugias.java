@@ -7,17 +7,19 @@ public class Cirugias {
     private String surgeryDate;
     private int recoveryDays;
     private String recovery_status;
+    private  String typeSugery;
 
     public Cirugias() {
     }
 
-    public Cirugias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays, String recovery_status) {
+    public Cirugias(int id, int petId, int veterinarianId, String surgeryDate, int recoveryDays, String recovery_status, String typeSugery) {
         this.id = id;
         this.petId = petId;
         this.veterinarianId = veterinarianId;
         this.surgeryDate = surgeryDate;
         this.recoveryDays = recoveryDays;
         this.recovery_status = recovery_status;
+        this.typeSugery = typeSugery;
     }
 
     public int getId() {
@@ -66,5 +68,13 @@ public class Cirugias {
 
     public void setRecovery_status(String recovery_status) {
         this.recovery_status = recovery_status;
+    }
+
+    public String getTypeSugery() {
+        return typeSugery;
+    }
+
+    public void setTypeSugery(String typeSugery) {
+        this.typeSugery = typeSugery;
     }
 }

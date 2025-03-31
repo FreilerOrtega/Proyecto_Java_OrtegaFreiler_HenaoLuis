@@ -44,7 +44,7 @@ public class AddVaccination extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        TableIdMedicamento2 = new javax.swing.JTable();
+        TableMedicamento2 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,15 +80,15 @@ public class AddVaccination extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("proxima aplicacion");
 
-        TableIdMedicamento2.setModel(new javax.swing.table.DefaultTableModel(
+        TableMedicamento2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "ID medicamento", "Nombre", "ID Lote", "Tipo", "Presentacion", "Precio"
+                "ID medicamento", "Nombre", "Tipo", "Presentacion"
             }
         ));
-        jScrollPane1.setViewportView(TableIdMedicamento2);
+        jScrollPane1.setViewportView(TableMedicamento2);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -225,7 +225,7 @@ public class AddVaccination extends javax.swing.JFrame {
     public javax.swing.JButton ButtonAignarMedicamento;
     public javax.swing.JButton ButtonBackVaccination;
     public javax.swing.JTextField IDvaccination;
-    public javax.swing.JTable TableIdMedicamento2;
+    public javax.swing.JTable TableMedicamento2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

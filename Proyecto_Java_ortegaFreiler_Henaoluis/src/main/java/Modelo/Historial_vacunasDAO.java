@@ -46,14 +46,16 @@ public class Historial_vacunasDAO {
     }
     public static void insertvaccination(Historial_vacuna historialVacuna) throws SQLException {
 
-        String sql = "INSERT INTO Historial_vacunas (vaccine_id,next_dose_date)\n \n" +
-                "VALUES(?,?)";
+        String sql = "INSERT INTO Historial_vacunas (vaccine_id,next_dose_date,pet_id,application_date)\n \n" +
+                "VALUES(?,?,?,?)";
 
 
         try (Connection con = Conect.getCon();
              PreparedStatement PS = con.prepareStatement(sql)) {
             PS.setInt(1,historialVacuna.getVaccineId());
             PS.setString(2,historialVacuna.getNextDose());
+            PS.setInt(3,historialVacuna.getPetId());
+            PS.setString(4,historialVacuna.getApplicationDate());
 
 
             int agg = PS.executeUpdate();

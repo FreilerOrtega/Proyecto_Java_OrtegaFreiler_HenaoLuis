@@ -47,7 +47,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
         ButtonAddVaccination = new javax.swing.JButton();
         ButtonAddSuffering = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        textaddD = new javax.swing.JTextArea();
 
         jButton3.setText("Asignar vacunacion");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -133,9 +133,9 @@ public class AddDiagnosis extends javax.swing.JFrame {
         ButtonAddSuffering.setBackground(new java.awt.Color(204, 255, 204));
         ButtonAddSuffering.setText("asignar padecimiento");
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        textaddD.setColumns(20);
+        textaddD.setRows(5);
+        jScrollPane2.setViewportView(textaddD);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -316,6 +316,6 @@ public class AddDiagnosis extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel1;
     public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea1;
+    public javax.swing.JTextArea textaddD;
     // End of variables declaration//GEN-END:variables
 }

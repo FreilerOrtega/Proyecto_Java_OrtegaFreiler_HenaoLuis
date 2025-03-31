@@ -162,5 +162,22 @@ public class    CitaDAO {
         }
         return Appoimentlis;
     }
+
+    public static   void changediagnosis(Cita cita) throws SQLException {
+        String sql ="UPDATE cita SET diagnosis=? WHERE id=?";
+        try (Connection con = Conect.getCon();
+        PreparedStatement ps= con.prepareStatement(sql)){
+            ps.setString(1,cita.getDiagnosis());
+            ps.setInt(2,cita.getId());
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"diagnostico agregado con exito");
+
+        }catch (SQLException e){
+
+            throw new SQLException("erro al agregar diagnostico");
+        }
+
+
+    }
 }
 

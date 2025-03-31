@@ -1,5 +1,6 @@
 package Modelo;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -35,5 +36,29 @@ public class PadecimientoDAO {
             throw new SQLException("Error en la busqueda de mascotas por id"+e.getMessage());
         }
         return conditionList;
+    }
+
+    public  void insertsuffering( Padecimiento padecimiento) throws SQLException {
+        String SQL = "INSERT INTO Padecimientos (pet_id,detection_date,diagnosis) VALUES (?,?,?)";
+
+        try (Connection con = Conect.getCon();
+             PreparedStatement PS = con.prepareStatement(SQL);
+        ){
+            PS.setInt(1,padecimiento.getPet_id());
+            PS.setString(2,padecimiento.getDetection_date());
+            PS.setString(3,padecimiento.getDiagnosis());
+            int res=PS.executeUpdate();
+            if (res>0){
+                JOptionPane.showMessageDialog(null,"Padecimiento agregado con exito");
+            }
+
+
+
+
+        }catch (SQLException ex){
+            throw new SQLException("error al insertar padecimiento"+ex.getMessage());
+        }
+
+
     }
 }

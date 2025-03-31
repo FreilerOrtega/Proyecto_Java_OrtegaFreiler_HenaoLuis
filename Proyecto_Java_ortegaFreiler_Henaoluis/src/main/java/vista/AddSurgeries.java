@@ -19,7 +19,7 @@ public class AddSurgeries extends javax.swing.JFrame {
         initComponents();
         inputDate = new JDateChooser();
         inputDate.setDateFormatString("yyyy-MM-dd");
-        inputDate.setBounds(200, 270, 220, 24);
+        inputDate.setBounds(130, 185, 220, 24);
         inputDate.setAlignmentX(50);
         add(inputDate);
     }
@@ -38,7 +38,7 @@ public class AddSurgeries extends javax.swing.JFrame {
         ButtonAddsurgeries = new javax.swing.JButton();
         ButtonBackSugeries = new javax.swing.JButton();
         typeSurgeries = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        TextTypeSugery = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -66,9 +66,9 @@ public class AddSurgeries extends javax.swing.JFrame {
             }
         });
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        typeSurgeries.setViewportView(jTextArea1);
+        TextTypeSugery.setColumns(20);
+        TextTypeSugery.setRows(5);
+        typeSurgeries.setViewportView(TextTypeSugery);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,7 +100,6 @@ public class AddSurgeries extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(25, 25, 25)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -108,7 +107,10 @@ public class AddSurgeries extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addGap(18, 18, 18)
-                                .addComponent(DaysRecovery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(DaysRecovery, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(30, 30, 30)
+                                .addComponent(jLabel3))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(181, 181, 181)
                         .addComponent(jLabel1))
@@ -129,10 +131,10 @@ public class AddSurgeries extends javax.swing.JFrame {
                     .addComponent(typeSurgeries, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
-                        .addComponent(jLabel2)
-                        .addGap(33, 33, 33)
-                        .addComponent(jLabel3)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                        .addComponent(jLabel2)))
+                .addGap(36, 36, 36)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(DaysRecovery, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -212,12 +214,12 @@ public class AddSurgeries extends javax.swing.JFrame {
     public javax.swing.JButton ButtonAddsurgeries;
     public javax.swing.JButton ButtonBackSugeries;
     public javax.swing.JTextField DaysRecovery;
+    public javax.swing.JTextArea TextTypeSugery;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JScrollPane typeSurgeries;
     // End of variables declaration//GEN-END:variables
 }

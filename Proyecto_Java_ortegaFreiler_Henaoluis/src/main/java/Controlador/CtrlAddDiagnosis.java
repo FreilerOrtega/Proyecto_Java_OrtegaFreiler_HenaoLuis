@@ -56,7 +56,14 @@ public class CtrlAddDiagnosis implements ActionListener {
                  Diagnosis.setVisible(false);
                  AddSurgeries addSurgeries= new AddSurgeries();
                  addSurgeries.setVisible(true);
-                 CtrlAddSurgeries ctrlAddSurgeries = new CtrlAddSurgeries(addSurgeries,people);
+                 int id_pet= 0;
+                 for (Cita c:citaList){
+                     if (c.getId()==idAppointment){
+                         id_pet=c.getPet_id();
+                     };
+                 }
+
+                 CtrlAddSurgeries ctrlAddSurgeries = new CtrlAddSurgeries(addSurgeries,people,id_pet);
 
              } else if (e.getSource()==Diagnosis.ButtonAddSuffering) {
                  try {
@@ -71,9 +78,17 @@ public class CtrlAddDiagnosis implements ActionListener {
                      throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
                  }
                  Diagnosis.setVisible(false);
-                 AddSurgeries addSurgeries= new AddSurgeries();
-                 addSurgeries.setVisible(true);
-                 CtrlAddSurgeries ctrlAddSurgeries = new CtrlAddSurgeries(addSurgeries,people);
+                 AddSuffering suffering = new AddSuffering();
+                 suffering.setVisible(true);
+                 int id_pet= 0;
+                 for (Cita c:citaList){
+                     if (c.getId()==idAppointment){
+                         id_pet=c.getPet_id();
+                     };
+                 }
+                 CtrlAddSuffering ctrlAddSuffering = new CtrlAddSuffering(suffering,people,id_pet);
+
+
 
              } else if (e.getSource()==Diagnosis.ButtonAddDeworning) {
                  try {
@@ -136,13 +151,24 @@ public class CtrlAddDiagnosis implements ActionListener {
                  Diagnosis.setVisible(false);
                  AddVaccination addVaccination= new AddVaccination();
                  addVaccination.setVisible(true);
-                  crtlVaccine crtlVaccine_history = new crtlVaccine (addVaccination,people);
+                 int id_pet= 0;
+                 for (Cita c:citaList){
+                     if (c.getId()==idAppointment){
+                         id_pet=c.getPet_id();
+                     };
+                 }
+                 crtlVaccine crtlVaccine_history = new crtlVaccine (addVaccination,people,id_pet);
 
 
             }else if (e.getSource()==Diagnosis.ButtonAddDiagnosis) {
+                 Cita cita = new Cita();
+
                  try {
                      if (!Diagnosis.IdCitaAsiganar.getText().trim().isEmpty()) {
                          idAppointment = Integer.parseInt(Diagnosis.IdCitaAsiganar.getText());
+                         cita.setId(idAppointment);
+
+
                      } else {
                          throw new RuntimeException("por favor ingrese un id de cita");
 
@@ -151,19 +177,13 @@ public class CtrlAddDiagnosis implements ActionListener {
                  } catch (NumberFormatException es) {
                      throw new NumberFormatException("Por Favor Ingrese Un Id De Cita Valido");
                  }
-
-
-
+                 cita.setDiagnosis(Diagnosis.textaddD.getText());
+                 CitaDAO.changediagnosis(cita);
             }
-
-
         }catch  (Exception ex){
                 JOptionPane.showMessageDialog(Diagnosis, ex.getMessage());
 
         }
-
-
-
 
     }
 

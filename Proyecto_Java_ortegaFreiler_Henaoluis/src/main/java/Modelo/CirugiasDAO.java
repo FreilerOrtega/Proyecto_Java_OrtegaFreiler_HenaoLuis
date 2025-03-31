@@ -73,15 +73,18 @@ public class CirugiasDAO {
 
     public static void insertsurgeries(Cirugias cirugias) throws SQLException {
 
-        String sql = "INSERT INTO Cirugias (surgery_date,surgery_date,recovery_days)\n \n" +
-                "VALUES(?,?,?)";
+        String sql = "INSERT INTO Cirugias (surgery_date,recovery_days,typeSugery,pet_id,veterinarian_id,recovery_status)\n \n" +
+                "VALUES(?,?,?,?,?,?)";
 
 
         try (Connection con = Conect.getCon();
              PreparedStatement PS = con.prepareStatement(sql)) {
             PS.setString(1, cirugias.getSurgeryDate());
-            PS.setString(2, cirugias.getSurgeryDate());
-            PS.setString(3, cirugias.getRecovery_status());
+            PS.setInt(2, cirugias.getRecoveryDays());
+            PS.setString(3, cirugias.getTypeSugery());
+            PS.setInt(4,cirugias.getPetId());
+            PS.setInt(5,cirugias.getVeterinarianId());
+            PS.setString(6,cirugias.getRecovery_status());
 
 
             int agg = PS.executeUpdate();
