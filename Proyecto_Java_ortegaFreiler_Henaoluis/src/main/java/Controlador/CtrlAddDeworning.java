@@ -10,19 +10,21 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class CtrlAddDeworning implements ActionListener {
     List<Lote> batchList = LoteDAO.getBatchList();
     List<Medicamento> medicineList = MedicamentoDAO.getMedicineList();
+    int id_pet;
     AddDeworning addDeworning;
     Persona people;
     DefaultTableModel model;
 
-    public CtrlAddDeworning(AddDeworning addDeworning, Persona people) throws SQLException {
+    public CtrlAddDeworning(AddDeworning addDeworning, Persona people,int id_pet) throws SQLException {
         this.addDeworning = addDeworning;
         this.people = people;
-
+        this.id_pet = id_pet;
         this.addDeworning.ButtonAddDeworming.addActionListener(this);
         this.addDeworning.ButtonBackDeworming.addActionListener(this);
 
@@ -55,15 +57,18 @@ public class CtrlAddDeworning implements ActionListener {
         Object[] object = new Object[4];
 
         for (Medicamento m : medicineList) {
-            object[0] = m.getId();
-            object[1] = m.getName();
-            object[2] = m.getPresentation();
-            for (Lote l : batchList) {
-                if (l.getId() == m.getBatchId()) {
-                    object[3] = l.getCurrentQuantity();
+            if(m.getType().toLowerCase().equals("antiparasitario")){
+                object[0] = m.getId();
+                object[1] = m.getName();
+                object[2] = m.getPresentation();
+                for (Lote l : batchList) {
+                    if (l.getId() == m.getBatchId()) {
+                        object[3] = l.getCurrentQuantity();
+                    }
                 }
+                model.addRow(object);
             }
-            model.addRow(object);
+
         }
         addDeworning.TableIdMedicamento.setModel(model);
     }
@@ -83,9 +88,13 @@ public class CtrlAddDeworning implements ActionListener {
 
 
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-            desparacitaciones.setApplicationDate(simpleDateFormat.format(addDeworning.inputDate.getDate()));
-
-
+            desparacitaciones.setNextApplication(simpleDateFormat.format(addDeworning.inputDate.getDate()));
+            desparacitaciones.setType(addDeworning.type.getSelectedItem().toString());
+            Date today=new Date();
+            desparacitaciones.setApplicationDate(simpleDateFormat.format(today));
+            desparacitaciones.setPetId(id_pet);
+            desparacitaciones.setVeterinarianId(people.getId()
+            );
             DesparacitacionesDAO.insertDeworning(desparacitaciones);
 
 

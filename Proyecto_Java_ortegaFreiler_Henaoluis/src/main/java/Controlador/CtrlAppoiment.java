@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 
-import static Modelo.CitaDAO.getsurgeriesByveterinarianId;
+import static Modelo.CitaDAO.getsurAppoimentveterinarianId;
 
 public class CtrlAppoiment implements ActionListener {
     ViewAppoiment ViewAppoiment;
@@ -23,6 +23,7 @@ public class CtrlAppoiment implements ActionListener {
         ViewAppoiment = viewAppoiment;
         this.people = people;
         this.ViewAppoiment.Buttonbackappoiment.addActionListener(this);
+        citaTable(ViewAppoiment.ViewtableAppoiment);
     }
 
     @Override
@@ -42,7 +43,7 @@ public class CtrlAppoiment implements ActionListener {
         model.setRowCount(0);
         List<Cita> AppoimentList = new ArrayList<>();
         try {
-            AppoimentList = getsurgeriesByveterinarianId(people.getId());
+            AppoimentList = getsurAppoimentveterinarianId(people.getId());
 
             Object[] object = new Object[8];
             for (Cita P : AppoimentList) {

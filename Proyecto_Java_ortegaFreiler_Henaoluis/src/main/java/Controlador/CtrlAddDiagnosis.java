@@ -1,6 +1,7 @@
 package Controlador;
 
 import Modelo.Cita;
+import Modelo.CitaDAO;
 import Modelo.Persona;
 import vista.*;
 
@@ -16,8 +17,10 @@ public class CtrlAddDiagnosis implements ActionListener {
     AddDiagnosis Diagnosis;
     Persona people;
     int idAppointment;
+    List<Cita>citaList = CitaDAO.getAllAppointments();
+    DefaultTableModel model = new DefaultTableModel() ;
 
-    public CtrlAddDiagnosis(AddDiagnosis diagnosis, Persona people) {
+    public CtrlAddDiagnosis(AddDiagnosis diagnosis, Persona people) throws SQLException {
         Diagnosis = diagnosis;
         this.people = people;
         this.Diagnosis.ButtonAddSurgeries.addActionListener(this);
@@ -27,6 +30,7 @@ public class CtrlAddDiagnosis implements ActionListener {
         this.Diagnosis.ButtonAddDeworning.addActionListener(this);
         this.Diagnosis.ButtonAddProcedure.addActionListener(this);
         this.Diagnosis.ButtonAddDiagnosis.addActionListener(this);
+        ViewAppoimentByV(Diagnosis.TableViewCita);
 
 
 
@@ -86,7 +90,13 @@ public class CtrlAddDiagnosis implements ActionListener {
                  Diagnosis.setVisible(false);
                  AddDeworning addDeworning= new AddDeworning();
                  addDeworning.setVisible(true);
-                 CtrlAddDeworning ctrlAddDeworning = new CtrlAddDeworning(addDeworning,people);
+                 int id_pet= 0;
+                 for (Cita c:citaList){
+                     if (c.getId()==idAppointment){
+                         id_pet=c.getPet_id();
+                     };
+                 }
+                 CtrlAddDeworning ctrlAddDeworning = new CtrlAddDeworning(addDeworning,people,id_pet);
 
             } else if (e.getSource()==Diagnosis.ButtonBackDiagnosis) {
                 Diagnosis.setVisible(false);
@@ -155,10 +165,29 @@ public class CtrlAddDiagnosis implements ActionListener {
 
 
 
-
     }
 
+    public void ViewAppoimentByV(JTable jtable){
+        model = (DefaultTableModel) jtable.getModel();
+        model.setRowCount(0);
+        Object[] obj = new Object[5];
+        for (Cita c : citaList){
+            if (c.getVeterinarian_id()==people.getId()){
 
+                obj[0]=c.getId();
+                obj[1]=c.getPet_id();
+                obj[2]=c.getOwner_id();
+                obj[3]=c.getDates();
+                obj[4]=c.getDiagnosis();
+
+                model.addRow(obj);
+
+
+            };
+
+        }
+        Diagnosis.TableViewCita.setModel(model);
+    }
 
 
 

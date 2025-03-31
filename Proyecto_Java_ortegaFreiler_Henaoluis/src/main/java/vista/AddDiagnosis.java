@@ -13,17 +13,13 @@ import javax.swing.table.DefaultTableModel;
  * @author Usuario
  */
 public class AddDiagnosis extends javax.swing.JFrame {
-      public JDateChooser inputDate;
+
     /**
      * Creates new form AddSurgeries
      */
     public AddDiagnosis() {
         initComponents();
-        inputDate = new JDateChooser();
-        inputDate.setDateFormatString("yyyy-MM-dd");
-        inputDate.setBounds(200, 270, 220, 24);
-        inputDate.setAlignmentX(50);
-        add(inputDate);
+
     }
 
     /**
@@ -82,7 +78,7 @@ public class AddDiagnosis extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID_cita", "ID_mascota", "ID_dueño", "Fecha", "motivo ", "diagnostico", "Asistencia", "Estado"
+                "ID_cita", "ID_mascota", "ID_dueño", "Fecha", "diagnostico"
             }
         ));
         jScrollPane1.setViewportView(TableViewCita);
@@ -321,7 +317,5 @@ public class AddDiagnosis extends javax.swing.JFrame {
     public javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
-
-
     // End of variables declaration//GEN-END:variables
 }

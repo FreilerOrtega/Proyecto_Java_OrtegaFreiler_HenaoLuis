@@ -42,7 +42,7 @@ public class crtlSurgeries implements ActionListener {
         model.setRowCount(0);
         List<Cirugias> surgeriesList = new ArrayList<>();
         try {
-            surgeriesList = CirugiasDAO.getSurgeriesListByPetID(people.getId());
+            surgeriesList = CirugiasDAO.getsurgeriesByveterinarianId(people.getId());
 
             Object[] object = new Object[6];
             for (Cirugias P : surgeriesList) {

@@ -4,6 +4,7 @@ import Modelo.CitaDAO;
 import Modelo.Persona;
 import vista.*;
 
+import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
@@ -31,41 +32,45 @@ public class Ctrlveterinarian implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    try{
+        if(e.getSource()==ViewVeterinarian.Buttonprocedure){
 
-    if(e.getSource()==ViewVeterinarian.Buttonprocedure){
+            ViewVeterinarian.setVisible(false);
+            ViewProcedures ViewPro = new ViewProcedures();
+            ViewPro.setVisible(true);
+            ctrlProcedure ctrp = new ctrlProcedure(ViewPro,people);
 
-        ViewVeterinarian.setVisible(false);
-        ViewProcedures ViewPro = new ViewProcedures();
-        ViewPro.setVisible(true);
-        ctrlProcedure ctrp = new ctrlProcedure(ViewPro,people);
-
-    } else if (e.getSource()==ViewVeterinarian.Buttonsurgeries) {
-        ViewVeterinarian.setVisible(false);
-        viewsurgeriesperformed viewS = new viewsurgeriesperformed();
-        viewS.setVisible(true);
-        crtlSurgeries ctrls = new crtlSurgeries(viewS,people);
+        } else if (e.getSource()==ViewVeterinarian.Buttonsurgeries) {
+            ViewVeterinarian.setVisible(false);
+            viewsurgeriesperformed viewS = new viewsurgeriesperformed();
+            viewS.setVisible(true);
+            crtlSurgeries ctrls = new crtlSurgeries(viewS,people);
 
 
 
-    } else if (e.getSource()==ViewVeterinarian.Buttonappoinment) {
-        ViewVeterinarian.setVisible(false);
-        ViewAppoiment viewAppoiment = new ViewAppoiment();
-        viewAppoiment.setVisible(true);
-        CtrlAppoiment crtlappoiment = new CtrlAppoiment(viewAppoiment,people);
+        } else if (e.getSource()==ViewVeterinarian.Buttonappoinment) {
+            ViewVeterinarian.setVisible(false);
+            ViewAppoiment viewAppoiment = new ViewAppoiment();
+            viewAppoiment.setVisible(true);
+            CtrlAppoiment crtlappoiment = new CtrlAppoiment(viewAppoiment,people);
 
-    }else if (e.getSource()==ViewVeterinarian.ButtonAddDiagnosis) {
-        ViewVeterinarian.setVisible(false);
-        AddDiagnosis addDiagnosis = new AddDiagnosis();
-        addDiagnosis.setVisible(true);
-        CtrlAddDiagnosis ctrlAppoiment = new CtrlAddDiagnosis(addDiagnosis,people);
+        }else if (e.getSource()==ViewVeterinarian.ButtonAddDiagnosis) {
+            ViewVeterinarian.setVisible(false);
+            AddDiagnosis addDiagnosis = new AddDiagnosis();
+            addDiagnosis.setVisible(true);
+            CtrlAddDiagnosis ctrlAppoiment = new CtrlAddDiagnosis(addDiagnosis,people);
 
-    } else if (e.getSource()==ViewVeterinarian.ButtonClosedSesion) {
-        ViewVeterinarian.setVisible(false);
-        viewLogin viewLogin = new viewLogin();
-        viewLogin.setVisible(true);
-        crtllogin crtllogin= new crtllogin(viewLogin);
+        } else if (e.getSource()==ViewVeterinarian.ButtonClosedSesion) {
+            ViewVeterinarian.setVisible(false);
+            viewLogin viewLogin = new viewLogin();
+            viewLogin.setVisible(true);
+            crtllogin crtllogin= new crtllogin(viewLogin);
 
+        }
+    } catch (Exception ex) {
+        JOptionPane.showMessageDialog(ViewVeterinarian,ex.getMessage());
     }
+
 
     }
 }

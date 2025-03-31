@@ -25,9 +25,10 @@ public class CirugiasDAO {
                 Cirugias sugeries= new Cirugias();
                 sugeries.setId(rs.getInt(1));
                 sugeries.setPetId(rs.getInt(2));
-                sugeries.setSurgeryDate(rs.getString(3));
-                sugeries.setRecoveryDays(rs.getInt(4));
-                sugeries.setRecovery_status(rs.getString(5));
+                sugeries.setVeterinarianId(rs.getInt(3));
+                sugeries.setSurgeryDate(rs.getString(4));
+                sugeries.setRecoveryDays(rs.getInt(5));
+                sugeries.setRecovery_status(rs.getString(6));
                 sugeriesList.add(sugeries);
             }
             try {
@@ -46,7 +47,7 @@ public class CirugiasDAO {
     public static List<Cirugias> getsurgeriesByveterinarianId(int id) throws SQLException {
         List<Cirugias> surgeriesList =new ArrayList<>();
 
-        String sql="select * from cirugias where veterinarian_id=?";
+        String sql="select * from Cirugias where veterinarian_id=?";
 
         try(Connection con=Conect.getCon();
             PreparedStatement ps=con.prepareStatement(sql)) {

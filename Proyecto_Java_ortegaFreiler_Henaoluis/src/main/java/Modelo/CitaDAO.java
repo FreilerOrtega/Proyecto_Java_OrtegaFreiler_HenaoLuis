@@ -129,10 +129,10 @@ public class    CitaDAO {
         }
     }
 
-    public static List<Cita> getsurgeriesByveterinarianId(int id) throws SQLException {
+    public static List<Cita> getsurAppoimentveterinarianId(int id) throws SQLException {
         List<Cita> Appoimentlis =new ArrayList<>();
 
-        String sql="select * from cita where id_veterinarian=?;";
+        String sql="select * from cita where veterinarian_id=?;";
         try(Connection con = Conect.getCon();
             PreparedStatement ps=con.prepareStatement(sql)) {
             ps.setInt(1,id);
@@ -144,9 +144,11 @@ public class    CitaDAO {
                 appointment.setOwner_id(rs.getInt(3));
                 appointment.setDates(rs.getString(4));
                 appointment.setConsultation_reason(rs.getString(5));
-                appointment.setDiagnosis(rs.getString(6));
-                appointment.setAttendance(rs.getBoolean(7));
-                appointment.setStatus(rs.getString(8));
+                appointment.setVeterinarian_id(rs.getInt(6));
+                appointment.setDiagnosis(rs.getString(7));
+                appointment.setAttendance(rs.getBoolean(8));
+                appointment.setStatus(rs.getString(9));
+                appointment.setHours(rs.getString(10));
                 Appoimentlis.add(appointment);
             }
             try {

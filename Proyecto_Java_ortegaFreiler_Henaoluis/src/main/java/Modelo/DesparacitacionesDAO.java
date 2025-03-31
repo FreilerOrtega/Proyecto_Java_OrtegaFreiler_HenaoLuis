@@ -40,13 +40,15 @@ public class DesparacitacionesDAO {
 
 
     public static void insertDeworning(Desparacitaciones desparacitaciones) throws SQLException {
-        String sql = "INSERT INTO Desparacitaciones (medicine_id, next_deworming_date, pet_id, veterinarian_id) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO Desparacitaciones (medicine_id, next_deworming_date, pet_id, veterinarian_id,application_date,typeD) VALUES (?, ?, ?, ?,?,?)";
 
         try (Connection con = Conect.getCon(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setInt(1, desparacitaciones.getMedicine_id());
             ps.setString(2, desparacitaciones.getNextApplication());
             ps.setInt(3, desparacitaciones.getPetId());
             ps.setInt(4, desparacitaciones.getVeterinarianId());
+            ps.setString(5,desparacitaciones.getApplicationDate());
+            ps.setString(6, desparacitaciones.getType());
 
 
             int agg = ps.executeUpdate();
