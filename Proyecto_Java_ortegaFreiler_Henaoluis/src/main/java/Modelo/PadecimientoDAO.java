@@ -38,7 +38,7 @@ public class PadecimientoDAO {
         return conditionList;
     }
 
-    public  void insertsuffering( Padecimiento padecimiento) throws SQLException {
+    public static void insertsuffering(Padecimiento padecimiento) throws SQLException {
         String SQL = "INSERT INTO Padecimientos (pet_id,detection_date,diagnosis) VALUES (?,?,?)";
 
         try (Connection con = Conect.getCon();
